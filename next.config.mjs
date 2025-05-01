@@ -5,13 +5,12 @@ const withNextIntl = createNextIntlPlugin();
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   output: 'export', // Enable static exports for GitHub Pages
-  // Only use basePath in production
-  ...(process.env.NODE_ENV === 'production' && {
-    basePath: '/ms-tools'
-  }),
+  // Always use basePath in production
+  basePath: process.env.NODE_ENV === 'production' ? '/ms-tools' : '',
+  // Configure asset prefix for production
+  assetPrefix: process.env.NODE_ENV === 'production' ? '/ms-tools' : '',
   images: {
-    unoptimized: true,
-    path: process.env.NODE_ENV === 'production' ? '/ms-tools' : ''
+    unoptimized: true
   },
   // Disable server components for static export
   experimental: {
