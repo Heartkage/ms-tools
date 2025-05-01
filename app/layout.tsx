@@ -6,6 +6,8 @@ import { Inter } from "next/font/google"
 
 const inter = Inter({ subsets: ["latin"] })
 
+export const dynamic = 'force-static'
+
 export const metadata: Metadata = {
   title: 'MapleStory Tool',
   description: 'A collection of tools for MapleStory',

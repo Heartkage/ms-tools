@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { useLanguage } from '../../../../contexts/LanguageContext';
 import LanguageSwitcher from '../../../../components/LanguageSwitcher';
 
-export default function RoomLayout({ children, title }) {
+export default function RoomLayout({ children }) {
   const { t } = useLanguage();
 
   return (
