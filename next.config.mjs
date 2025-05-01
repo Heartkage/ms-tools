@@ -10,7 +10,8 @@ const nextConfig = {
     basePath: '/ms-tools'
   }),
   images: {
-    unoptimized: true
+    unoptimized: true,
+    path: process.env.NODE_ENV === 'production' ? '/ms-tools' : ''
   },
   // Disable server components for static export
   experimental: {

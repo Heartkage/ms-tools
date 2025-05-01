@@ -5,6 +5,7 @@ import Link from 'next/link';
 import LanguageSwitcher from '../../../components/LanguageSwitcher';
 import { useLanguage } from '../../../contexts/LanguageContext';
 import { roomConfig as roomConfigs } from './constants';
+import Image from 'next/image';
 
 export default function OrbisPQ() {
   const { t } = useLanguage();
@@ -165,10 +166,12 @@ export default function OrbisPQ() {
                           hover:brightness-105 hover:shadow-md active:brightness-95 cursor-pointer transition-all duration-200
                         `}
                       >
-                        <img 
-                          src="/images/statue.jpg" 
+                        <Image 
+                          src="/images/party-quest/orbis/statue.jpg" 
                           alt="Garden Room"
-                          className="absolute inset-0 w-full h-full object-cover"
+                          fill
+                          className="object-cover"
+                          priority
                         />
                         
                         {/* Hover overlay */}
