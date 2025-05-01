@@ -1,0 +1,198 @@
+{
+  "title": "MapleStory - Tools",
+  "navigation": {
+    "partyQuest": {
+      "title": "Party Quest",
+      "kerning": "Kerning Party Quest",
+      "ludibrium": "Ludibrium Party Quest",
+      "orbis": "Orbis Party Quest"
+    },
+    "scroll": {
+      "title": "Scroll",
+      "calculator": "Scroll Simulator"
+    }
+  },
+  "pages": {
+    "backToHome": "← Back to Home",
+    "kerningPQ": {
+      "title": "Kerning Party Quest Tool"
+    },
+    "ludibriumPQ": {
+      "title": "Ludibrium Party Quest Tool"
+    },
+    "orbisPQ": {
+      "title": "Orbis Party Quest Tool"
+    },
+    "scroll": {
+      "title": "Scroll Simulator"
+    }
+  },
+  "common": {
+    "recommend": "Recommend",
+    "players": "Players",
+    "jobs": "Jobs",
+    "types": "Types",
+    "skills": "Skills"
+  },
+  "orbisPQ": {
+    "weekdays": {
+      "monday": "Monday",
+      "tuesday": "Tuesday",
+      "wednesday": "Wednesday",
+      "thursday": "Thursday",
+      "friday": "Friday",
+      "saturday": "Saturday",
+      "sunday": "Sunday"
+    },
+    "colors": {
+      "orange": "Orange",
+      "yellow": "Yellow",
+      "purple": "Purple",
+      "darkBlue": "Dark Blue",
+      "lightBlue": "Light Blue",
+      "green": "Green",
+      "red": "Red"
+    },
+    "dayTypes": {
+      "cute": "Cute",
+      "scary": "Scary",
+      "fun": "Fun",
+      "sad": "Sad",
+      "cold": "Cold",
+      "tight": "Tight",
+      "operatic": "Operatic"
+    },
+    "rooms": {
+      "common": {
+        "copied": "Copied!",
+        "exit": "Exit",
+        "goback": "← Previous page"
+      },
+      "sealed": {
+        "title": "Sealed Room",
+        "solvePuzzle": "Solve puzzle",
+        "howToGetDigits": "How to get 4 digits",
+        "step1": "1. Try no one standing on any platform to get 1st digit from NPC.",
+        "step2": "2. Try 1 person standing on left platform to get 2nd digit from NPC.",
+        "step3": "3. Try 1 person standing on middle platform to get 3rd digit from NPC.",
+        "step4": "4. Try 1 person standing on right platform to get 4th digit from NPC.",
+        "enterCode": "Enter Code (0-2):",
+        "clear": "Clear",
+        "enterCodeHint": "Enter a 4-digit code using only numbers 0-2",
+        "invalidCode": "Invalid code! This combination doesn't exist in the puzzle.",
+        "copyAnswer": "Copy Answer",
+        "requirements": "Requirements:",
+        "requirement1": "Requires 1 player to solve",
+        "requirement2": "Requires 4 players to complete the room",
+        "left": "LEFT",
+        "middle": "MIDDLE",
+        "right": "RIGHT"
+      },
+      "lobby": {
+        "title": "Lobby",
+        "collectCD": "Collect 0/1 {color} CD",
+        "serverTime": "Current {server} Server time",
+        "localTime": "Your Local Time",
+        "nextDayChange": "Next Day Change",
+        "timezone": "Timezone",
+        "servers": {
+          "na": "Artale (NA)",
+          "asia": "Artale (Asia)",
+          "kr": "Artale (KR)"
+        },
+        "tip": "Tip: Find the correct CD from boxes and give it to NPC. The most left box requires a teleport skill to reach the platform."
+      },
+      "statue": {
+        "title": "Garden (Boss Room)",
+        "huntBoss": "Hunt 0/1 Boss",
+        "copy": "Copy"
+      },
+      "storage": {
+        "title": "Storage",
+        "huntMobs": "Hunt 0/15 Cellion in the following sequence",
+        "copySequence": "Copy Sequence"
+      },
+      "lounge": {
+        "title": "Lounge",
+        "collectPieces": "Collect 0/10 Pieces",
+        "collect40Pieces": "Collect 0/40 Pieces",
+        "room303": "Room 303",
+        "room302": "Room 302",
+        "room301": "Room 301",
+        "room304": "Room 304",
+        "pieces": "Pieces",
+        "weaponAttack": "Weapon Attack",
+        "magicAttack": "Magic Attack",
+        "jumpRequirement": "↑↑↑---Jump 112% REQUIRED---↑↑↑",
+        "tip": "Note: Count pieces before you jump down from a platform to ensure you have collected all pieces. Otherwise, you will have to restart the Party Quest."
+      },
+      "walkway": {
+        "title": "Walkway",
+        "collectPieces": "Collect 0/30 Pieces",
+        "tip": "Note: Count pieces before you jump down from a platform to ensure you have collected all pieces. Otherwise, you will have to restart the Party Quest.",
+        "jobRequirement": "Requires AOE (Area of Effect) job type"
+      },
+      "onTheWayUp": {
+        "title": "On the way up",
+        "collectPieces": "Collect 0/10 Pieces",
+        "reset": "Reset",
+        "jumpToHighest": "Jump to highest platform",
+        "tip": "When you reach top for levers, answer is always 2 ↓ 3 ↑. Total of 10 possible answers.",
+        "resetSection": "Reset Section",
+        "clearAll": "Clear All",
+        "confirmClear": "Confirm Clear All",
+        "confirmMessage": "Are you sure you want to clear all selections?",
+        "cancel": "Cancel",
+        "copyAnswer": "Copy Answer"
+      },
+      "entrance": {
+        "title": "Entrance",
+        "collectClouds": "Collect 0/20 Clouds",
+        "tip": "Tip: Do not climb when completing the stage."
+      },
+      "garden": {
+        "title": "Garden (Boss)",
+        "huntBoss": "Hunt 0/1 Boss",
+        "bossPot": "Boss Pot",
+        "copy": "Copy",
+        "positions": {
+          "left": "Left",
+          "right": "Right",
+          "top": "Top",
+          "middle": "Middle",
+          "bottom": "Bottom"
+        }
+      }
+    }
+  },
+  "jobs": {
+    "classes": {
+      "warrior": "Warrior",
+      "archer": "Archer",
+      "mage": "Mage",
+      "thief": "Thief",
+      "pirate": "Pirate",
+      "gunslinger": "Gunslinger",
+      "any": "Any"
+    },
+    "types": {
+      "melee": "Melee",
+      "range": "Range",
+      "weaponAttack": "Weapon Attack",
+      "magicAttack": "Magic Attack",
+      "aoe": "AOE",
+      "highDamage": "High Damage"
+    },
+    "skills": {
+      "haste": "Haste",
+      "holyBody": "Holy Body",
+      "teleport": "TP",
+      "heal": "Heal"
+    }
+  },
+  "language": {
+    "switch": "Switch Language",
+    "en": "English",
+    "zh": "中文"
+  }
+} 

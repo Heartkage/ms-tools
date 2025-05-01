@@ -1,0 +1,193 @@
+{
+  "title": "楓之谷 - 工具",
+  "navigation": {
+    "partyQuest": {
+      "title": "組隊任務",
+      "kerning": "墮落城市組隊任務",
+      "ludibrium": "玩具城組隊任務",
+      "orbis": "天空之城組隊任務"
+    },
+    "scroll": {
+      "title": "卷軸",
+      "calculator": "卷軸模擬器"
+    }
+  },
+  "pages": {
+    "backToHome": "← 返回首頁",
+    "kerningPQ": {
+      "title": "墮落城市組隊任務工具"
+    },
+    "ludibriumPQ": {
+      "title": "玩具城組隊任務工具"
+    },
+    "orbisPQ": {
+      "title": "天空之城組隊任務工具"
+    },
+    "scroll": {
+      "title": "卷軸模擬器"
+    }
+  },
+  "common": {
+    "recommend": "建議配置",
+    "players": "人數",
+    "jobs": "職業",
+    "types": "類型",
+    "skills": "技能"
+  },
+  "orbisPQ": {
+    "weekdays": {
+      "monday": "星期一",
+      "tuesday": "星期二",
+      "wednesday": "星期三",
+      "thursday": "星期四",
+      "friday": "星期五",
+      "saturday": "星期六",
+      "sunday": "星期日"
+    },
+    "colors": {
+      "orange": "橙色",
+      "yellow": "黃色",
+      "purple": "紫色",
+      "darkBlue": "深藍色",
+      "lightBlue": "淺藍色",
+      "green": "綠色",
+      "red": "紅色"
+    },
+    "dayTypes": {
+      "cute": "有趣",
+      "scary": "恐怖",
+      "fun": "有意思",
+      "sad": "憂鬱",
+      "cold": "冷冰冰",
+      "tight": "晴朗",
+      "operatic": "雄壯"
+    },
+    "rooms": {
+      "common": {
+        "exit": "出口",
+        "copied": "已複製！",
+        "goback": "← 回前一張地圖"
+      },
+      "sealed": {
+        "title": "封印之間 (400)",
+        "solvePuzzle": "解謎題",
+        "howToGetDigits": "如何獲得 4 位數字",
+        "step1": "1. 嘗試沒有人站在任何平台上，從 NPC 獲得第 1 位數字。",
+        "step2": "2. 嘗試 1 人站在左側(←)平台上，從 NPC 獲得第 2 位數字。",
+        "step3": "3. 嘗試 1 人站在中間(↑)平台上，從 NPC 獲得第 3 位數字。",
+        "step4": "4. 嘗試 1 人站在右側(→)平台上，從 NPC 獲得第 4 位數字。",
+        "enterCode": "輸入代碼 (0-2):",
+        "clear": "清除",
+        "enterCodeHint": "輸入 4 位數字，請使用 0-2 之間的數字",
+        "invalidCode": "無效的代碼！這個組合在謎題中不存在。",
+        "copyAnswer": "複製答案",
+        "requirements": "通關條件：",
+        "requirement1": "只需要 1 名玩家解謎",
+        "requirement2": "需要共 4 名玩家依照答案以相同人數站在平台上通關",
+        "left": "左側",
+        "middle": "中間",
+        "right": "右側"
+      },
+      "lobby": {
+        "title": "休息室 (CD)",
+        "collectCD": "收集 0/1 {color}唱片",
+        "serverTime": "當前 {server} 伺服器時間",
+        "localTime": "現在時間",
+        "nextDayChange": "下次換日時間",
+        "timezone": "時區",
+        "servers": {
+          "na": "Artale (NA)",
+          "asia": "Artale (Asia)",
+          "kr": "Artale (KR)"
+        },
+        "tip": "通關條件：在休息室內的箱子找到正確的CD。此關需要擅長跳忍耐和有位移技能的職業"
+      },
+      "garden": {
+        "title": "花園 (王房)",
+        "huntBoss": "狩獵 0/1 Boss",
+        "bossPot": "王盆",
+        "copy": "王盆位置",
+        "positions": {
+          "left": "左",
+          "right": "右",
+          "top": "上",
+          "middle": "中",
+          "bottom": "下"
+        }
+      },
+      "storage": {
+        "title": "倉庫",
+        "huntMobs": "按照以下順序擊殺 0 / 15 隻獨角獅",
+        "copySequence": "複製順序"
+      },
+      "lounge": {
+        "title": "客房 (下水道)",
+        "collectPieces": "收集 0/10 個碎片",
+        "collect40Pieces": "收集 0/40 個碎片",
+        "room303": "房間 303",
+        "room302": "房間 302",
+        "room301": "房間 301",
+        "room304": "房間 304",
+        "pieces": "碎片",
+        "weaponAttack": "需物理攻擊",
+        "magicAttack": "需魔法攻擊",
+        "jumpRequirement": "↑↑↑---上面平台需要至少跳躍 112%---↑↑↑",
+        "tip": "注意：在每個房間清空怪物後跳下平台前，請確認已收集該平台上的所有碎片。少撿一個碎片整個組隊任務要重來。"
+      },
+      "walkway": {
+        "title": "散步路",
+        "collectPieces": "收集 0/30 個碎片",
+        "tip": "注意：清空怪物後跳下平台前，請確認已收集該平台上的所有碎片。少撿一個碎片整個組隊任務要重來。",
+        "jobRequirement": "需要範圍攻擊職業"
+      },
+      "onTheWayUp": {
+        "title": "上層 (向上)",
+        "collectPieces": "收集 0/10 個碎片",
+        "reset": "重置",
+        "jumpToHighest": "跳到最高平台",
+        "tip": "當抵達頂部設定槓桿時，答案一定是：2個下、3個上。總共只有 10 種可能的答案。",
+        "resetSection": "重置區域",
+        "clearAll": "清除全部",
+        "confirmClear": "確認清除全部",
+        "confirmMessage": "確定要清除所有選擇嗎？",
+        "cancel": "取消",
+        "copyAnswer": "複製答案"
+      },
+      "entrance": {
+        "title": "大廳",
+        "collectClouds": "收集 0/20 雲朵",
+        "tip": "注意：通關時不要爬繩索。"
+      }
+    }
+  },
+  "jobs": {
+    "classes": {
+      "warrior": "戰士",
+      "archer": "弓箭手",
+      "mage": "法師",
+      "thief": "盜賊",
+      "pirate": "海盜",
+      "gunslinger": "槍手",
+      "any": "任何職業"
+    },
+    "types": {
+      "melee": "近戰",
+      "range": "遠程",
+      "weaponAttack": "物理攻擊",
+      "magicAttack": "魔法攻擊",
+      "aoe": "範圍攻擊",
+      "highDamage": "高傷害"
+    },
+    "skills": {
+      "haste": "速度激發",
+      "holyBody": "聖火",
+      "teleport": "瞬移",
+      "heal": "治療"
+    }
+  },
+  "language": {
+    "switch": "切換語言",
+    "en": "English",
+    "zh": "中文"
+  }
+} 
