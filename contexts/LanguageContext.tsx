@@ -20,15 +20,26 @@ const messages: Record<Language, typeof enMessages> = {
 
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
 
-export function LanguageProvider({ children }: { children: React.ReactNode }) {
-  const [language, setLanguage] = useState<Language>('en');
+// Function to get user's preferred language
+const getUserPreferredLanguage = (): Language => {
+  // First check localStorage
+  const savedLanguage = localStorage.getItem('language') as Language;
+  if (savedLanguage && (savedLanguage === 'en' || savedLanguage === 'zh')) {
+    return savedLanguage;
+  }
 
-  useEffect(() => {
-    const savedLanguage = localStorage.getItem('language') as Language;
-    if (savedLanguage && (savedLanguage === 'en' || savedLanguage === 'zh')) {
-      setLanguage(savedLanguage);
-    }
-  }, []);
+  // Then check browser language
+  const browserLang = navigator.language.toLowerCase();
+  if (browserLang.startsWith('zh')) {
+    return 'zh';
+  }
+  
+  // Default to English
+  return 'en';
+};
+
+export function LanguageProvider({ children }: { children: React.ReactNode }) {
+  const [language, setLanguage] = useState<Language>(getUserPreferredLanguage);
 
   const t = (key: string, params?: Record<string, string>) => {
     const keys = key.split('.');
