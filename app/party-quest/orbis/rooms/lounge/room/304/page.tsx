@@ -48,7 +48,7 @@ export default function DarkRoom() {
         <h1 className="text-3xl font-bold text-altText-primary">{t('orbisPQ.rooms.lounge.room304')}</h1>
         <h3 className="text-altText-secondary text-sm font-semibold">{t('orbisPQ.rooms.lounge.collectPieces')}</h3>
       </div>
-      <div className="flex justify-center items-end h-[calc(100%-4rem)] max-w-6xl mx-auto">
+      <div className="flex w-full justify-center items-end h-[calc(100%-4rem)] max-w-3xl mx-auto">
         {/* Left Section - 6x9 Platform */}
         <div className="w-1/3 overflow-hidden pb-4 sm:pb-10">
           <div className="grid grid-cols-6 gap-y-0 sm:gap-y-2">
