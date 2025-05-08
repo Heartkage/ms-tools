@@ -22,27 +22,34 @@ const LanguageContext = createContext<LanguageContextType | undefined>(undefined
 
 // Function to get user's preferred language
 const getUserPreferredLanguage = (): Language => {
-  // Check if we're in a browser environment
-  if (typeof window !== 'undefined') {
-    // First check localStorage
-    const savedLanguage = localStorage.getItem('language') as Language;
-    if (savedLanguage && (savedLanguage === 'en' || savedLanguage === 'zh')) {
-      return savedLanguage;
-    }
+  if (typeof window === 'undefined') return 'en';
 
-    // Then check browser language
-    const browserLang = navigator.language.toLowerCase();
-    if (browserLang.startsWith('zh')) {
-      return 'zh';
-    }
+  // First check localStorage
+  const savedLanguage = localStorage.getItem('language') as Language;
+  if (savedLanguage && (savedLanguage === 'en' || savedLanguage === 'zh')) {
+    return savedLanguage;
+  }
+
+  // Then check browser language
+  const browserLang = navigator.language.toLowerCase();
+  if (browserLang.startsWith('zh')) {
+    return 'zh';
   }
   
-  // Default to English for server-side rendering
   return 'en';
 };
 
 export function LanguageProvider({ children }: { children: React.ReactNode }) {
-  const [language, setLanguage] = useState<Language>(getUserPreferredLanguage);
+  // Always start with English to match server-side rendering
+  const [language, setLanguage] = useState<Language>('en');
+  const [mounted, setMounted] = useState(false);
+
+  // Handle language detection after initial render
+  useEffect(() => {
+    setMounted(true);
+    const detectedLanguage = getUserPreferredLanguage();
+    setLanguage(detectedLanguage);
+  }, []);
 
   const t = (key: string, params?: Record<string, string>) => {
     const keys = key.split('.');
@@ -65,11 +72,19 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
 
   const handleSetLanguage = (lang: Language) => {
     setLanguage(lang);
-    // Only access localStorage in browser environment
     if (typeof window !== 'undefined') {
       localStorage.setItem('language', lang);
     }
   };
+
+  // Prevent hydration mismatch by not rendering content until mounted
+  if (!mounted) {
+    return (
+      <LanguageContext.Provider value={{ language: 'en', setLanguage: handleSetLanguage, t }}>
+        {children}
+      </LanguageContext.Provider>
+    );
+  }
 
   return (
     <LanguageContext.Provider value={{ language, setLanguage: handleSetLanguage, t }}>
