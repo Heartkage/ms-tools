@@ -22,19 +22,22 @@ const LanguageContext = createContext<LanguageContextType | undefined>(undefined
 
 // Function to get user's preferred language
 const getUserPreferredLanguage = (): Language => {
-  // First check localStorage
-  const savedLanguage = localStorage.getItem('language') as Language;
-  if (savedLanguage && (savedLanguage === 'en' || savedLanguage === 'zh')) {
-    return savedLanguage;
-  }
+  // Check if we're in a browser environment
+  if (typeof window !== 'undefined') {
+    // First check localStorage
+    const savedLanguage = localStorage.getItem('language') as Language;
+    if (savedLanguage && (savedLanguage === 'en' || savedLanguage === 'zh')) {
+      return savedLanguage;
+    }
 
-  // Then check browser language
-  const browserLang = navigator.language.toLowerCase();
-  if (browserLang.startsWith('zh')) {
-    return 'zh';
+    // Then check browser language
+    const browserLang = navigator.language.toLowerCase();
+    if (browserLang.startsWith('zh')) {
+      return 'zh';
+    }
   }
   
-  // Default to English
+  // Default to English for server-side rendering
   return 'en';
 };
 
@@ -62,7 +65,10 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
 
   const handleSetLanguage = (lang: Language) => {
     setLanguage(lang);
-    localStorage.setItem('language', lang);
+    // Only access localStorage in browser environment
+    if (typeof window !== 'undefined') {
+      localStorage.setItem('language', lang);
+    }
   };
 
   return (
