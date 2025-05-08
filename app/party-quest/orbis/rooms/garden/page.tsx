@@ -126,9 +126,9 @@ export default function GardenRoom() {
   );
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-gray-900 to-gray-800 p-8 -mt-6">
+    <div className="min-h-screen bg-gradient-to-b from-gray-900 to-gray-800 pb-8">
       {/* Main Container */}
-      <div className="relative max-w-3xl mx-auto bg-gradient-to-b from-room to-room-bottom rounded-lg border border-room-border p-4 flex flex-col space-y-8 pb-48 overflow-hidden">
+      <div className="relative max-w-2xl mx-auto bg-gradient-to-b from-room to-room-bottom rounded-lg border border-room-border p-4 flex flex-col space-y-8 pb-32 sm:pb-48 overflow-hidden">
         {/* Skybox */}
         <div className="absolute inset-0 bg-gradient-to-b from-decor-light to-room pointer-events-none rounded-lg"></div>
 
@@ -147,7 +147,7 @@ export default function GardenRoom() {
         </div>
 
         {/* Platforms Grid */}
-        <div className="relative z-10 flex justify-center space-x-28">
+        <div className="relative z-10 flex justify-center space-x-6 sm:space-x-28">
           {/* Left Column */}
           <div className="flex flex-col space-y-8">
             {platforms.slice(0, 3).map((platform, index) => (
@@ -159,7 +159,7 @@ export default function GardenRoom() {
                   {platform.pots.map((pot, potIndex) => (
                     <div
                       key={`left-${index}-${potIndex}`}
-                      className={`w-12 h-12 bg-platform rounded-lg shadow-md relative cursor-pointer
+                      className={`w-8 h-8 sm:w-12 sm:h-12 bg-platform rounded-lg shadow-md relative cursor-pointer
                         ${pot === 'empty' ? 'hover:bg-platform-hover' : ''}
                         transition-colors duration-200`}
                       onClick={() => handlePotClick(index, potIndex)}
@@ -185,7 +185,7 @@ export default function GardenRoom() {
                   {platform.pots.map((pot, potIndex) => (
                     <div
                       key={`right-${index}-${potIndex}`}
-                      className={`w-12 h-12 bg-platform rounded-lg shadow-md relative cursor-pointer
+                      className={`w-8 h-8 sm:w-12 sm:h-12 bg-platform rounded-lg shadow-md relative cursor-pointer
                         ${pot === 'empty' ? 'hover:bg-platform-hover' : ''}
                         transition-colors duration-200`}
                       onClick={() => handlePotClick(index + 3, potIndex)}
@@ -203,7 +203,7 @@ export default function GardenRoom() {
 
         {/* Copy Button */}
         {hasBossPot && (
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20">
+          <div className="relative z-10 flex justify-center">
             <button
               onClick={handleCopy}
               className={`flex items-center space-x-2 px-4 py-2 rounded-lg transition-colors duration-200 ${
@@ -241,7 +241,7 @@ export default function GardenRoom() {
       </div>
 
       {/* Info Container */}
-      <div className="relative max-w-3xl mx-auto mt-8 bg-gradient-to-b from-room to-room-bottom rounded-lg border border-room-border p-4 overflow-hidden">
+      <div className="relative max-w-2xl mx-auto mt-8 bg-gradient-to-b from-room to-room-bottom rounded-lg border border-room-border p-4 overflow-hidden">
         {/* Background decor */}
         <div className="absolute inset-0 opacity-20 pointer-events-none">
           <div className="absolute top-5 left-[10%] w-8 h-8 rounded-full bg-decor"></div>

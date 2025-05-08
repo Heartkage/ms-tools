@@ -21,9 +21,9 @@ export default function LoungeRoom() {
   };
 
   return (
-    <div className="min-h-screen pt-2 px-8">
+    <div className="min-h-screen">
       {/* Lounge Room Container */}
-      <div className="relative max-w-xl bg-gradient-to-b from-black/0 to-black/10 pb-8 mx-auto flex flex-col space-y-10 shadow-xl -mt-6">
+      <div className="relative max-w-xl bg-gradient-to-b from-black/0 to-black/10 pb-8 mx-auto flex flex-col space-y-10 shadow-xl">
         {/* Background decor */}
         <div className="absolute inset-0 opacity-20 pointer-events-none z-0">
           <div className="absolute top-5 left-[10%] w-8 h-8 rounded-full bg-decor animate-pulse"></div>
@@ -110,7 +110,7 @@ export default function LoungeRoom() {
 
         {/* Jump Requirement */}
         <div className="relative z-20 text-center">
-          <p className="text-status-hint font-semibold text-md">{t('orbisPQ.rooms.lounge.jumpRequirement')}</p>
+          <p className="text-status-hint font-semibold text-xs sm:text-md">{t('orbisPQ.rooms.lounge.jumpRequirement')}</p>
         </div>
 
         {/* Exit */}

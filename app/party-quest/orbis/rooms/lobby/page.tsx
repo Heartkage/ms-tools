@@ -144,11 +144,11 @@ export default function Lobby() {
   };
 
   return (
-    <div className="min-h-screen flex flex-col items-center pt-2 pb-8 bg-gradient-to-b from-gray-900 to-gray-800 -mt-4">
+    <div className="min-h-screen flex flex-col items-center pb-8 bg-gradient-to-b from-gray-900 to-gray-800">
       {/* Main Container */}
       <div className="relative max-w-4xl w-full mx-auto px-4">
         {/* Title */}
-        <div className="mb-8 text-center">
+        <div className="mt-8 sm:mt-0 mb-8 text-center">
           <div className="text-altText-primary text-2xl sm:text-3xl md:text-4xl font-semibold mb-1">
             {t('orbisPQ.rooms.lobby.title')}
           </div>
@@ -164,9 +164,9 @@ export default function Lobby() {
               onClick={() => setIsServerMenuOpen(!isServerMenuOpen)}
               className="flex items-center space-x-2 px-3 sm:px-4 py-1.5 sm:py-2 bg-interactive rounded-lg hover:bg-interactive-hover transition-colors duration-200"
             >
-              <span className="text-altText-primary font-semibold text-xs sm:text-sm">{t(`orbisPQ.rooms.lobby.servers.${selectedServer.name.toLowerCase()}`)}</span>
+              <span className="text-altText-primary font-semibold text-xxs sm:text-sm">{t(`orbisPQ.rooms.lobby.servers.${selectedServer.name.toLowerCase()}`)}</span>
               <svg
-                className={`w-3 h-3 sm:w-4 sm:h-4 transform transition-transform duration-200 ${isServerMenuOpen ? 'rotate-180' : ''}`}
+                className={`w-2 h-2 sm:w-4 sm:h-4 transform transition-transform duration-200 ${isServerMenuOpen ? 'rotate-180' : ''}`}
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
@@ -198,7 +198,7 @@ export default function Lobby() {
 
         {/* CD Circle */}
         <div 
-          className="relative w-64 h-64 mb-6 group cursor-pointer mx-auto"
+          className="relative w-56 h-56 sm:w-64 sm:h-64 mb-6 group cursor-pointer mx-auto"
           onClick={handleCircleClick}
         >
           <div 

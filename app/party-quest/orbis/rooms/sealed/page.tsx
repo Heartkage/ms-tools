@@ -92,14 +92,14 @@ export default function SealedRoom() {
         </div>
 
         {/* Platform Stage */}
-        <div className="absolute w-full bottom-0 flex items-end justify-center space-x-10">
+        <div className="relative w-full bottom-0 flex items-end justify-center space-x-4 sm:space-x-10">
           {/* Left Platform */}
           <div className="relative flex flex-col items-center">
             <div className="mb-4 h-12 w-12 rounded-full bg-blue-100 border-2 border-blue-300 flex items-center justify-center text-xl font-bold shadow-md text-altText-black">
               {platformNumbers[0] !== null ? platformNumbers[0] : ""}
             </div>
             <div className="relative">
-              <div className="h-10 w-32 bg-platform rounded-md shadow-md flex items-center justify-center">
+              <div className="h-10 w-16 sm:w-28 md:w-32 bg-platform rounded-md shadow-md flex items-center justify-center">
                 <span className="text-altText-black font-semibold">{t('orbisPQ.rooms.sealed.left')}</span>
               </div>
               <div className="h-5 w-6 mx-auto"></div>
@@ -112,7 +112,7 @@ export default function SealedRoom() {
               {platformNumbers[1] !== null ? platformNumbers[1] : ""}
             </div>
             <div className="relative">
-              <div className="h-10 w-40 bg-platform rounded-md shadow-md flex items-center justify-center">
+              <div className="h-10 w-20 sm:w-32 md:w-40 bg-platform rounded-md shadow-md flex items-center justify-center">
                 <span className="text-altText-black font-semibold">{t('orbisPQ.rooms.sealed.middle')}</span>
               </div>
               <div className="h-28 w-8 mx-auto"></div>
@@ -125,7 +125,7 @@ export default function SealedRoom() {
               {platformNumbers[2] !== null ? platformNumbers[2] : ""}
             </div>
             <div className="relative">
-              <div className="h-10 w-32 bg-platform rounded-md shadow-md flex items-center justify-center">
+              <div className="h-10 w-16 sm:w-28 md:w-32 bg-platform rounded-md shadow-md flex items-center justify-center">
                 <span className="text-altText-black font-semibold">{t('orbisPQ.rooms.sealed.right')}</span>
               </div>
               <div className="h-5 w-6 mx-auto"></div>
@@ -139,9 +139,9 @@ export default function SealedRoom() {
       </div>
       
       {/* How to get 4 digits & enter code */}
-      <div className="flex gap-6 max-w-3xl mx-auto">
+      <div className="flex flex-wrap-reverse gap-6 max-w-3xl mx-auto">
         {/* Description Section */}
-        <div className="flex-1 p-6 bg-gradient-to-b from-room to-room-bottom rounded-lg border border-blue-200 relative">
+        <div className="basis-full md:basis-[48%] p-6 bg-gradient-to-b from-room to-room-bottom rounded-lg border border-blue-200 relative">
           {/* Background decor */}
           <div className="absolute inset-0 opacity-20 pointer-events-none">
             <div className="absolute top-5 left-[10%] w-8 h-8 rounded-full bg-blue-300"></div>
@@ -165,7 +165,7 @@ export default function SealedRoom() {
         </div>
 
         {/* Code Input Section */}
-        <div className="flex-1 p-6 bg-gradient-to-b from-room to-room-bottom rounded-lg border border-blue-200 relative">
+        <div className="basis-full md:basis-[48%] p-6 bg-gradient-to-b from-room to-room-bottom rounded-lg border border-blue-200 relative">
           {/* Background decor */}
           <div className="absolute inset-0 opacity-20 pointer-events-none">
             <div className="absolute top-5 left-[10%] w-8 h-8 rounded-full bg-blue-300"></div>
@@ -188,7 +188,7 @@ export default function SealedRoom() {
               onChange={handleCodeInputChange}
               placeholder="0000"
               maxLength={4}
-              className={`w-40 px-4 py-2 text-xl font-mono tracking-widest text-center rounded-md border-2 ${showError ? 'border-red-500 bg-red-50' : 'border-blue-300'} focus:border-blue-500 focus:outline-none transition-colors text-gray-900`}
+              className={`w-32 sm:w-40 px-4 py-2 text-xl font-mono tracking-widest text-center rounded-md border-2 ${showError ? 'border-red-500 bg-red-50' : 'border-blue-300'} focus:border-blue-500 focus:outline-none transition-colors text-gray-900`}
             />
             <button 
               onClick={() => {setCodeInput(''); setShowError(false);}}
@@ -204,10 +204,10 @@ export default function SealedRoom() {
           </div>
 
           {/* Result and Copy Button */}
-          <div className="relative z-10 flex items-center space-x-4">
+          <div className="relative z-10 flex flex-col sm:flex-row items-start sm:items-center space-x-0 sm:space-x-4 space-y-4 sm:space-y-0">
             {hasValidAnswer && (
               <>
-                <div className="w-40 h-12 bg-green-100 rounded-md border-2 border-blue-300 flex items-center justify-center text-xl font-mono tracking-widest text-gray-900">
+                <div className="w-32 sm:w-40 h-12 bg-green-100 rounded-md border-2 border-blue-300 flex items-center justify-center text-xl font-mono tracking-widest text-gray-900">
                   {platformNumbers.join('')}
                 </div>
                 

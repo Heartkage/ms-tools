@@ -70,7 +70,7 @@ export default function StorageRoom() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-gray-900 to-gray-800 p-8 -mt-6">
+    <div className="min-h-screen bg-gradient-to-b from-gray-900 to-gray-800">
       {/* Storage Room Container */}
       <div className="relative max-w-2xl mx-auto bg-gradient-to-b from-room to-room-bottom rounded-lg border border-room-border p-4 flex flex-col pb-32 overflow-hidden">
         {/* Background decor - moved to absolute positioning */}
@@ -117,7 +117,7 @@ export default function StorageRoom() {
           {/* Platform Grid */}
           <div className="relative flex justify-center space-x-12">
             {/* Left Column */}
-            <div className="w-1/3 flex flex-col justify-start space-y-8">
+            <div className="w-1/3 flex flex-col justify-start space-y-4 sm:space-y-8">
               {platformNumbers.map((num, index) => {
                 if (index % 2 === 0) {
                   const isSelected = selectedNumber === num;
@@ -131,9 +131,9 @@ export default function StorageRoom() {
                           ? 'bg-interactive text-white shadow-lg scale-110' 
                           : 'text-text-primary'
                       }`}>{num}</div>
-                      <div className={`h-6 w-32 rounded-md shadow-md ${isSelected ? 'bg-interactive' : 'bg-platform'} flex items-center justify-center`}>
+                      <div className={`h-4 w-28 sm:h-6 sm:w-32 rounded-md shadow-md ${isSelected ? 'bg-interactive' : 'bg-platform'} flex items-center justify-center`}>
                         {isSelected && (
-                          <span className="text-xl text-white-900 font-bold">
+                          <span className="text-md sm:text-xl text-white-900 font-bold">
                             {arrow}
                           </span>
                         )}
@@ -146,7 +146,7 @@ export default function StorageRoom() {
             </div>
             
             {/* Right Column */}
-            <div className="w-1/3 flex flex-col justify-start space-y-8 mt-10">
+            <div className="w-1/3 flex flex-col justify-start space-y-4 sm:space-y-8 mt-9 sm:mt-10">
               {platformNumbers.map((num, index) => {
                 if (index % 2 === 1) {
                   const isSelected = selectedNumber === num;
@@ -160,9 +160,9 @@ export default function StorageRoom() {
                           ? 'bg-interactive text-white shadow-lg scale-110' 
                           : 'text-text-primary'
                       }`}>{num}</div>
-                      <div className={`h-6 w-32 rounded-md shadow-md ${isSelected ? 'bg-interactive' : 'bg-platform'} flex items-center justify-center`}>
+                      <div className={`h-4 w-28 sm:h-6 sm:w-32 rounded-md shadow-md ${isSelected ? 'bg-interactive' : 'bg-platform'} flex items-center justify-center`}>
                         {isSelected && (
-                          <span className="text-xl text-white-900 font-bold">
+                          <span className="text-md sm:text-xl text-white-900 font-bold">
                             {arrow}
                           </span>
                         )}

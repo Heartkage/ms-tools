@@ -8,7 +8,7 @@ export default function WalkwayRoom() {
   const { t } = useLanguage();
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-gray-900 to-gray-800 p-8 -mt-6">
+    <div className="min-h-screen bg-gradient-to-b from-gray-900 to-gray-800">
       {/* Walkway Room Container */}
       <div className="relative max-w-2xl mx-auto bg-gradient-to-b from-room to-room-bottom rounded-lg border border-room-border p-4 flex flex-col pb-32 overflow-hidden">
         {/* Background decor */}
@@ -29,7 +29,7 @@ export default function WalkwayRoom() {
         </div>
 
         {/* Platform Grid */}
-        <div className="relative flex justify-center space-x-32 z-10">
+        <div className="relative flex justify-center space-x-8 sm:space-x-32 z-10">
           {/* Left Column */}
           <div className="flex flex-col space-y-8">
             {[5, 3, 7].map((number, index) => (
@@ -37,7 +37,7 @@ export default function WalkwayRoom() {
                 <div className="h-8 w-8 text-text-primary flex items-center justify-center text-lg font-bold mb-2 mx-auto">
                   {number}
                 </div>
-                <div className="h-6 w-48 bg-platform rounded-md shadow-lg"></div>
+                <div className="h-6 w-32 sm:w-48 bg-platform rounded-md shadow-lg"></div>
               </div>
             ))}
           </div>
@@ -49,7 +49,7 @@ export default function WalkwayRoom() {
                 <div className="h-8 w-8 text-text-primary flex items-center justify-center text-lg font-bold mb-2 mx-auto">
                   {number}
                 </div>
-                <div className="h-6 w-48 bg-platform rounded-md shadow-lg"></div>
+                <div className="h-6 w-32 sm:w-48 bg-platform rounded-md shadow-lg"></div>
               </div>
             ))}
           </div>

@@ -195,7 +195,7 @@ export default function OnTheWayUp() {
                   {isRightStart && section.some(row => row.some(state => state === 1)) && (
                     <button
                       onClick={() => handleResetSection(sectionIndex)}
-                      className="relative top-0 px-2 sm:px-3 py-1 bg-gray-600 text-white text-[10px] sm:text-xs md:text-sm rounded hover:bg-gray-700 transition-colors"
+                      className="relative max-w-20 top-0 px-2 sm:px-3 py-1 bg-gray-600 text-white text-[8px] sm:text-xs md:text-sm rounded hover:bg-gray-700 transition-colors"
                     >
                       {t('orbisPQ.rooms.onTheWayUp.resetSection')}
                     </button>
@@ -213,7 +213,7 @@ export default function OnTheWayUp() {
                               <button
                                 key={platformIndex}
                                 onClick={() => handleToggle(sectionIndex, rowIndex, platformIndex)}
-                                className={`w-20 h-6 rounded-lg transition-all duration-300 transform hover:scale-105 relative ${
+                                className={`w-10 sm:w-16 md:w-20 h-6 rounded-lg transition-all duration-300 transform hover:scale-105 relative ${
                                   state === 1 
                                     ? 'bg-yellow-400 shadow-lg ring-2 ring-yellow-500' 
                                     : 'bg-gray-400 hover:bg-gray-500'
@@ -233,7 +233,7 @@ export default function OnTheWayUp() {
                   {!isRightStart && section.some(row => row.some(state => state === 1)) && (
                     <button
                       onClick={() => handleResetSection(sectionIndex)}
-                      className="relative top-0 px-2 sm:px-3 py-1 bg-gray-600 text-white text-[10px] sm:text-xs md:text-sm rounded hover:bg-gray-700 transition-colors"
+                      className="relative max-w-20 top-0 px-2 sm:px-3 py-1 bg-gray-600 text-white text-[8px] sm:text-xs md:text-sm rounded hover:bg-gray-700 transition-colors"
                     >
                       {t('orbisPQ.rooms.onTheWayUp.resetSection')}
                     </button>
@@ -281,10 +281,10 @@ export default function OnTheWayUp() {
 
         {/* Clear All Button */}
         {hasAnySelection && (
-          <div className="flex justify-center">
+          <div className="relative flex flex-col items-center items-center">
             <button
               onClick={() => setShowConfirmDialog(true)}
-              className="z-10 w-1/5 px-4 py-2 bg-red-600 text-white text-xs sm:text-sm rounded hover:bg-red-700 transition-colors"
+              className="z-10 px-4 py-2 bg-red-600 text-white text-xs sm:text-sm rounded hover:bg-red-700 transition-colors"
             >
               {t('orbisPQ.rooms.onTheWayUp.clearAll')}
             </button>
