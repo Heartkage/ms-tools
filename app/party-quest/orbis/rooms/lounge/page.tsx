@@ -110,7 +110,7 @@ export default function LoungeRoom() {
 
         {/* Jump Requirement */}
         <div className="relative z-20 text-center">
-          <p className="text-status-hint font-semibold text-xs sm:text-md">{t('orbisPQ.rooms.lounge.jumpRequirement')}</p>
+          <p className="text-status-hint font-semibold text-xs sm:text-base md:text-lg">{t('orbisPQ.rooms.lounge.jumpRequirement')}</p>
         </div>
 
         {/* Exit */}

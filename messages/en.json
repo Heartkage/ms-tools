@@ -97,7 +97,7 @@
         "timezone": "Timezone",
         "servers": {
           "na": "Artale (NA)",
-          "asia": "Artale (Asia)",
+          "tw": "Artale (TW)",
           "kr": "Artale (KR)"
         },
         "tip": "Tip: Find the correct CD from boxes and give it to NPC. The most left box requires a teleport skill to reach the platform."

@@ -23,7 +23,7 @@ export default function OrbisPQ() {
   }> = {
     2: { 
       name: 'onTheWayUp',
-      shape: 'h-20 sm:h-20 md:h-24 rounded-lg',
+      shape: 'aspect-[3/2] h-16 sm:h-20 md:h-24 rounded-lg',
       bgColor: 'bg-gradient-to-b from-door-light to-door-light-bottom',
       borderColor: 'border-door-light-border',
       textColor: 'text-text-primary'
@@ -123,12 +123,12 @@ export default function OrbisPQ() {
                         <div className="absolute inset-0 bg-gradient-to-b from-white/80 to-blue-100/90 opacity-0 group-hover:opacity-100 backdrop-blur-[1px] transition-all duration-300 ease-in-out transform group-hover:scale-105 flex flex-col items-center justify-center p-1 shadow-inner">
                           <span className="font-semibold text-[8px] sm:text-[10px] text-blue-700 mb-0.5 drop-shadow-sm">{t('common.recommend')}</span>
                           <div className="text-[7px] sm:text-[8px] text-blue-800 font-medium bg-white/40 px-1.5 py-0.5 rounded-md border border-blue-200/50">
-                            <div className="flex items-center gap-0.5 text-[5px] sm:text-[10px]">
+                            <div className="flex items-center gap-0.5 text-[5px] sm:text-[8px]">
                               <span className="font-semibold">→</span> {roomConfig.players} player(s)
                             </div>
                             
                             {roomConfig.jobs && (
-                              <div className="flex items-center gap-0.5 text-[5px] sm:text-[10px]">
+                              <div className="flex items-center gap-0.5 text-[5px] sm:text-[8px]">
                                 <span className="font-semibold">→</span> {roomConfig.jobs.map((job, idx) => (
                                   <React.Fragment key={idx}>
                                     {idx > 0 && <span className="mx-0.5">/</span>}
@@ -139,7 +139,7 @@ export default function OrbisPQ() {
                             )}
                             
                             {roomConfig.types && (
-                              <div className="flex items-center gap-0.5 mt-0.5 text-[5px] sm:text-[10px]">
+                              <div className="flex items-center gap-0.5 mt-0.5 text-[5px] sm:text-[8px]">
                                 <span className="font-semibold">→</span> {roomConfig.types.map((type, idx) => (
                                   <React.Fragment key={idx}>
                                     {idx > 0 && <span className="mx-0.5">/</span>}
@@ -150,7 +150,7 @@ export default function OrbisPQ() {
                             )}
                             
                             {roomConfig.skills && (
-                              <div className="flex items-center gap-0.5 mt-0.5 text-[5px] sm:text-[10px]">
+                              <div className="flex items-center gap-0.5 mt-0.5 text-[5px] sm:text-[8px]">
                                 <span className="font-semibold">→</span> {roomConfig.skills.map((skill, idx) => (
                                   <React.Fragment key={idx}>
                                     {idx > 0 && <span className="mx-0.5">/</span>}

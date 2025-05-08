@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import { useLanguage } from '../../../../../contexts/LanguageContext';
 
 export default function SealedRoom() {
@@ -8,6 +8,7 @@ export default function SealedRoom() {
   const [codeInput, setCodeInput] = useState('');
   const [showError, setShowError] = useState(false);
   const [copySuccess, setCopySuccess] = useState(false);
+  const inputRef = useRef(null);
 
   // Sealed Room answers configuration
   const sealedRoomConfig = {
@@ -54,9 +55,14 @@ export default function SealedRoom() {
     setShowError(false);
     if (/^[0-2]{0,4}$/.test(value)) {
       setCodeInput(value);
-      if (value.length === 4 && !sealedRoomConfig.answers[value]) {
-        setShowError(true);
-        setTimeout(() => setShowError(false), 3000);
+      if (value.length === 4) {
+        // Close keyboard by blurring the input
+        inputRef.current?.blur();
+        // Show error if code is invalid
+        if (!sealedRoomConfig.answers[value]) {
+          setShowError(true);
+          setTimeout(() => setShowError(false), 3000);
+        }
       }
     }
   };
@@ -183,6 +189,7 @@ export default function SealedRoom() {
           {/* Input and Clear Button */}
           <div className="relative z-10 flex items-center space-x-4 mb-4">
             <input
+              ref={inputRef}
               type="text"
               value={codeInput}
               onChange={handleCodeInputChange}

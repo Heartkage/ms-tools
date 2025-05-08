@@ -18,7 +18,7 @@ type Server = {
 
 const SERVERS: Record<string, Server> = {
   NA: { name: 'NA', timezone: 'America/Jamaica', displayName: 'Artale (NA)' },
-  ASIA: { name: 'ASIA', timezone: 'Asia/Shanghai', displayName: 'Artale (Asia)' },
+  ASIA: { name: 'TW', timezone: 'Asia/Taipei', displayName: 'Artale (TW)' },
   KR: { name: 'KR', timezone: 'Asia/Seoul', displayName: 'Artale (KR)' }
 };
 
@@ -84,7 +84,7 @@ export default function Lobby() {
       const serverNextDay = new Date(now);
       if (selectedServer.name === 'NA') {
         serverNextDay.setUTCHours(5, 0, 0, 0); // Set to 00:00 Jamaica Time (05:00 UTC)
-      } else if (selectedServer.name === 'ASIA') {
+      } else if (selectedServer.name === 'TW') {
         serverNextDay.setUTCHours(16, 0, 0, 0); // Set to 00:00 Asia Time (16:00 UTC)
       } else if (selectedServer.name === 'KR') {
         serverNextDay.setUTCHours(15, 0, 0, 0); // Set to 00:00 Korea Time (15:00 UTC)
@@ -226,7 +226,7 @@ export default function Lobby() {
             {currentTime} 
           </div>
           <div className="text-xs sm:text-sm text-altText-secondary">
-            {t('orbisPQ.rooms.lobby.serverTime', { server: selectedServer.displayName })} <span>({selectedServer.name === 'NA' ? 'EST/UTC-5' : selectedServer.name === 'ASIA' ? 'UTC+8' : 'KST/UTC+9'})</span>
+            {t('orbisPQ.rooms.lobby.serverTime', { server: selectedServer.displayName })} <span>({selectedServer.name === 'NA' ? 'EST/UTC-5' : selectedServer.name === 'TW' ? 'UTC+8' : 'KST/UTC+9'})</span>
           </div>
         </div>
 
