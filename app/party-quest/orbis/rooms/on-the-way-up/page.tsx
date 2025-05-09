@@ -213,13 +213,13 @@ export default function OnTheWayUp() {
                               <button
                                 key={platformIndex}
                                 onClick={() => handleToggle(sectionIndex, rowIndex, platformIndex)}
-                                className={`w-10 sm:w-16 md:w-20 h-6 rounded-lg transition-all duration-300 transform hover:scale-105 relative ${
+                                className={`w-10 sm:w-16 md:w-20 h-6 rounded-lg transition-colors duration-300 ${
                                   state === 1 
-                                    ? 'bg-yellow-400 shadow-lg ring-2 ring-yellow-500' 
-                                    : 'bg-gray-400 hover:bg-gray-500'
+                                    ? 'bg-yellow-400' 
+                                    : 'bg-gray-400'
                                 }`}
                               >
-                                <span className="absolute inset-0 flex items-center justify-center text-xs font-bold text-gray-700">
+                                <span className="flex items-center justify-center text-xs font-bold text-gray-700">
                                   {platformNumber}
                                 </span>
                               </button>

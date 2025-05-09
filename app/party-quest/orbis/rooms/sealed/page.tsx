@@ -61,7 +61,10 @@ export default function SealedRoom() {
         // Show error if code is invalid
         if (!sealedRoomConfig.answers[value]) {
           setShowError(true);
-          setTimeout(() => setShowError(false), 3000);
+          setTimeout(() => {
+            setShowError(false);
+            setCodeInput('');
+          }, 3000);
         }
       }
     }
