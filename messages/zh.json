@@ -69,7 +69,7 @@
         "goback": "← 回前一張地圖"
       },
       "sealed": {
-        "title": "封印之間 (400)",
+        "title": "封印之間\n(400)",
         "solvePuzzle": "解謎題",
         "howToGetDigits": "如何獲得 4 位數字",
         "step1": "1. 嘗試沒有人站在任何平台上，點擊 NPC 獲得第 1 位數字。",
@@ -79,7 +79,7 @@
         "enterCode": "輸入代碼 (0-2):",
         "clear": "清除",
         "enterCodeHint": "輸入 4 位數字，請使用 0-2 之間的數字",
-        "invalidCode": "無效的代碼！這個組合在謎題中不存在。",
+        "invalidCode": "無效的代碼！不存在這個組合。",
         "copyAnswer": "複製答案",
         "requirements": "通關條件：",
         "requirement1": "只需要 1 名玩家解謎",
@@ -89,7 +89,7 @@
         "right": "右側"
       },
       "lobby": {
-        "title": "休息室 (CD)",
+        "title": "休息室\n(CD)",
         "collectCD": "收集 0/1 {color}唱片",
         "serverTime": "當前 {server} 伺服器時間",
         "localTime": "現在時間",
@@ -121,7 +121,7 @@
         "copySequence": "複製順序"
       },
       "lounge": {
-        "title": "客房 (下水道)",
+        "title": "客房\n(下水道)",
         "collectPieces": "收集 0/10 個碎片",
         "collect40Pieces": "收集 0/40 個碎片",
         "room303": "房間 303",

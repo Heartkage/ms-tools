@@ -2,9 +2,7 @@ import React from 'react'
 import Providers from '../components/Providers'
 import './globals.css'
 import type { Metadata } from 'next'
-import { Inter } from "next/font/google"
-
-const inter = Inter({ subsets: ["latin"] })
+import { notoSansTC } from './fonts'
 
 export const dynamic = 'force-static'
 
@@ -19,8 +17,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={inter.className}>
+    <html lang="en" className={notoSansTC.variable}>
+      <body className={`${notoSansTC.className} antialiased`}>
         <Providers>
           {children}
         </Providers>

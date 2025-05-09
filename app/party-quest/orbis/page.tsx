@@ -115,7 +115,7 @@ export default function OrbisPQ() {
                           hover:brightness-105 hover:shadow-md active:brightness-95 cursor-pointer transition-all duration-200
                         `}
                       >
-                        <span className={`${cell.textColor} font-medium font-semibold min-w-[3rem] sm:min-w-[4rem] text-center z-10 opacity-100 group-hover:opacity-0 transition-opacity duration-200 text-[10px] sm:text-xs md:text-sm`}>
+                        <span className={`${cell.textColor} whitespace-pre-line font-medium font-semibold min-w-[3rem] sm:min-w-[4rem] text-center z-10 opacity-100 group-hover:opacity-0 transition-opacity duration-200 text-[12px] sm:text-base md:text-lg`}>
                           {t(roomConfig.nameKey)}
                         </span>
                         
