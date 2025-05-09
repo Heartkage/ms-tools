@@ -9,9 +9,6 @@ import Image from 'next/image';
 
 export default function OrbisPQ() {
   const { t } = useLanguage();
-  const statueImagePath = process.env.NODE_ENV === 'production' 
-    ? '/ms-tools/images/party-quest/orbis/statue.jpg'
-    : '/images/party-quest/orbis/statue.jpg';
 
   // Map cell indices to room configuration
   const cellConfig: Record<number, { 
@@ -170,7 +167,7 @@ export default function OrbisPQ() {
                         `}
                       >
                         <Image 
-                          src={statueImagePath}
+                          src={"/images/party-quest/orbis/statue.jpg"}
                           alt="Garden Room"
                           fill
                           className="object-cover"
