@@ -61,9 +61,11 @@ export default function SealedRoom() {
         // Show error if code is invalid
         if (!sealedRoomConfig.answers[value]) {
           setShowError(true);
+          setCodeInput('');
+          inputRef.current?.focus();
           setTimeout(() => {
             setShowError(false);
-            setCodeInput('');
+            // Re-focus input after showing error
           }, 3000);
         }
       }
@@ -80,9 +82,9 @@ export default function SealedRoom() {
   const hasValidAnswer = platformNumbers[0] !== null;
 
   return (
-    <div className="space-y-8">
+    <div className="space-y-6">
       {/* Sealed Room Platform Container */}
-      <div className="relative h-[300px] max-w-3xl mx-auto bg-gradient-to-b from-room to-room-bottom rounded-lg border border-blue-200 p-4 flex items-end justify-center overflow-hidden">
+      <div className="relative max-w-3xl mx-auto bg-gradient-to-b from-room to-room-bottom rounded-lg border border-blue-200 p-4 flex justify-center overflow-hidden">
         {/* Background decor */}
         <div className="absolute inset-0 opacity-20 pointer-events-none">
           <div className="absolute top-5 left-[10%] w-8 h-8 rounded-full bg-blue-300"></div>
@@ -95,13 +97,13 @@ export default function SealedRoom() {
         <div className="absolute inset-0 bg-gradient-to-b from-decor-light to-room pointer-events-none"></div>
         
         {/* Title */}
-        <div className="absolute flex top-4 flex-col items-top justify-top">
-          <div className="text-text-primary font-semibold text-center">{t('orbisPQ.rooms.sealed.title')}</div>
-          <h3 className="text-text-secondary text-center text-xs font-semibold mb-2">{t('orbisPQ.rooms.sealed.solvePuzzle')}</h3>
+        <div className="absolute flex top-4 flex-col font-semibold items-top">
+          <div className="text-2xl text-text-primary text-center">{t('orbisPQ.rooms.sealed.title')}</div>
+          <h3 className="text-text-secondary text-center text-xs sm:text-sm mt-1 mb-4">{t('orbisPQ.rooms.sealed.solvePuzzle')}</h3>
         </div>
 
         {/* Platform Stage */}
-        <div className="relative w-full bottom-0 flex items-end justify-center space-x-4 sm:space-x-10">
+        <div className="relative min-h-[300px] w-full flex items-end justify-center space-x-4 sm:space-x-10">
           {/* Left Platform */}
           <div className="relative flex flex-col items-center">
             <div className="mb-4 h-12 w-12 rounded-full bg-blue-100 border-2 border-blue-300 flex items-center justify-center text-xl font-bold shadow-md text-altText-black">
@@ -124,7 +126,7 @@ export default function SealedRoom() {
               <div className="h-10 w-20 sm:w-32 md:w-40 bg-platform rounded-md shadow-md flex items-center justify-center">
                 <span className="text-altText-black font-semibold">{t('orbisPQ.rooms.sealed.middle')}</span>
               </div>
-              <div className="h-28 w-8 mx-auto"></div>
+              <div className="h-24 w-8 mx-auto"></div>
             </div>
           </div>
           
@@ -147,10 +149,10 @@ export default function SealedRoom() {
         
       </div>
       
-      {/* How to get 4 digits & enter code */}
-      <div className="flex flex-wrap-reverse gap-6 max-w-3xl mx-auto">
+      {/* How to get 4 digits & Decoder */}
+      <div className="flex flex-wrap-reverse justify-between gap-6 md:gap-0 max-w-3xl mx-auto">
         {/* Description Section */}
-        <div className="basis-full md:basis-[48%] p-6 bg-gradient-to-b from-room to-room-bottom rounded-lg border border-blue-200 relative">
+        <div className="basis-full md:basis-[48.5%] p-4 bg-gradient-to-b from-room to-room-bottom rounded-lg border border-blue-200 relative">
           {/* Background decor */}
           <div className="absolute inset-0 opacity-20 pointer-events-none">
             <div className="absolute top-5 left-[10%] w-8 h-8 rounded-full bg-blue-300"></div>
@@ -174,7 +176,7 @@ export default function SealedRoom() {
         </div>
 
         {/* Code Input Section */}
-        <div className="basis-full md:basis-[48%] p-6 bg-gradient-to-b from-room to-room-bottom rounded-lg border border-blue-200 relative">
+        <div className="basis-full md:basis-[48.5%] p-4 bg-gradient-to-b from-room to-room-bottom rounded-lg border border-blue-200 relative">
           {/* Background decor */}
           <div className="absolute inset-0 opacity-20 pointer-events-none">
             <div className="absolute top-5 left-[10%] w-8 h-8 rounded-full bg-blue-300"></div>
@@ -257,8 +259,8 @@ export default function SealedRoom() {
         </div>
       </div>
       
-      {/* Info Section */}
-      <div className="relative max-w-3xl mx-auto bg-gradient-to-b from-room to-room-bottom rounded-lg border p-6 border-room-border flex flex-col">
+      {/* Objective Section */}
+      <div className="relative max-w-3xl mx-auto bg-gradient-to-b from-room to-room-bottom rounded-lg border p-4 border-room-border flex flex-col">
         {/* Background decor */}
         <div className="absolute inset-0 opacity-20 pointer-events-none">
           <div className="absolute top-5 left-[10%] w-8 h-8 rounded-full bg-decor"></div>
@@ -271,14 +273,34 @@ export default function SealedRoom() {
         <div className="absolute inset-0 rounded-lg bg-gradient-to-b from-decor-light to-room pointer-events-none"></div>
 
         <div className="relative z-10">
-          <div className="text-text-primary font-semibold mb-2">{t('common.recommend')}</div>
+          <div className="text-text-primary font-semibold mb-2">{t('common.objective')}</div>
           <ul className="list-disc list-inside space-y-1 font-semibold text-xs text-text-secondary">
             <li>{t('orbisPQ.rooms.sealed.requirement1')}</li>
             <li>{t('orbisPQ.rooms.sealed.requirement2')}</li>
+            <li>{t('orbisPQ.rooms.sealed.requirement3')}</li>
           </ul>
         </div>
       </div>
 
+      {/* Tips Container */}
+      <div className="relative max-w-3xl mx-auto bg-gradient-to-b from-room to-room-bottom rounded-lg border border-room-border p-4 overflow-hidden">
+        {/* Background decor */}
+        <div className="absolute inset-0 opacity-20 pointer-events-none">
+          <div className="absolute top-5 left-[10%] w-8 h-8 rounded-full bg-decor"></div>
+          <div className="absolute top-20 right-[15%] w-6 h-6 rounded-full bg-decor"></div>
+          <div className="absolute bottom-40 left-[25%] w-4 h-4 rounded-full bg-decor"></div>
+          <div className="absolute bottom-30 right-[35%] w-5 h-5 rounded-full bg-decor"></div>
+        </div>
+        
+        {/* Skybox */}
+        <div className="absolute inset-0 bg-gradient-to-b from-decor-light to-room pointer-events-none"></div>
+
+        <div className="relative z-10">
+          <p className="text-status-warning font-semibold text-xs">
+            {t('orbisPQ.rooms.sealed.tip')}
+          </p>
+        </div>
+      </div>
     </div>
   );
 }

@@ -132,7 +132,7 @@ export default function Lobby() {
 
   const handleCircleClick = () => {
     const colorName = t(currentDayInfo.colorNameKey);
-    const textToCopy = `Lobby: ${colorName}`;
+    const textToCopy = `${t('orbisPQ.rooms.lobby.title')}: ${colorName}`;
     navigator.clipboard.writeText(textToCopy)
       .then(() => {
         setCopySuccess(true);
@@ -144,12 +144,12 @@ export default function Lobby() {
   };
 
   return (
-    <div className="min-h-screen flex flex-col items-center pb-8 bg-gradient-to-b from-gray-900 to-gray-800">
+    <div className="flex flex-col items-center pb-4 bg-gradient-to-b from-gray-900 to-gray-800">
       {/* Main Container */}
       <div className="relative max-w-4xl w-full mx-auto px-4">
         {/* Title */}
-        <div className="mt-8 sm:mt-0 mb-8 text-center">
-          <div className="text-altText-primary text-2xl sm:text-3xl md:text-4xl font-semibold mb-1">
+        <div className="mt-8 sm:mt-4 mb-8 text-center">
+          <div className="text-altText-primary text-2xl sm:text-3xl md:text-4xl font-semibold mb-2">
             {t('orbisPQ.rooms.lobby.title')}
           </div>
           <div className="text-altText-secondary text-xs sm:text-sm font-semibold">
@@ -212,6 +212,7 @@ export default function Lobby() {
           <div className="absolute inset-0 flex flex-col items-center justify-center">
             <span className="text-2xl sm:text-3xl font-bold text-altText-primary">{t(`orbisPQ.weekdays.${currentDay.toLowerCase()}`)}</span>
             <span className="text-lg sm:text-xl text-altText-secondary mt-2">{t(`orbisPQ.dayTypes.${currentDayInfo.type}`)}</span>
+            <span className="text-xs text-altText-tertiary mt-1">{t('orbisPQ.rooms.lobby.clickTip')}</span>
             {copySuccess && (
               <div className="absolute bottom-4 text-status-success text-xs sm:text-sm font-semibold bg-black/50 px-3 py-1 rounded-full">
                 {t('orbisPQ.rooms.common.copied')}
@@ -308,7 +309,7 @@ export default function Lobby() {
           <div className="absolute inset-0 bg-gradient-to-b from-decor-light to-room pointer-events-none"></div>
 
           <div className="relative z-10">
-            <p className="text-status-warning font-semibold text-sm">
+            <p className="text-status-warning font-semibold text-xs">
               {t('orbisPQ.rooms.lobby.tip')}
             </p>
           </div>

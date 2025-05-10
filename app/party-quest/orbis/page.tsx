@@ -77,7 +77,7 @@ export default function OrbisPQ() {
   };
 
   return (
-    <main className="min-h-screen p-8 relative overflow-hidden">
+    <main className="min-h-screen p-4 sm:p-8 relative overflow-hidden">
       <div className="max-w-4xl mx-auto">
         
         <div className="flex justify-between items-center mb-4">

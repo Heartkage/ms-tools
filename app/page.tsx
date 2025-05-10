@@ -14,7 +14,7 @@ export default function Home() {
   }, []);
   
   return (
-    <main className="min-h-screen p-8">
+    <main className="min-h-screen p-4 sm:p-8">
       <div className="max-w-4xl mx-auto">
         <div className="flex justify-end mb-4">
           <LanguageSwitcher />

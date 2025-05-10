@@ -26,14 +26,14 @@ export const roomConfig: Record<string, RoomConfig> = {
     nameKey: 'orbisPQ.rooms.lounge.title', 
     page: 'lounge',
     players: 2,
-    types: ['jobs.types.aoe', 'jobs.types.weaponAttack', 'jobs.types.magicAttack'],
+    types: ['jobs.types.weaponAttack', 'jobs.types.magicAttack'],
     skills: ['jobs.skills.haste']
   },
   'storage': { 
     nameKey: 'orbisPQ.rooms.storage.title', 
     page: 'storage',
     players: 1,
-    jobs: ['jobs.classes.thief', 'jobs.classes.gunslinger'],
+    jobs: ['jobs.classes.thief'],
     skills: ['jobs.skills.haste']
   },
   'sealed': { 

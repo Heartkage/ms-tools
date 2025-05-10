@@ -126,9 +126,9 @@ export default function GardenRoom() {
   );
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-gray-900 to-gray-800 pb-8">
+    <div className="bg-gradient-to-b from-gray-900 to-gray-800 pb-8 space-y-6">
       {/* Main Container */}
-      <div className="relative max-w-2xl mx-auto bg-gradient-to-b from-room to-room-bottom rounded-lg border border-room-border p-4 flex flex-col space-y-8 pb-32 sm:pb-48 overflow-hidden">
+      <div className="relative max-w-2xl mx-auto bg-gradient-to-b from-room to-room-bottom rounded-lg border border-room-border pt-4 px-4 flex flex-col space-y-8 overflow-hidden">
         {/* Skybox */}
         <div className="absolute inset-0 bg-gradient-to-b from-decor-light to-room pointer-events-none rounded-lg"></div>
 
@@ -234,14 +234,14 @@ export default function GardenRoom() {
         {/* Exit */}
         <Link 
           href="/party-quest/orbis"
-          className="absolute bottom-0 left-1/2 -translate-x-1/2 w-24 h-24 bg-gradient-to-b from-door-exit to-door-exit-hover rounded-t-md flex items-center justify-center hover:from-door-exit-hover hover:to-door-exit-active transition-all duration-300 cursor-pointer shadow-lg hover:shadow-xl transform hover:scale-105 z-10"
+          className="relative bottom-0 left-1/2 -translate-x-1/2 w-24 h-24 bg-gradient-to-b from-door-exit to-door-exit-hover rounded-t-md flex flex-col items-center justify-center hover:from-door-exit-hover hover:to-door-exit-active transition-all duration-300 cursor-pointer shadow-lg hover:shadow-xl transform hover:scale-105 z-10"
         >
           <span className="text-altText-primary font-semibold">{t('orbisPQ.rooms.common.exit')}</span>
         </Link>
       </div>
 
       {/* Info Container */}
-      <div className="relative max-w-2xl mx-auto mt-8 bg-gradient-to-b from-room to-room-bottom rounded-lg border border-room-border p-4 overflow-hidden">
+      <div className="relative max-w-2xl mx-auto bg-gradient-to-b from-room to-room-bottom rounded-lg border border-room-border p-4 overflow-hidden">
         {/* Background decor */}
         <div className="absolute inset-0 opacity-20 pointer-events-none">
           <div className="absolute top-5 left-[10%] w-8 h-8 rounded-full bg-decor"></div>
@@ -269,6 +269,52 @@ export default function GardenRoom() {
           </ul>
         </div>
       </div>
+
+      {/* Objective Section */}
+      <div className="relative max-w-2xl mx-auto bg-gradient-to-b from-room to-room-bottom rounded-lg border p-4 border-room-border flex flex-col">
+        {/* Background decor */}
+        <div className="absolute inset-0 opacity-20 pointer-events-none">
+          <div className="absolute top-5 left-[10%] w-8 h-8 rounded-full bg-decor"></div>
+          <div className="absolute top-20 right-[15%] w-6 h-6 rounded-full bg-decor"></div>
+          <div className="absolute bottom-40 left-[25%] w-4 h-4 rounded-full bg-decor"></div>
+          <div className="absolute bottom-30 right-[35%] w-5 h-5 rounded-full bg-decor"></div>
+        </div>
+        
+        {/* Skybox */}
+        <div className="absolute inset-0 rounded-lg bg-gradient-to-b from-decor-light to-room pointer-events-none"></div>
+
+        <div className="relative z-10">
+          <div className="text-text-primary font-semibold mb-2">{t('common.objective')}</div>
+          <ul className="list-disc list-inside space-y-1 font-semibold text-xs text-text-secondary">
+            <li>{t('orbisPQ.rooms.garden.objective1')}</li>
+            <li>{t('orbisPQ.rooms.garden.objective2')}</li>
+            <li>{t('orbisPQ.rooms.garden.objective3')}</li>
+            <li>{t('orbisPQ.rooms.garden.objective4')}</li>
+            <li>{t('orbisPQ.rooms.garden.objective5')}</li>
+          </ul>
+        </div>
+      </div>
+
+      {/* Tips Container */}
+      <div className="relative max-w-2xl mx-auto bg-gradient-to-b from-room to-room-bottom rounded-lg border border-room-border p-4 overflow-hidden">
+        {/* Background decor */}
+        <div className="absolute inset-0 opacity-20 pointer-events-none">
+          <div className="absolute top-5 left-[10%] w-8 h-8 rounded-full bg-decor"></div>
+          <div className="absolute top-20 right-[15%] w-6 h-6 rounded-full bg-decor"></div>
+          <div className="absolute bottom-40 left-[25%] w-4 h-4 rounded-full bg-decor"></div>
+          <div className="absolute bottom-30 right-[35%] w-5 h-5 rounded-full bg-decor"></div>
+        </div>
+        
+        {/* Skybox */}
+        <div className="absolute inset-0 bg-gradient-to-b from-decor-light to-room pointer-events-none"></div>
+
+        <div className="relative z-10">
+          <p className="text-status-warning font-semibold text-xs">
+            {t('orbisPQ.rooms.garden.tip')}
+          </p>
+        </div>
+      </div>
+
     </div>
   );
 } 

@@ -29,6 +29,7 @@
   },
   "common": {
     "recommend": "建議配置",
+    "objective": "通關方法",
     "players": "人數",
     "jobs": "職業",
     "types": "類型",
@@ -65,18 +66,19 @@
     "rooms": {
       "common": {
         "exit": "出口",
+        "transferWarning":"記得轉移隊長",
         "copied": "已複製！",
         "goback": "← 回前一張地圖"
       },
       "sealed": {
         "title": "封印之間\n(400)",
-        "solvePuzzle": "解謎題",
+        "solvePuzzle": "目標：根據NPC的回答填入下方的解碼器，再讓4位玩家站在對應的平台上通關",
         "howToGetDigits": "如何獲得 4 位數字",
         "step1": "1. 嘗試沒有人站在任何平台上，點擊 NPC 獲得第 1 位數字。",
         "step2": "2. 嘗試 1 人站在左側(←)平台上，點擊 NPC 獲得第 2 位數字。",
         "step3": "3. 嘗試 1 人站在中間(↑)平台上，點擊 NPC 獲得第 3 位數字。",
         "step4": "4. 嘗試 1 人站在右側(→)平台上，點擊 NPC 獲得第 4 位數字。",
-        "enterCode": "輸入代碼 (0-2):",
+        "enterCode": "輸入4次NPC的回答 (0-2):",
         "clear": "清除",
         "enterCodeHint": "輸入 4 位數字，請使用 0-2 之間的數字",
         "invalidCode": "無效的代碼！不存在這個組合。",
@@ -84,14 +86,17 @@
         "requirements": "通關條件：",
         "requirement1": "只需要 1 名玩家解謎",
         "requirement2": "需要共 4 名玩家依照答案以相同人數站在平台上通關",
+        "requirement3": "記得到最上面打箱子取得女神像碎片",
         "left": "左側",
         "middle": "中間",
-        "right": "右側"
+        "right": "右側",
+        "tip": "注意：如果讓NPC回答超過 7 次，全員將被傳送出房間，答案會重新產生"
       },
       "lobby": {
         "title": "休息室\n(CD)",
-        "collectCD": "收集 0/1 {color}唱片",
+        "collectCD": "目標：找到 0/1 {color}唱片、點擊唱片機、和NPC對話取得女神像碎片",
         "serverTime": "當前 {server} 伺服器時間",
+        "clickTip": "(複製到剪貼簿)",
         "localTime": "現在時間",
         "nextDayChange": "下次換日時間",
         "timezone": "時區",
@@ -100,11 +105,11 @@
           "tw": "Artale (TW)",
           "kr": "Artale (KR)"
         },
-        "tip": "通關條件：在休息室內的箱子找到正確的CD。此關需要擅長跳忍耐和有位移技能的職業"
+        "tip": "注意：此關一定要有位移技能的職業，會跳忍耐更好"
       },
       "garden": {
         "title": "花園 (王房)",
-        "huntBoss": "狩獵 0/1 Boss",
+        "huntBoss": "目標：狩獵 0/1 Boss",
         "bossPot": "王盆",
         "copy": "王盆位置",
         "positions": {
@@ -113,17 +118,24 @@
           "top": "上",
           "middle": "中",
           "bottom": "下"
-        }
+        },
+        "objective1": "清空王房內的怪物後會掉落種子",
+        "objective2": "將種子種在花盆裡並找出「黑色花」和「無法種下種子」的花盆",
+        "objective3": "擊殺黑色花朵後，王會出現",
+        "objective4": "擊殺王後會掉落「更奇怪的種子」，請將這種子種在剛剛無法長出花朵的「王盆」裡",
+        "objective5": "取得生命草後，再回到中央塔放置在女神像中間，組隊任務就通關了",
+        "tip": "注意：種下種子後，如果花盆裡長出的是粉色花，請勿將其打死。"
       },
       "storage": {
         "title": "倉庫",
-        "huntMobs": "按照以下順序擊殺 0 / 15 隻獨角獅",
-        "copySequence": "複製順序"
+        "huntMobs": "目標：按照以下順序擊殺 0 / 15 隻獨角獅",
+        "copySequence": "複製順序",
+        "tip": "注意：最後一隻獨角獅會掉落女神像碎片"
       },
       "lounge": {
         "title": "客房\n(下水道)",
-        "collectPieces": "收集 0/10 個碎片",
-        "collect40Pieces": "收集 0/40 個碎片",
+        "collect40Pieces": "目標：收集共 0/40 個碎片、和NPC對話取得女神像碎片",
+        "collectPieces": "目標：到白色格子上收集共 0/10 個碎片",
         "room303": "房間 303",
         "room302": "房間 302",
         "room301": "房間 301",
@@ -136,26 +148,28 @@
       },
       "walkway": {
         "title": "散步路",
-        "collectPieces": "收集 0/30 個碎片",
+        "collectPieces": "目標：收集 0/30 個碎片、和NPC對話取得女神像碎片",
         "tip": "注意：清空怪物後跳下平台前，請確認已收集該平台上的所有碎片。少撿一個碎片整個組隊任務要重來。",
         "jobRequirement": "需要範圍攻擊職業"
       },
       "onTheWayUp": {
         "title": "上層 (向上)",
-        "collectPieces": "收集 0/10 個碎片",
+        "jumpToHighest": "目標：跳到最高平台",
         "reset": "重置",
-        "jumpToHighest": "跳到最高平台",
-        "tip": "當抵達頂部設定槓桿時，答案一定是：2個下、3個上。總共只有 10 種可能的答案。",
+        "tip": "當抵達頂部敲控制桿時，答案一定是：2個下、3個上。總共只有 10 種可能的答案。",
         "resetSection": "重置區域",
         "clearAll": "清除全部",
         "confirmClear": "確認清除全部",
         "confirmMessage": "確定要清除所有選擇嗎？",
         "cancel": "取消",
-        "copyAnswer": "複製答案"
+        "copyAnswer": "複製答案",
+        "requirement1": "當其中一人跳到最上層時，另一位可以回到最下面。",
+        "requirement2": "最上層的玩家會設定控制桿，最下面玩家要一直點NPC確認答案。",
+        "requirement3": "通關後，記得打箱子取得女神像碎片"
       },
       "entrance": {
         "title": "大廳",
-        "collectClouds": "收集 0/20 雲朵",
+        "collectClouds": "目標：收集 0/20 雲朵",
         "tip": "注意：通關時不要爬繩索。"
       }
     }

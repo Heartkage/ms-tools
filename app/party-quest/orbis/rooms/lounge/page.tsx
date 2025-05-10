@@ -120,6 +120,7 @@ export default function LoungeRoom() {
             className="relative w-24 h-32 bg-gradient-to-b from-door-exit to-door-exit-hover rounded-t-md flex flex-col items-center justify-center hover:from-door-exit-hover hover:to-door-exit-active transition-all duration-300 cursor-pointer shadow-lg hover:shadow-xl mx-auto transform hover:scale-105"
           >
             <span className="text-altText-primary font-semibold">{t('orbisPQ.rooms.common.exit')}</span>
+            <span className="text-altText-secondary text-xxs text-center font-semibold mt-1">{t('orbisPQ.rooms.common.transferWarning')}</span>
           </Link>
           <div className="relative z-30 h-1 w-2/3 bg-room-floor mx-auto rounded-full"></div>
         </div>
@@ -181,7 +182,7 @@ export default function LoungeRoom() {
         <div className="absolute inset-0 bg-gradient-to-b from-decor-light to-room pointer-events-none"></div>
 
         <div className="relative z-10">
-          <p className="text-status-warning text-xs">
+          <p className="text-status-warning font-semibold text-xs">
             {t('orbisPQ.rooms.lounge.tip')}
           </p>
         </div>

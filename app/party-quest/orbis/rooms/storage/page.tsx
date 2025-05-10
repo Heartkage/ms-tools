@@ -95,7 +95,9 @@ export default function StorageRoom() {
           {/* Copy Button */}
           <button
             onClick={copySequence}
-            className="ml-auto flex items-center space-x-2 px-4 py-2 bg-interactive rounded-lg hover:bg-interactive-hover transition-colors duration-200"
+            className={`ml-auto flex items-center space-x-2 px-4 py-2 rounded-lg transition-colors duration-200 ${
+              copySuccess ? 'bg-green-500' : 'bg-blue-600 hover:bg-blue-700'
+            }`}
           >
             {copySuccess ? (
               <>
@@ -214,6 +216,27 @@ export default function StorageRoom() {
           </ul>
         </div>
       </div>
+
+      {/* Tips Container */}
+      <div className="relative max-w-2xl mx-auto mt-8 bg-gradient-to-b from-room to-room-bottom rounded-lg border border-room-border p-4 overflow-hidden">
+        {/* Background decor */}
+        <div className="absolute inset-0 opacity-20 pointer-events-none">
+          <div className="absolute top-5 left-[10%] w-8 h-8 rounded-full bg-decor"></div>
+          <div className="absolute top-20 right-[15%] w-6 h-6 rounded-full bg-decor"></div>
+          <div className="absolute bottom-40 left-[25%] w-4 h-4 rounded-full bg-decor"></div>
+          <div className="absolute bottom-30 right-[35%] w-5 h-5 rounded-full bg-decor"></div>
+        </div>
+        
+        {/* Skybox */}
+        <div className="absolute inset-0 bg-gradient-to-b from-decor-light to-room pointer-events-none"></div>
+
+        <div className="relative z-10">
+          <p className="text-status-warning font-semibold text-xs">
+            {t('orbisPQ.rooms.storage.tip')}
+          </p>
+        </div>
+      </div>
+
     </div>
   );
 } 

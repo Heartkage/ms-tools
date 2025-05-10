@@ -158,7 +158,7 @@ export default function OnTheWayUp() {
   );
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen space-y-8">
       {/* Main Container */}
       <div className="relative max-w-2xl mx-auto bg-gradient-to-b from-room to-room-bottom rounded-lg border border-room-border p-4 flex flex-col space-y-8 pb-0 overflow-hidden">
         {/* Skybox */}
@@ -173,9 +173,9 @@ export default function OnTheWayUp() {
         </div>
 
         {/* Title */}
-        <div className="relative z-10 text-center">
-          <h1 className="text-xl sm:text-2xl md:text-3xl font-bold text-text-primary">{t('orbisPQ.rooms.onTheWayUp.title')}</h1>
-          <h3 className="text-xs sm:text-sm md:text-base text-text-secondary font-semibold">{t('orbisPQ.rooms.onTheWayUp.jumpToHighest')}</h3>
+        <div className="relative z-10 text-center font-semibold">
+          <h1 className="text-2xl text-text-primary">{t('orbisPQ.rooms.onTheWayUp.title')}</h1>
+          <h3 className="text-sm text-text-secondary mt-1">{t('orbisPQ.rooms.onTheWayUp.jumpToHighest')}</h3>
         </div>
 
         {/* Hint Section */}
@@ -297,6 +297,7 @@ export default function OnTheWayUp() {
           className="relative z-20 w-24 h-28 bg-gradient-to-b from-door-exit to-door-exit-hover rounded-t-md flex flex-col items-center justify-center hover:from-door-exit-hover hover:to-door-exit-active transition-all duration-300 cursor-pointer shadow-lg hover:shadow-xl mx-auto transform hover:scale-105"
         >
           <span className="text-altText-primary font-semibold">{t('orbisPQ.rooms.common.exit')}</span>
+          <span className="text-altText-secondary text-xxs text-center font-semibold mt-1">{t('orbisPQ.rooms.common.transferWarning')}</span>
         </Link>
       </div>
 
@@ -325,7 +326,7 @@ export default function OnTheWayUp() {
       )}
 
       {/* Info Container */}
-      <div className="relative max-w-2xl mx-auto mt-8 bg-gradient-to-b from-room to-room-bottom rounded-lg border border-room-border p-4 overflow-hidden">
+      <div className="relative max-w-2xl mx-auto bg-gradient-to-b from-room to-room-bottom rounded-lg border border-room-border p-4 overflow-hidden">
         {/* Background decor */}
         <div className="absolute inset-0 opacity-20 pointer-events-none">
           <div className="absolute top-5 left-[10%] w-8 h-8 rounded-full bg-decor"></div>
@@ -350,6 +351,29 @@ export default function OnTheWayUp() {
             {roomConfig["onTheWayUp"].skills && (
               <li>{t('common.skills')}: {roomConfig["onTheWayUp"].skills.map(skill => t(skill)).join(', ')}</li>
             )}
+          </ul>
+        </div>
+      </div>
+
+      {/* Objective Section */}
+      <div className="relative max-w-2xl mx-auto bg-gradient-to-b from-room to-room-bottom rounded-lg border p-4 border-room-border flex flex-col">
+        {/* Background decor */}
+        <div className="absolute inset-0 opacity-20 pointer-events-none">
+          <div className="absolute top-5 left-[10%] w-8 h-8 rounded-full bg-decor"></div>
+          <div className="absolute top-20 right-[15%] w-6 h-6 rounded-full bg-decor"></div>
+          <div className="absolute bottom-40 left-[25%] w-4 h-4 rounded-full bg-decor"></div>
+          <div className="absolute bottom-30 right-[35%] w-5 h-5 rounded-full bg-decor"></div>
+        </div>
+        
+        {/* Skybox */}
+        <div className="absolute inset-0 rounded-lg bg-gradient-to-b from-decor-light to-room pointer-events-none"></div>
+
+        <div className="relative z-10">
+          <div className="text-text-primary font-semibold mb-2">{t('common.objective')}</div>
+          <ul className="list-disc list-inside space-y-1 font-semibold text-xs text-text-secondary">
+            <li>{t('orbisPQ.rooms.onTheWayUp.requirement1')}</li>
+            <li>{t('orbisPQ.rooms.onTheWayUp.requirement2')}</li>
+            <li>{t('orbisPQ.rooms.onTheWayUp.requirement3')}</li>
           </ul>
         </div>
       </div>

@@ -8,9 +8,9 @@ export default function WalkwayRoom() {
   const { t } = useLanguage();
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-gray-900 to-gray-800">
+    <div className="bg-gradient-to-b from-gray-900 to-gray-800">
       {/* Walkway Room Container */}
-      <div className="relative max-w-2xl mx-auto bg-gradient-to-b from-room to-room-bottom rounded-lg border border-room-border p-4 flex flex-col pb-32 overflow-hidden">
+      <div className="relative max-w-2xl mx-auto bg-gradient-to-b from-room to-room-bottom rounded-lg border border-room-border pt-4 px-4 flex flex-col overflow-hidden">
         {/* Background decor */}
         <div className="absolute inset-0 opacity-20 pointer-events-none">
           <div className="absolute top-5 left-[10%] w-8 h-8 rounded-full bg-decor"></div>
@@ -37,7 +37,7 @@ export default function WalkwayRoom() {
                 <div className="h-8 w-8 text-text-primary flex items-center justify-center text-lg font-bold mb-2 mx-auto">
                   {number}
                 </div>
-                <div className="h-6 w-32 sm:w-48 bg-platform rounded-md shadow-lg"></div>
+                <div className="h-6 w-28 sm:w-48 bg-platform rounded-md shadow-lg"></div>
               </div>
             ))}
           </div>
@@ -49,7 +49,7 @@ export default function WalkwayRoom() {
                 <div className="h-8 w-8 text-text-primary flex items-center justify-center text-lg font-bold mb-2 mx-auto">
                   {number}
                 </div>
-                <div className="h-6 w-32 sm:w-48 bg-platform rounded-md shadow-lg"></div>
+                <div className="h-6 w-28 sm:w-48 bg-platform rounded-md shadow-lg"></div>
               </div>
             ))}
           </div>
@@ -58,9 +58,10 @@ export default function WalkwayRoom() {
         {/* Exit */}
         <Link 
           href="/party-quest/orbis"
-          className="absolute bottom-0 left-1/2 -translate-x-1/2 w-24 h-24 bg-gradient-to-b from-door-exit to-door-exit-hover rounded-t-md flex items-center justify-center hover:from-door-exit-hover hover:to-door-exit-active transition-all duration-300 cursor-pointer shadow-lg hover:shadow-xl transform hover:scale-105 z-10"
+          className="relative mt-10 w-24 h-24 left-1/2 -translate-x-1/2 bg-gradient-to-b from-door-exit to-door-exit-hover rounded-t-md flex flex-col items-center justify-center hover:from-door-exit-hover hover:to-door-exit-active transition-all duration-300 cursor-pointer shadow-lg hover:shadow-xl transform hover:scale-105 z-10"
         >
           <span className="text-altText-primary font-semibold">{t('orbisPQ.rooms.common.exit')}</span>
+          <span className="text-altText-secondary text-xxs text-center font-semibold mt-1">{t('orbisPQ.rooms.common.transferWarning')}</span>
         </Link>
       </div>
 
@@ -108,7 +109,7 @@ export default function WalkwayRoom() {
         <div className="absolute inset-0 bg-gradient-to-b from-decor-light to-room pointer-events-none"></div>
 
         <div className="relative z-10">
-          <p className="text-status-warning text-xs">
+          <p className="text-status-warning font-semibold text-xs">
             {t('orbisPQ.rooms.walkway.tip')}
           </p>
         </div>

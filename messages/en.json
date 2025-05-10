@@ -29,6 +29,7 @@
   },
   "common": {
     "recommend": "Recommend",
+    "objective": "Objective",
     "players": "Players",
     "jobs": "Jobs",
     "types": "Types",
@@ -64,19 +65,20 @@
     },
     "rooms": {
       "common": {
-        "copied": "Copied!",
         "exit": "Exit",
+        "transferWarning": "Transfer leader before exit",
+        "copied": "Copied!",  
         "goback": "← Previous page"
       },
       "sealed": {
         "title": "Sealed Room",
-        "solvePuzzle": "Solve puzzle",
+        "solvePuzzle": "Objective: Get digits from the NPC and fill in the decoder, then let 4 players stand on the correct platform",
         "howToGetDigits": "How to get 4 digits",
-        "step1": "1. Try no one standing on any platform to get 1st digit from NPC.",
+        "step1": "1. Try NO one standing on any platform to get 1st digit from NPC.",
         "step2": "2. Try 1 person standing on left platform to get 2nd digit from NPC.",
         "step3": "3. Try 1 person standing on middle platform to get 3rd digit from NPC.",
         "step4": "4. Try 1 person standing on right platform to get 4th digit from NPC.",
-        "enterCode": "Enter Code (0-2):",
+        "enterCode": "Decoder (0-2):",
         "clear": "Clear",
         "enterCodeHint": "Enter a 4-digit code using only numbers 0-2",
         "invalidCode": "Invalid code! This combination doesn't exist in the puzzle.",
@@ -84,14 +86,17 @@
         "requirements": "Requirements:",
         "requirement1": "Requires 1 player to solve",
         "requirement2": "Requires 4 players to complete the room",
+        "requirement3": "Get the Goddess Piece from the box at the top platform",
         "left": "LEFT",
         "middle": "MIDDLE",
-        "right": "RIGHT"
+        "right": "RIGHT",
+        "tip": "Warning: If you tested more than 7 tries, you will be send out of the room and the answer will be regenerated again"
       },
       "lobby": {
         "title": "Lobby",
-        "collectCD": "Collect 0/1 {color} CD",
+        "collectCD": "Objective: Find 0/1 {color} CD, click the CD player, then talk to NPC for the Goddess Piece",
         "serverTime": "Current {server} Server time",
+        "clickTip": "(copy to clipboard)",
         "localTime": "Your Local Time",
         "nextDayChange": "Next Day Change",
         "timezone": "Timezone",
@@ -100,7 +105,7 @@
           "tw": "Artale (TW)",
           "kr": "Artale (KR)"
         },
-        "tip": "Tip: Find the correct CD from boxes and give it to NPC. The most left box requires a teleport skill to reach the platform."
+        "tip": "Note: This stage requires a teleport skill to reach the platforms."
       },
       "statue": {
         "title": "Garden (Boss Room)",
@@ -109,13 +114,14 @@
       },
       "storage": {
         "title": "Storage",
-        "huntMobs": "Hunt 0/15 Cellion in the following sequence",
-        "copySequence": "Copy Sequence"
+        "huntMobs": "Objective: Hunt 0/15 Cellion in the following sequence",
+        "copySequence": "Copy Sequence",
+        "tip": "Note: The last Cellion will drop the Goddess Piece."
       },
       "lounge": {
         "title": "Lounge",
-        "collectPieces": "Collect 0/10 Pieces",
-        "collect40Pieces": "Collect 0/40 Pieces",
+        "collect40Pieces": "Objective: Collect 0/40 Pieces, then talk to NPC for the Goddess Piece",
+        "collectPieces": "Objective: Collect 0/10 Pieces on white platform",
         "room303": "Room 303",
         "room302": "Room 302",
         "room301": "Room 301",
@@ -128,40 +134,48 @@
       },
       "walkway": {
         "title": "Walkway",
-        "collectPieces": "Collect 0/30 Pieces",
+        "collectPieces": "Objective: Collect 0/30 Pieces, then talk to NPC for the Goddess Piece",
         "tip": "Note: Count pieces before you jump down from a platform to ensure you have collected all pieces. Otherwise, you will have to restart the Party Quest.",
         "jobRequirement": "Requires AOE (Area of Effect) job type"
       },
       "onTheWayUp": {
         "title": "On the way up",
-        "collectPieces": "Collect 0/10 Pieces",
+        "jumpToHighest": "Objective: Jump to the top platform",
         "reset": "Reset",
-        "jumpToHighest": "Jump to highest platform",
         "tip": "When you reach top for levers, answer is always 2 ↓ 3 ↑. Total of 10 possible answers.",
-        "resetSection": "Reset Section",
+        "resetSection": "Reset",
         "clearAll": "Clear All",
         "confirmClear": "Confirm Clear All",
         "confirmMessage": "Are you sure you want to clear all selections?",
         "cancel": "Cancel",
-        "copyAnswer": "Copy Answer"
+        "copyAnswer": "Copy Answer",
+        "requirement1": "When a player reaches the top, the other can return to the bottom.",
+        "requirement2": "The top will configure levers while the bottom spams NPC to check the answer.",
+        "requirement3": "After clearing the stage, remember to get the Goddess Piece from the box."
       },
       "entrance": {
         "title": "Entrance",
-        "collectClouds": "Collect 0/20 Clouds",
-        "tip": "Tip: Do not climb when completing the stage."
+        "collectClouds": "Objective: Collect 0/20 Clouds",
+        "tip": "Tip: Do not climb ladders when completing the stage."
       },
       "garden": {
         "title": "Garden (Boss)",
-        "huntBoss": "Hunt 0/1 Boss",
+        "huntBoss": "Objective: Hunt 0/1 Boss",
         "bossPot": "Boss Pot",
-        "copy": "Copy",
+        "copy": "Grass Pot Location",
         "positions": {
           "left": "Left",
           "right": "Right",
           "top": "Top",
           "middle": "Middle",
           "bottom": "Bottom"
-        }
+        },
+        "objective1": "After clearing mobs in the garden, seeds will drop",
+        "objective2": "Plant these seeds in the pots and find a dark flower and a pot that cannot be planted",
+        "objective3": "After killing the black flower, the boss will appear",
+        "objective4": "After killing the boss, a \"Even Stranger Seed\" will drop, please plant this seed in the pot that cannot grow flowers",
+        "objective5": "After planting the seed, a \"Life of Grass\" will grow, take the \"Life of Grass\" and return to Central Tower and place it in the middle of the Statue to complete the party quest",
+        "tip": "Note: If a pink flower grows, do not kill it."
       }
     }
   },
