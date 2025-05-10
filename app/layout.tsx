@@ -3,6 +3,7 @@ import Providers from '../components/Providers'
 import './globals.css'
 import type { Metadata } from 'next'
 import { notoSansTC } from './fonts'
+import AnalyticsProvider from '../components/AnalyticsProvider'
 
 export const dynamic = 'force-static'
 
@@ -20,7 +21,9 @@ export default function RootLayout({
     <html lang="en" className={notoSansTC.variable}>
       <body className={`${notoSansTC.className} antialiased`}>
         <Providers>
-          {children}
+          <AnalyticsProvider>
+            {children}
+          </AnalyticsProvider>
         </Providers>
       </body>
     </html>
