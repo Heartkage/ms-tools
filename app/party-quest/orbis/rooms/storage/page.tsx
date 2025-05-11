@@ -14,7 +14,7 @@ export default function StorageRoom() {
   const platformNumbers = [1, 8, 14, 12, 9, 6, 13, 11, 3, 2, 5, 7, 4, 15, 10];
 
   const copySequence = () => {
-    const sequence = t('orbisPQ.rooms.storage.title') + ": 1 -> 10 -> 9 -> 13 -> 11 -> 6 -> 12 -> 2 -> 5 -> 15 -> 8 -> 4 -> 7 -> 3 -> 14";
+    const sequence = t('orbisPQ.rooms.storage.title') + ": 1,10,9,13,11,6,12,2,5,15,8,4,7,3,14";
     navigator.clipboard.writeText(sequence)
       .then(() => {
         setCopySuccess(true);
