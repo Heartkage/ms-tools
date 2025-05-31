@@ -18,7 +18,7 @@ type Server = {
 
 const SERVERS: Record<string, Server> = {
   NA: { name: 'NA', timezone: 'America/Jamaica', displayName: 'Artale (NA)' },
-  ASIA: { name: 'TW', timezone: 'Asia/Taipei', displayName: 'Artale (TW)' },
+  ASIA: { name: 'TW', timezone: 'America/Jamaica', displayName: 'Artale (TW)' },
   KR: { name: 'KR', timezone: 'Asia/Seoul', displayName: 'Artale (KR)' }
 };
 
@@ -227,7 +227,7 @@ export default function Lobby() {
             {currentTime} 
           </div>
           <div className="text-xs sm:text-sm text-altText-secondary">
-            {t('orbisPQ.rooms.lobby.serverTime', { server: selectedServer.displayName })} <span>({selectedServer.name === 'NA' ? 'EST/UTC-5' : selectedServer.name === 'TW' ? 'UTC+8' : 'KST/UTC+9'})</span>
+            {t('orbisPQ.rooms.lobby.serverTime', { server: selectedServer.displayName })} <span>({selectedServer.name === 'NA' ? 'EST/UTC-5' : selectedServer.name === 'TW' ? 'EST/UTC-5' : 'KST/UTC+9'})</span>
           </div>
         </div>
 
