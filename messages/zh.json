@@ -72,6 +72,7 @@
       },
       "sealed": {
         "title": "封印之間\n(400)",
+        "shortTitle":"封印",
         "solvePuzzle": "目標：根據NPC的回答填入下方的解碼器，再讓4位玩家站在對應的平台上通關",
         "howToGetDigits": "如何獲得 4 位數字",
         "step1": "1. 嘗試沒有人站在任何平台上，點擊 NPC 獲得第 1 位數字。",

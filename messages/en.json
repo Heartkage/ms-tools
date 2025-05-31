@@ -72,6 +72,7 @@
       },
       "sealed": {
         "title": "Sealed Room",
+        "shortTitle": "Sealed",
         "solvePuzzle": "Objective: Get digits from the NPC and fill in the decoder, then let 4 players stand on the correct platform",
         "howToGetDigits": "How to get 4 digits",
         "step1": "1. Try NO one standing on any platform to get 1st digit from NPC.",

@@ -38,7 +38,7 @@ export default function SealedRoom() {
     if (!platformNumbers) return;
     
     const answerString = platformNumbers.join('');
-    const textToCopy = `Sealed Room: ${answerString}`;
+    const textToCopy = `${t('orbisPQ.rooms.sealed.shortTitle')}: ${answerString}`;
     
     try {
       await copyToClipboard(textToCopy);
@@ -216,7 +216,7 @@ export default function SealedRoom() {
           </div>
 
           {/* Result and Copy Button */}
-          <div className="relative z-10 flex flex-col sm:flex-row items-start sm:items-center space-x-0 sm:space-x-4 space-y-4 sm:space-y-0">
+          <div className="relative z-10 flex flex-row items-center sm:items-center space-x-4">
             {hasValidAnswer && (
               <>
                 <div className="w-32 sm:w-40 h-12 bg-green-100 rounded-md border-2 border-blue-300 flex items-center justify-center text-xl font-mono tracking-widest text-gray-900">
