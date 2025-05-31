@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react';
 import { useLanguage } from '../../../../../contexts/LanguageContext';
 import { roomConfig } from '../../constants';
+import { copyToClipboard } from '../../../../../lib/utils/clipboard';
 
 interface DayInfo {
   color: string;
@@ -130,17 +131,16 @@ export default function Lobby() {
     colorNameKey: 'Unknown'
   };
 
-  const handleCircleClick = () => {
+  const handleCircleClick = async () => {
     const colorName = t(currentDayInfo.colorNameKey);
     const textToCopy = `${t('orbisPQ.rooms.lobby.title')}: ${colorName}`;
-    navigator.clipboard.writeText(textToCopy)
-      .then(() => {
-        setCopySuccess(true);
-        setTimeout(() => setCopySuccess(false), 2000);
-      })
-      .catch(err => {
-        console.error('Failed to copy text: ', err);
-      });
+    try {
+      await copyToClipboard(textToCopy);
+      setCopySuccess(true);
+      setTimeout(() => setCopySuccess(false), 2000);
+    } catch (err) {
+      console.error('Failed to copy text: ', err);
+    }
   };
 
   return (

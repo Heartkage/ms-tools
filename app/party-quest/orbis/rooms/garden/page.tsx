@@ -4,6 +4,7 @@ import { useState } from 'react';
 import Link from 'next/link';
 import { useLanguage } from '../../../../../contexts/LanguageContext';
 import { roomConfig } from '../../constants';
+import { copyToClipboard } from '../../../../../lib/utils/clipboard';
 
 // Define pot states
 type PotState = 'empty' | 'blackFlower' | 'pinkFlower' | 'bossPot' | 'obstacle';
@@ -110,15 +111,14 @@ export default function GardenRoom() {
     return '';
   };
 
-  const handleCopy = () => {
-    navigator.clipboard.writeText(`${t('orbisPQ.rooms.garden.bossPot')}: ${getBossPotPosition()}`)
-      .then(() => {
-        setCopySuccess(true);
-        setTimeout(() => setCopySuccess(false), 2000);
-      })
-      .catch(err => {
-        console.error('Failed to copy text: ', err);
-      });
+  const handleCopy = async () => {
+    try {
+      await copyToClipboard(`${t('orbisPQ.rooms.garden.bossPot')}: ${getBossPotPosition()}`);
+      setCopySuccess(true);
+      setTimeout(() => setCopySuccess(false), 2000);
+    } catch (err) {
+      console.error('Failed to copy text: ', err);
+    }
   };
 
   const hasBossPot = platforms.some(platform => 

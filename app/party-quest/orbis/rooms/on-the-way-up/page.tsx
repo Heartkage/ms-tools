@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { useLanguage } from '../../../../../contexts/LanguageContext';
 import { roomConfig } from '../../constants';
+import { copyToClipboard } from '../../../../../lib/utils/clipboard';
 
 export default function OnTheWayUp() {
   const { t } = useLanguage();
@@ -108,11 +109,15 @@ export default function OnTheWayUp() {
     return result.trim();
   };
 
-  const handleCopyToClipboard = () => {
+  const handleCopyToClipboard = async () => {
     const result = generateAnswer();
-    navigator.clipboard.writeText(result);
-    setCopySuccess(true);
-    setTimeout(() => setCopySuccess(false), 2000);
+    try {
+      await copyToClipboard(result);
+      setCopySuccess(true);
+      setTimeout(() => setCopySuccess(false), 2000);
+    } catch (err) {
+      console.error('Failed to copy text: ', err);
+    }
   };
 
   const handleToggle = (sectionIndex: number, rowIndex: number, platformIndex: number) => {

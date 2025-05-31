@@ -4,6 +4,7 @@ import { useLanguage } from '../../../../../contexts/LanguageContext';
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { roomConfig } from '../../constants';
+import { copyToClipboard } from '../../../../../lib/utils/clipboard';
 
 export default function StorageRoom() {
   const { t } = useLanguage();
@@ -13,16 +14,15 @@ export default function StorageRoom() {
   // Platform numbers in order
   const platformNumbers = [1, 8, 14, 12, 9, 6, 13, 11, 3, 2, 5, 7, 4, 15, 10];
 
-  const copySequence = () => {
+  const copySequence = async () => {
     const sequence = t('orbisPQ.rooms.storage.title') + ": 1,10,9,13,11,6,12,2,5,15,8,4,7,3,14";
-    navigator.clipboard.writeText(sequence)
-      .then(() => {
-        setCopySuccess(true);
-        setTimeout(() => setCopySuccess(false), 2000);
-      })
-      .catch(err => {
-        console.error('Failed to copy text: ', err);
-      });
+    try {
+      await copyToClipboard(sequence);
+      setCopySuccess(true);
+      setTimeout(() => setCopySuccess(false), 2000);
+    } catch (err) {
+      console.error('Failed to copy text: ', err);
+    }
   };
 
   useEffect(() => {

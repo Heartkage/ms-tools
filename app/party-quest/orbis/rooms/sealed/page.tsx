@@ -2,6 +2,7 @@
 
 import { useState, useRef } from 'react';
 import { useLanguage } from '../../../../../contexts/LanguageContext';
+import { copyToClipboard } from '../../../../../lib/utils/clipboard';
 
 export default function SealedRoom() {
   const { t } = useLanguage();
@@ -32,21 +33,20 @@ export default function SealedRoom() {
   };
 
   // Handle copy to clipboard
-  const copyToClipboard = () => {
+  const handleCopy = async () => {
     const platformNumbers = sealedRoomConfig.answers[codeInput];
     if (!platformNumbers) return;
     
     const answerString = platformNumbers.join('');
     const textToCopy = `Sealed Room: ${answerString}`;
     
-    navigator.clipboard.writeText(textToCopy)
-      .then(() => {
-        setCopySuccess(true);
-        setTimeout(() => setCopySuccess(false), 2000);
-      })
-      .catch(err => {
-        console.error('Failed to copy text: ', err);
-      });
+    try {
+      await copyToClipboard(textToCopy);
+      setCopySuccess(true);
+      setTimeout(() => setCopySuccess(false), 2000);
+    } catch (err) {
+      console.error('Failed to copy text: ', err);
+    }
   };
 
   // Handle code input change
@@ -225,7 +225,7 @@ export default function SealedRoom() {
                 
                 {/* Copy to clipboard button */}
                 <button 
-                  onClick={copyToClipboard}
+                  onClick={handleCopy}
                   className={`px-4 py-2 flex items-center justify-center rounded-md transition-colors text-sm flex-shrink-0 ${
                     copySuccess 
                       ? 'bg-green-100 text-green-800' 

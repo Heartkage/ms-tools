@@ -3,6 +3,7 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import LanguageSwitcher from '../../../components/LanguageSwitcher';
+import BackToHome from '../../../components/BackToHome';
 import { useLanguage } from '../../../contexts/LanguageContext';
 import { roomConfig as roomConfigs } from './constants';
 import Image from 'next/image';
@@ -81,9 +82,7 @@ export default function OrbisPQ() {
       <div className="max-w-4xl mx-auto">
         
         <div className="flex justify-between items-center mb-4">
-          <Link href="/" className="text-blue-500 hover:text-blue-600 inline-block text-sm sm:text-base">
-            {t('pages.backToHome')}
-          </Link>
+          <BackToHome />
           <LanguageSwitcher />
         </div>
         
