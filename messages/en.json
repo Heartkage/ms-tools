@@ -10,6 +10,10 @@
     "scroll": {
       "title": "Scroll",
       "calculator": "Scroll Simulator"
+    },
+    "tools": {
+      "title": "Tools",
+      "rjtool": "Romeo and Juliet"
     }
   },
   "pages": {
@@ -25,6 +29,61 @@
     },
     "scroll": {
       "title": "Scroll Simulator"
+    },
+    "rjtool": {
+      "title": "Romeo and Juliet Tool",
+      "createRoom": {
+        "title": "Create Room",
+        "button": "Create"
+      },
+      "joinRoom": {
+        "title": "Join Room",
+        "placeholder": "-",
+        "button": "Join"
+      },
+      "room": {
+        "title": "Room {id}",
+        "back": "Back",
+        "share": "Share Room",
+        "copied": "Copied!",
+        "leave": "Leave Room",
+        "selectColor": "Select Your Color",
+        "colorTooltip": "Select color {number}",
+        "reset": "Reset",
+        "cellTooltip": "Probability: {probability}%"
+      },
+      "colors": {
+        "red": "Red",
+        "blue": "Blue",
+        "yellow": "Yellow",
+        "purple": "Purple"
+      },
+      "confirmations": {
+        "leaveRoom": {
+          "title": "Leave Room?",
+          "message": "Are you sure you want to leave this room? You'll need to rejoin if you want to return.",
+          "confirm": "Leave Room"
+        },
+        "resetGrid": {
+          "title": "Reset All?",
+          "message": "Are you sure you want to reset everything? This will clear all selections.",
+          "confirm": "Reset All"
+        },
+        "swapCell": {
+          "title": "Swap Positions?",
+          "message": "Do you want to swap positions with {color}?",
+          "confirm": "Swap"
+        },
+        "cancel": "Cancel"
+      },
+      "errors": {
+        "createRoomFailed": "Failed to create room. Please try again later.",
+        "joinRoomFailed": "Failed to join room. This room does not exist or has expired.",
+        "invalidRoomCode": "Please enter a valid 6-digit room code",
+        "selectColorFirst": "Please select your color first",
+        "roomRemoved": "Room has been closed, please rejoin a new room"
+      },
+      "loading": "Loading..."
     }
   },
   "common": {

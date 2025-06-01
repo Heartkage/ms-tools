@@ -10,6 +10,10 @@
     "scroll": {
       "title": "卷軸",
       "calculator": "卷軸模擬器"
+    },
+    "tools": {
+      "title": "工具",
+      "rjtool": "羅密歐與茱麗葉"
     }
   },
   "pages": {
@@ -25,6 +29,61 @@
     },
     "scroll": {
       "title": "卷軸模擬器"
+    },
+    "rjtool": {
+      "title": "羅密歐與茱麗葉工具",
+      "createRoom": {
+        "title": "創建房間",
+        "button": "創建"
+      },
+      "joinRoom": {
+        "title": "加入房間",
+        "placeholder": "-",
+        "button": "加入"
+      },
+      "room": {
+        "title": "房間 {id}",
+        "back": "返回",
+        "share": "分享房間",
+        "copied": "已複製！",
+        "leave": "離開房間",
+        "selectColor": "選擇你的顏色",
+        "colorTooltip": "選擇顏色 {number}",
+        "reset": "重置",
+        "cellTooltip": "機率：{probability}%"
+      },
+      "colors": {
+        "red": "紅色",
+        "blue": "藍色",
+        "yellow": "黃色",
+        "purple": "紫色"
+      },
+      "confirmations": {
+        "leaveRoom": {
+          "title": "離開房間？",
+          "message": "確定要離開房間嗎？如果要返回需要重新加入。",
+          "confirm": "離開房間"
+        },
+        "resetGrid": {
+          "title": "重置全部？",
+          "message": "確定要重置全部嗎？這將清除所有選擇。",
+          "confirm": "重置全部"
+        },
+        "swapCell": {
+          "title": "交換位置？",
+          "message": "要與{color}交換位置嗎？",
+          "confirm": "交換"
+        },
+        "cancel": "取消"
+      },
+      "errors": {
+        "createRoomFailed": "目前連線數過多，創建房間失敗，請稍後再試。",
+        "joinRoomFailed": "加入房間失敗，此房號不存在或已過期。",
+        "invalidRoomCode": "請輸入有效的6位數房間號碼",
+        "selectColorFirst": "請先選擇你的顏色",
+        "roomRemoved": "房間已關閉，請重新加入"
+      },
+      "loading": "載入中..."
     }
   },
   "common": {

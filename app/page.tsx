@@ -4,6 +4,7 @@ import React, { useEffect } from 'react';
 import Navigation from '../components/Navigation';
 import LanguageSwitcher from '../components/LanguageSwitcher';
 import { useLanguage } from '../contexts/LanguageContext';
+import Link from 'next/link';
 
 export default function Home() {
   const { t } = useLanguage();
