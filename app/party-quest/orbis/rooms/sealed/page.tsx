@@ -196,6 +196,8 @@ export default function SealedRoom() {
             <input
               ref={inputRef}
               type="text"
+              inputMode="numeric"
+              pattern="[0-2]*"
               value={codeInput}
               onChange={handleCodeInputChange}
               placeholder="0000"
