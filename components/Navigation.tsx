@@ -22,7 +22,7 @@ const Navigation = () => {
         </div>
 
         {/* Tools Section */}
-        <div className="space-y-4 hidden">
+        <div className="space-y-4">
           <h2 className="text-2xl font-semibold text-white">{t('navigation.tools.title')}</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             <Link href="/rjtool"
