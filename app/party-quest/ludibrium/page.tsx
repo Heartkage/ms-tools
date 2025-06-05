@@ -584,7 +584,7 @@ export default function LudibriumPQ() {
                       {lineBlocks.map((block, blockIndex) => (
                         <div
                           key={blockIndex}
-                          className={`${block.height} ${block.width} ${block.gradient}`}
+                          className={`${block.height} ${block.width} ${block.gradient} border-2 border-black/10`}
                         />
                       ))}
                     </div>
