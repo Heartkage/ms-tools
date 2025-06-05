@@ -12,6 +12,34 @@ module.exports = {
         'tiny': '0.563rem',   // 9px
       },
       colors: {
+        ludibrium: {
+          background: {
+            light: 'rgb(254, 234, 109)',
+            dark: 'rgb(174, 152, 7)',
+            red: 'rgba(0, 0, 0, 0.81)',
+            border: 'rgb(236, 210, 97)',
+            pink: 'rgb(247, 3, 159)',
+            brown: 'rgb(227, 145, 63)',
+          },
+          pillar: {
+            primary: 'rgb(126, 157, 6)',
+            secondary: 'rgb(78, 153, 7)',
+            tertiary: 'rgb(46, 96, 5)',
+            quaternary: 'rgb(137, 136, 7)',
+            black: 'rgb(9, 33, 1)',
+          },
+          text: {
+            primary: 'rgb(247, 245, 209)',
+            secondary: 'rgb(243, 234, 64)',
+            white: 'rgb(255, 255, 255)',
+          },
+          player: {
+            1: 'rgb(255, 247, 0)',    // yellow-400
+            2: 'rgb(128, 252, 3)',    // cyan-400
+            3: 'rgb(34, 211, 238)',    // orange-300
+            4: 'rgb(52, 211, 153)',    // emerald-400
+          }
+        },
         // Room backgrounds and containers
         room: {
           DEFAULT: 'rgba(219, 234, 254, 0.5)', // bg-blue-100/50
@@ -29,7 +57,8 @@ module.exports = {
           dark: {
             DEFAULT: 'rgb(106, 104, 102)', 
             bottom: 'rgba(41, 37, 36, 1)', 
-            border: 'rgb(154, 149, 145)', 
+            border: 'rgb(154, 149, 145)',
+            hover: 'rgb(229, 229, 229)',
           },
           exit: {
             DEFAULT: 'rgb(52, 140, 223)', 

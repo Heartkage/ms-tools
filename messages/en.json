@@ -22,7 +22,35 @@
       "title": "Kerning Party Quest Tool"
     },
     "ludibriumPQ": {
-      "title": "Ludibrium Party Quest Tool"
+      "title": "Ludibrium Party Quest Tool",
+      "simple": {
+        "title": "All you need to know",
+        "copy": "Copy",
+        "copied": "Copied!"
+      },
+      "detailed": {
+        "title": "Simple Guide",
+        "stage": "Stage {stage}",
+        "stages": {
+          "objective1": "Objective: Collect 0/25 Pass of Dimension from Black Ratz",
+          "objective2": "Objective: Collect 0/15 Pass of Dimension from Boxes",
+          "objective3": "Objective: Collect 0/32 Pass of Dimension from Bloctopus",
+          "objective4": "Objective: Collect 0/6 Pass of Dimension from Dark Eyes",
+          "objective5": "Objective: Collect 0/24 Pass of Dimension from boxes in 6 portals",
+          "objective6": "Objective: Jump to the top platform",
+          "objective7": "Objective: Collect 0/3 Pass of Dimension from Rombot",
+          "objective8": "Find correct combination in 9 boxes",
+          "objective9": "Objective: Kill 0/1 Boss - Alishar",
+          "tips2": "Tip: The first group of players should break the second box from the top to enter the hidden map, then tell the rest of the teammates to enter the second stage.",
+          "tips4": "Suggestion: There are 5 portals, the top 3 are suitable for magic attack jobs, the bottom 2 are suitable for physical attack jobs. The last portal has two monsters.",
+          "tips5": "Suggestion: The top portal is suitable for mages, the bottom portal is suitable for thieves.",
+          "tips6": "Code: 333 221 333 123 111",
+          "tips8": "There are 126 combinations, please watch the animation based on the jump method of your team",
+          "warning1": "Warning: Do not immediately go to the next stage after clearing the stage. Please let 1-2 players go to the next stage and enter the Hidden Room, then the rest of the players can enter.",
+          "warning5": "Warning: The bottommost portal requires a thief with stealth to enter, otherwise you will die when you are hit by a monster.",
+          "warning7": "Warning: This stage requires a range-attack job to hit monsters."
+        }
+      }
     },
     "orbisPQ": {
       "title": "Orbis Party Quest Tool"
@@ -220,7 +248,7 @@
       },
       "garden": {
         "title": "Garden (Boss)",
-        "huntBoss": "Objective: Hunt 0/1 Boss",
+        "huntBoss": "Objective: Hunt 0/1 Boss - Papa Pixie",
         "bossPot": "Boss Pot",
         "copy": "Grass Pot Location",
         "positions": {
@@ -231,11 +259,11 @@
           "bottom": "Bottom"
         },
         "objective1": "After clearing mobs in the garden, seeds will drop",
-        "objective2": "Plant these seeds in the pots and find a dark flower and a pot that cannot be planted",
-        "objective3": "After killing the black flower, the boss will appear",
+        "objective2": "Plant these seeds in the pots and find a dark Nependeath and a pot that cannot be planted",
+        "objective3": "After killing the dark Nependeath, the boss will appear",
         "objective4": "After killing the boss, a \"Even Stranger Seed\" will drop, please plant this seed in the pot that cannot grow flowers",
         "objective5": "After planting the seed, a \"Life of Grass\" will grow, take the \"Life of Grass\" and return to Central Tower and place it in the middle of the Statue to complete the party quest",
-        "tip": "Note: If a pink flower grows, do not kill it."
+        "tip": "Note: If a pink Nependeath grows, do not kill it."
       }
     }
   },

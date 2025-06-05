@@ -159,7 +159,7 @@ export default function GardenRoom() {
                   {platform.pots.map((pot, potIndex) => (
                     <div
                       key={`left-${index}-${potIndex}`}
-                      className={`w-8 h-8 sm:w-12 sm:h-12 bg-platform rounded-lg shadow-md relative cursor-pointer
+                      className={`w-8 h-8 sm:w-12 sm:h-12 bg-platform rounded-lg border border-platform-border shadow-md relative cursor-pointer
                         ${pot === 'empty' ? 'hover:bg-platform-hover' : ''}
                         transition-colors duration-200`}
                       onClick={() => handlePotClick(index, potIndex)}
@@ -185,7 +185,7 @@ export default function GardenRoom() {
                   {platform.pots.map((pot, potIndex) => (
                     <div
                       key={`right-${index}-${potIndex}`}
-                      className={`w-8 h-8 sm:w-12 sm:h-12 bg-platform rounded-lg shadow-md relative cursor-pointer
+                      className={`w-8 h-8 sm:w-12 sm:h-12 bg-platform rounded-lg border border-platform-border shadow-md relative cursor-pointer
                         ${pot === 'empty' ? 'hover:bg-platform-hover' : ''}
                         transition-colors duration-200`}
                       onClick={() => handlePotClick(index + 3, potIndex)}
@@ -285,7 +285,7 @@ export default function GardenRoom() {
 
         <div className="relative z-10">
           <div className="text-text-primary font-semibold mb-2">{t('common.objective')}</div>
-          <ul className="list-disc list-inside space-y-1 font-semibold text-xs text-text-secondary">
+          <ul className="list-decimal list-inside space-y-1 font-semibold text-xs text-text-secondary">
             <li>{t('orbisPQ.rooms.garden.objective1')}</li>
             <li>{t('orbisPQ.rooms.garden.objective2')}</li>
             <li>{t('orbisPQ.rooms.garden.objective3')}</li>
