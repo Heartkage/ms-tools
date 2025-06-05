@@ -38,36 +38,25 @@ export default function GardenRoom() {
 
     // Create a new platforms array with the updated state
     const newPlatforms = [...platforms];
-    const newPots = [...newPlatforms[platformIndex].pots];
+    let newPots = [...newPlatforms[platformIndex].pots];
     
-    // Check if black flower or boss pot already exists
-    const hasBlackFlower = platforms.some(platform => 
-      platform.pots.some(pot => pot === 'blackFlower')
-    );
+    // Check if boss pot already exists
     const hasBossPot = platforms.some(platform => 
       platform.pots.some(pot => pot === 'bossPot')
     );
     
-    // Cycle through states: empty -> pink flower -> black flower -> boss -> empty
+    // Cycle through states: empty -> boss -> empty
     switch (currentState) {
       case 'empty':
-        newPots[potIndex] = 'pinkFlower';
-        break;
-      case 'pinkFlower':
-        if (!hasBlackFlower) {
-          newPots[potIndex] = 'blackFlower';
-        } else if (!hasBossPot) {
-          newPots[potIndex] = 'bossPot';
-        } else {
-          newPots[potIndex] = 'empty';
+        if (hasBossPot) {
+          newPlatforms.forEach((platform, platformIndex) => {
+            newPlatforms[platformIndex].pots = platform.pots.map(pot => 
+              pot === 'bossPot' ? 'empty' : pot
+            );
+          });
+          newPots = newPlatforms[platformIndex].pots;
         }
-        break;
-      case 'blackFlower':
-        if (!hasBossPot) {
-          newPots[potIndex] = 'bossPot';
-        } else {
-          newPots[potIndex] = 'empty';
-        }
+        newPots[potIndex] = 'bossPot';
         break;
       case 'bossPot':
         newPots[potIndex] = 'empty';
