@@ -69,14 +69,14 @@ type LineBlock = {
 };
 
 const lineBlocks: LineBlock[] = [
-  { height: 'h-[5vh]', width: 'w-[12rem]', gradient: 'bg-gradient-to-r from-ludibrium-pillar-tertiary via-ludibrium-pillar-black to-ludibrium-pillar-tertiary' },
-  { height: 'h-[5vh]', width: 'w-[11rem]', gradient: 'bg-gradient-to-r from-ludibrium-pillar-quaternary via-ludibrium-pillar-black to-ludibrium-pillar-quaternary' },
-  { height: 'h-[5vh]', width: 'w-[12rem]', gradient: 'bg-gradient-to-r from-ludibrium-pillar-primary via-ludibrium-pillar-black to-ludibrium-pillar-primary' },
+  { height: 'h-[5vh]', width: 'w-[10rem]', gradient: 'bg-gradient-to-r from-ludibrium-pillar-tertiary via-ludibrium-pillar-black to-ludibrium-pillar-tertiary' },
+  { height: 'h-[5vh]', width: 'w-[9rem]', gradient: 'bg-gradient-to-r from-ludibrium-pillar-quaternary via-ludibrium-pillar-black to-ludibrium-pillar-quaternary' },
   { height: 'h-[5vh]', width: 'w-[10rem]', gradient: 'bg-gradient-to-r from-ludibrium-pillar-primary via-ludibrium-pillar-black to-ludibrium-pillar-primary' },
-  { height: 'h-[5vh]', width: 'w-[14rem]', gradient: 'bg-gradient-to-r from-ludibrium-pillar-secondary via-ludibrium-pillar-black to-ludibrium-pillar-secondary' },
+  { height: 'h-[5vh]', width: 'w-[8rem]', gradient: 'bg-gradient-to-r from-ludibrium-pillar-primary via-ludibrium-pillar-black to-ludibrium-pillar-primary' },
   { height: 'h-[5vh]', width: 'w-[12rem]', gradient: 'bg-gradient-to-r from-ludibrium-pillar-secondary via-ludibrium-pillar-black to-ludibrium-pillar-secondary' },
-  { height: 'h-[5vh]', width: 'w-[11rem]', gradient: 'bg-gradient-to-r from-ludibrium-pillar-quaternary via-ludibrium-pillar-black to-ludibrium-pillar-quaternary' },
-  { height: 'h-[5vh]', width: 'w-[13rem]', gradient: 'bg-gradient-to-r from-ludibrium-pillar-tertiary via-ludibrium-pillar-black to-ludibrium-pillar-tertiary' },
+  { height: 'h-[5vh]', width: 'w-[10rem]', gradient: 'bg-gradient-to-r from-ludibrium-pillar-secondary via-ludibrium-pillar-black to-ludibrium-pillar-secondary' },
+  { height: 'h-[5vh]', width: 'w-[9rem]', gradient: 'bg-gradient-to-r from-ludibrium-pillar-quaternary via-ludibrium-pillar-black to-ludibrium-pillar-quaternary' },
+  { height: 'h-[5vh]', width: 'w-[11rem]', gradient: 'bg-gradient-to-r from-ludibrium-pillar-tertiary via-ludibrium-pillar-black to-ludibrium-pillar-tertiary' },
 ];
 
 const generateCombinations = (arr: number[], size: number): number[][] => {
@@ -173,19 +173,35 @@ export default function LudibriumPQ() {
       if (isScrollingRef.current) return;
 
       const simpleSection = document.getElementById('simple-section');
-      if (simpleSection) {
-        const rect = simpleSection.getBoundingClientRect();
-        setShowNav(rect.bottom <= 0);
+      const detailedSection = document.getElementById('detailed-section');
+      const navPanel = document.getElementById('ludibrium-nav');
+      
+      if (simpleSection && detailedSection && navPanel) {
+        const simpleRect = simpleSection.getBoundingClientRect();
+        const detailedRect = detailedSection.getBoundingClientRect();
+        const navRect = navPanel.getBoundingClientRect();
+        
+        // Check if nav panel is overlapping with detailed section
+        const isOverlapping = !(
+          navRect.right < detailedRect.left || 
+          navRect.left > detailedRect.right || 
+          navRect.bottom < detailedRect.top || 
+          navRect.top > detailedRect.bottom
+        );
+
+        setShowNav(simpleRect.bottom <= 0);
 
         // Clear any existing timeout
         if (hideNavTimeoutRef.current) {
           clearTimeout(hideNavTimeoutRef.current);
         }
 
-        // Set new timeout to hide nav after 2 seconds of no scrolling
-        hideNavTimeoutRef.current = setTimeout(() => {
-          setShowNav(false);
-        }, 1000);
+        // Only set timeout to hide nav if it's overlapping with detailed section
+        if (isOverlapping) {
+          hideNavTimeoutRef.current = setTimeout(() => {
+            setShowNav(false);
+          }, 1000);
+        }
 
         // Find the section that's currently in view
         for (let i = 0; i < sectionsRef.current.length; i++) {
@@ -304,6 +320,7 @@ export default function LudibriumPQ() {
 
         {/* Navigation Menu */}
         <div 
+          id="ludibrium-nav"
           className={`fixed left-4 top-1/2 transform -translate-y-1/2 z-50 transition-all duration-300 ${
             showNav ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-full'
           }`}
