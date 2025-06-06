@@ -94,7 +94,7 @@ export default function GardenRoom() {
         const row = platformIndex % 3;
         const rowName = row === 0 ? 'top' : row === 1 ? 'middle' : 'bottom';
         const potPosition = potIndex === 0 ? 'left' : potIndex === 1 ? 'middle' : 'right';
-        return `${t(`orbisPQ.rooms.garden.positions.${column}`)}-${t(`orbisPQ.rooms.garden.positions.${rowName}`)}-${t(`orbisPQ.rooms.garden.positions.${potPosition}`)}`;
+        return `${t(`pages.orbisPQ.rooms.garden.positions.${column}`)}-${t(`pages.orbisPQ.rooms.garden.positions.${rowName}`)}-${t(`pages.orbisPQ.rooms.garden.positions.${potPosition}`)}`;
       }
     }
     return '';
@@ -102,7 +102,7 @@ export default function GardenRoom() {
 
   const handleCopy = async () => {
     try {
-      await copyToClipboard(`${t('orbisPQ.rooms.garden.bossPot')}: ${getBossPotPosition()}`);
+      await copyToClipboard(`${t('pages.orbisPQ.rooms.garden.bossPot')}: ${getBossPotPosition()}`);
       setCopySuccess(true);
       setTimeout(() => setCopySuccess(false), 2000);
     } catch (err) {
@@ -131,8 +131,8 @@ export default function GardenRoom() {
 
         {/* Title */}
         <div className="relative z-10 text-center">
-          <h1 className="text-2xl font-bold text-text-primary">{t('orbisPQ.rooms.garden.title')}</h1>
-          <div className="text-text-secondary font-semibold text-sm mt-2">{t('orbisPQ.rooms.garden.huntBoss')}</div>
+          <h1 className="text-2xl font-bold text-text-primary">{t('pages.orbisPQ.rooms.garden.title')}</h1>
+          <div className="text-text-secondary font-semibold text-sm mt-2">{t('pages.orbisPQ.rooms.garden.huntBoss')}</div>
         </div>
 
         {/* Platforms Grid */}
@@ -206,14 +206,14 @@ export default function GardenRoom() {
                   <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
                     <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                   </svg>
-                  <span className="text-altText-primary text-xs font-semibold">{t('orbisPQ.rooms.common.copied')}</span>
+                  <span className="text-altText-primary text-xs font-semibold">{t('pages.orbisPQ.rooms.common.copied')}</span>
                 </>
               ) : (
                 <>
                   <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                     <path strokeLinecap="round" strokeLinejoin="round" d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002-2h2a2 2 0 002 2m0 0h2a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3" />
                   </svg>
-                  <span className="text-altText-primary text-xs font-semibold">{t('orbisPQ.rooms.garden.copy')}</span>
+                  <span className="text-altText-primary text-xs font-semibold">{t('pages.orbisPQ.rooms.garden.copy')}</span>
                 </>
               )}
             </button>
@@ -225,7 +225,7 @@ export default function GardenRoom() {
           href="/party-quest/orbis"
           className="relative bottom-0 left-1/2 -translate-x-1/2 w-24 h-24 bg-gradient-to-b from-door-exit to-door-exit-hover rounded-t-md flex flex-col items-center justify-center hover:from-door-exit-hover hover:to-door-exit-active transition-all duration-300 cursor-pointer shadow-lg hover:shadow-xl transform hover:scale-105 z-10"
         >
-          <span className="text-altText-primary font-semibold">{t('orbisPQ.rooms.common.exit')}</span>
+          <span className="text-altText-primary font-semibold">{t('pages.orbisPQ.rooms.common.exit')}</span>
         </Link>
       </div>
 
@@ -275,11 +275,11 @@ export default function GardenRoom() {
         <div className="relative z-10">
           <div className="text-text-primary font-semibold mb-2">{t('common.objective')}</div>
           <ul className="list-decimal list-inside space-y-1 font-semibold text-xs text-text-secondary">
-            <li>{t('orbisPQ.rooms.garden.objective1')}</li>
-            <li>{t('orbisPQ.rooms.garden.objective2')}</li>
-            <li>{t('orbisPQ.rooms.garden.objective3')}</li>
-            <li>{t('orbisPQ.rooms.garden.objective4')}</li>
-            <li>{t('orbisPQ.rooms.garden.objective5')}</li>
+            <li>{t('pages.orbisPQ.rooms.garden.objective1')}</li>
+            <li>{t('pages.orbisPQ.rooms.garden.objective2')}</li>
+            <li>{t('pages.orbisPQ.rooms.garden.objective3')}</li>
+            <li>{t('pages.orbisPQ.rooms.garden.objective4')}</li>
+            <li>{t('pages.orbisPQ.rooms.garden.objective5')}</li>
           </ul>
         </div>
       </div>
@@ -299,7 +299,7 @@ export default function GardenRoom() {
 
         <div className="relative z-10">
           <p className="text-status-warning font-semibold text-xs">
-            {t('orbisPQ.rooms.garden.tip')}
+            {t('pages.orbisPQ.rooms.garden.tip')}
           </p>
         </div>
       </div>

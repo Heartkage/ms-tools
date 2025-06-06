@@ -12,7 +12,7 @@ export default function RoomLayout({ children }) {
       <div className="max-w-4xl mx-auto">
         <div className="flex justify-between items-center mb-4">
           <Link href="../" className="text-blue-500 hover:text-blue-600 inline-block text-sm sm:text-base">
-            {t('orbisPQ.rooms.common.goback')}
+            {t('pages.orbisPQ.rooms.common.goback')}
           </Link>
           <LanguageSwitcher />
         </div>

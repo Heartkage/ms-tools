@@ -38,7 +38,7 @@ export default function SealedRoom() {
     if (!platformNumbers) return;
     
     const answerString = platformNumbers.join('');
-    const textToCopy = `${t('orbisPQ.rooms.sealed.shortTitle')}: ${answerString}`;
+    const textToCopy = `${t('pages.orbisPQ.rooms.sealed.shortTitle')}: ${answerString}`;
     
     try {
       await copyToClipboard(textToCopy);
@@ -98,8 +98,8 @@ export default function SealedRoom() {
         
         {/* Title */}
         <div className="absolute flex top-4 flex-col font-semibold items-top">
-          <div className="text-2xl text-text-primary text-center">{t('orbisPQ.rooms.sealed.title')}</div>
-          <h3 className="text-text-secondary text-center text-xs sm:text-sm mt-1 mb-4">{t('orbisPQ.rooms.sealed.solvePuzzle')}</h3>
+          <div className="text-2xl text-text-primary text-center">{t('pages.orbisPQ.rooms.sealed.title')}</div>
+          <h3 className="text-text-secondary text-center text-xs sm:text-sm mt-1 mb-4">{t('pages.orbisPQ.rooms.sealed.solvePuzzle')}</h3>
         </div>
 
         {/* Platform Stage */}
@@ -111,7 +111,7 @@ export default function SealedRoom() {
             </div>
             <div className="relative">
               <div className="h-10 w-16 sm:w-28 md:w-32 bg-platform rounded-md shadow-md flex items-center justify-center">
-                <span className="text-altText-black font-semibold">{t('orbisPQ.rooms.sealed.left')}</span>
+                <span className="text-altText-black font-semibold">{t('pages.orbisPQ.rooms.sealed.left')}</span>
               </div>
               <div className="h-5 w-6 mx-auto"></div>
             </div>
@@ -124,7 +124,7 @@ export default function SealedRoom() {
             </div>
             <div className="relative">
               <div className="h-10 w-20 sm:w-32 md:w-40 bg-platform rounded-md shadow-md flex items-center justify-center">
-                <span className="text-altText-black font-semibold">{t('orbisPQ.rooms.sealed.middle')}</span>
+                <span className="text-altText-black font-semibold">{t('pages.orbisPQ.rooms.sealed.middle')}</span>
               </div>
               <div className="h-24 w-8 mx-auto"></div>
             </div>
@@ -137,7 +137,7 @@ export default function SealedRoom() {
             </div>
             <div className="relative">
               <div className="h-10 w-16 sm:w-28 md:w-32 bg-platform rounded-md shadow-md flex items-center justify-center">
-                <span className="text-altText-black font-semibold">{t('orbisPQ.rooms.sealed.right')}</span>
+                <span className="text-altText-black font-semibold">{t('pages.orbisPQ.rooms.sealed.right')}</span>
               </div>
               <div className="h-5 w-6 mx-auto"></div>
             </div>
@@ -165,12 +165,12 @@ export default function SealedRoom() {
           <div className="absolute inset-0 bg-gradient-to-b from-decor-light to-room pointer-events-none rounded-lg"></div>
 
           <div className="relative z-10">
-            <h3 className="text-base font-semibold text-text-primary mb-3">{t('orbisPQ.rooms.sealed.howToGetDigits')}</h3>
+            <h3 className="text-base font-semibold text-text-primary mb-3">{t('pages.orbisPQ.rooms.sealed.howToGetDigits')}</h3>
             <div className="space-y-2 text-xs font-semibold text-text-secondary">
-              <p>{t('orbisPQ.rooms.sealed.step1')}</p>
-              <p>{t('orbisPQ.rooms.sealed.step2')}</p>
-              <p>{t('orbisPQ.rooms.sealed.step3')}</p>
-              <p>{t('orbisPQ.rooms.sealed.step4')}</p>
+              <p>{t('pages.orbisPQ.rooms.sealed.step1')}</p>
+              <p>{t('pages.orbisPQ.rooms.sealed.step2')}</p>
+              <p>{t('pages.orbisPQ.rooms.sealed.step3')}</p>
+              <p>{t('pages.orbisPQ.rooms.sealed.step4')}</p>
             </div>
           </div>
         </div>
@@ -189,7 +189,7 @@ export default function SealedRoom() {
           <div className="absolute rounded-lg inset-0 bg-gradient-to-b from-decor-light to-room pointer-events-none"></div>
 
           {/* Title */}
-          <div className="relative z-10 text-text-primary font-semibold mb-3">{t('orbisPQ.rooms.sealed.enterCode')}</div>
+          <div className="relative z-10 text-text-primary font-semibold mb-3">{t('pages.orbisPQ.rooms.sealed.enterCode')}</div>
           
           {/* Input and Clear Button */}
           <div className="relative z-10 flex items-center space-x-4 mb-4">
@@ -208,13 +208,13 @@ export default function SealedRoom() {
               onClick={() => {setCodeInput(''); setShowError(false);}}
               className="px-4 py-2 bg-blue-300 hover:bg-blue-400 text-blue-800 rounded-md transition-colors flex-shrink-0"
             >
-              {t('orbisPQ.rooms.sealed.clear')}
+              {t('pages.orbisPQ.rooms.sealed.clear')}
             </button>
           </div>
 
           {/* Instructions */}
           <div className={`relative z-10 text-sm text-blue-600 mb-4 transition-opacity duration-300 ${showError ? 'opacity-0' : 'opacity-100'}`}>
-            {t('orbisPQ.rooms.sealed.enterCodeHint')}
+            {t('pages.orbisPQ.rooms.sealed.enterCodeHint')}
           </div>
 
           {/* Result and Copy Button */}
@@ -239,14 +239,14 @@ export default function SealedRoom() {
                       <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 mr-1" viewBox="0 0 20 20" fill="currentColor">
                         <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                       </svg>
-                      {t('orbisPQ.rooms.common.copied')}
+                      {t('pages.orbisPQ.rooms.common.copied')}
                     </>
                   ) : (
                     <>
                       <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                         <path strokeLinecap="round" strokeLinejoin="round" d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002-2h2a2 2 0 002 2m0 0h2a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3" />
                       </svg>
-                      {t('orbisPQ.rooms.sealed.copyAnswer')}
+                      {t('pages.orbisPQ.rooms.sealed.copyAnswer')}
                     </>
                   )}
                 </button>
@@ -256,7 +256,7 @@ export default function SealedRoom() {
           
           {/* Error message */}
           <div className={`relative z-10 text-sm font-medium text-red-600 transition-all duration-300 ${showError ? 'opacity-100 max-h-20' : 'opacity-0 max-h-0'} overflow-hidden`}>
-            {t('orbisPQ.rooms.sealed.invalidCode')}
+            {t('pages.orbisPQ.rooms.sealed.invalidCode')}
           </div>
         </div>
       </div>
@@ -277,9 +277,9 @@ export default function SealedRoom() {
         <div className="relative z-10">
           <div className="text-text-primary font-semibold mb-2">{t('common.objective')}</div>
           <ul className="list-disc list-inside space-y-1 font-semibold text-xs text-text-secondary">
-            <li>{t('orbisPQ.rooms.sealed.requirement1')}</li>
-            <li>{t('orbisPQ.rooms.sealed.requirement2')}</li>
-            <li>{t('orbisPQ.rooms.sealed.requirement3')}</li>
+            <li>{t('pages.orbisPQ.rooms.sealed.requirement1')}</li>
+            <li>{t('pages.orbisPQ.rooms.sealed.requirement2')}</li>
+            <li>{t('pages.orbisPQ.rooms.sealed.requirement3')}</li>
           </ul>
         </div>
       </div>
@@ -299,7 +299,7 @@ export default function SealedRoom() {
 
         <div className="relative z-10">
           <p className="text-status-warning font-semibold text-xs">
-            {t('orbisPQ.rooms.sealed.tip')}
+            {t('pages.orbisPQ.rooms.sealed.tip')}
           </p>
         </div>
       </div>

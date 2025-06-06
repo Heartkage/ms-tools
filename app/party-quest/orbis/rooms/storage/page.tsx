@@ -15,7 +15,7 @@ export default function StorageRoom() {
   const platformNumbers = [1, 8, 14, 12, 9, 6, 13, 11, 3, 2, 5, 7, 4, 15, 10];
 
   const copySequence = async () => {
-    const sequence = t('orbisPQ.rooms.storage.title') + ": 1,10,9,13,11,6,12,2,5,15,8,4,7,3,14";
+    const sequence = t('pages.orbisPQ.rooms.storage.title') + ": 1,10,9,13,11,6,12,2,5,15,8,4,7,3,14";
     try {
       await copyToClipboard(sequence);
       setCopySuccess(true);
@@ -88,8 +88,8 @@ export default function StorageRoom() {
         <div className="relative z-10">
           {/* Title */}
           <div className="text-text-primary font-semibold text-center mb-4">
-            <div className="text-2xl">{t('orbisPQ.rooms.storage.title')}</div>
-            <div className="text-sm text-text-secondary mt-1">{t('orbisPQ.rooms.storage.huntMobs')}</div>
+            <div className="text-2xl">{t('pages.orbisPQ.rooms.storage.title')}</div>
+            <div className="text-sm text-text-secondary mt-1">{t('pages.orbisPQ.rooms.storage.huntMobs')}</div>
           </div>
 
           {/* Copy Button */}
@@ -104,14 +104,14 @@ export default function StorageRoom() {
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
                   <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                 </svg>
-                <span className="text-altText-primary text-xs font-semibold">{t('orbisPQ.rooms.common.copied')}</span>
+                <span className="text-altText-primary text-xs font-semibold">{t('pages.orbisPQ.rooms.common.copied')}</span>
               </>
             ) : (
               <>
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                   <path strokeLinecap="round" strokeLinejoin="round" d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002-2h2a2 2 0 002 2m0 0h2a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3" />
                 </svg>
-                <span className="text-altText-primary text-xs font-semibold">{t('orbisPQ.rooms.storage.copySequence')}</span>
+                <span className="text-altText-primary text-xs font-semibold">{t('pages.orbisPQ.rooms.storage.copySequence')}</span>
               </>
             )}
           </button>
@@ -183,7 +183,7 @@ export default function StorageRoom() {
           href="/party-quest/orbis"
           className="absolute bottom-0 left-1/3 -translate-x-1/2 w-24 h-24 bg-gradient-to-b from-door-exit to-door-exit-hover rounded-t-md flex items-center justify-center hover:from-door-exit-hover hover:to-door-exit-active transition-all duration-300 cursor-pointer shadow-lg hover:shadow-xl transform hover:scale-105"
         >
-          <span className="text-altText-primary font-semibold">{t('orbisPQ.rooms.common.exit')}</span>
+          <span className="text-altText-primary font-semibold">{t('pages.orbisPQ.rooms.common.exit')}</span>
         </Link>
       </div>
 
@@ -232,7 +232,7 @@ export default function StorageRoom() {
 
         <div className="relative z-10">
           <p className="text-status-warning font-semibold text-xs">
-            {t('orbisPQ.rooms.storage.tip')}
+            {t('pages.orbisPQ.rooms.storage.tip')}
           </p>
         </div>
       </div>

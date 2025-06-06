@@ -179,14 +179,14 @@ export default function OnTheWayUp() {
 
         {/* Title */}
         <div className="relative z-10 text-center font-semibold">
-          <h1 className="text-2xl text-text-primary">{t('orbisPQ.rooms.onTheWayUp.title')}</h1>
-          <h3 className="text-sm text-text-secondary mt-1">{t('orbisPQ.rooms.onTheWayUp.jumpToHighest')}</h3>
+          <h1 className="text-2xl text-text-primary">{t('pages.orbisPQ.rooms.onTheWayUp.title')}</h1>
+          <h3 className="text-sm text-text-secondary mt-1">{t('pages.orbisPQ.rooms.onTheWayUp.jumpToHighest')}</h3>
         </div>
 
         {/* Hint Section */}
         {hasLastRowSelected && (
           <div className="relative flex items-center justify-center z-10 bg-decor rounded-lg border border-room-border p-3 sm:p-4">
-            <div className="text-xs sm:text-sm md:text-sm text-text-primary font-semibold">{t('orbisPQ.rooms.onTheWayUp.tip')}</div>
+            <div className="text-xs sm:text-sm md:text-sm text-text-primary font-semibold">{t('pages.orbisPQ.rooms.onTheWayUp.tip')}</div>
           </div>
         )}
 
@@ -202,7 +202,7 @@ export default function OnTheWayUp() {
                       onClick={() => handleResetSection(sectionIndex)}
                       className="relative max-w-20 top-0 px-2 sm:px-3 py-1 bg-gray-600 text-white text-[8px] sm:text-xs md:text-sm rounded hover:bg-gray-700 transition-colors"
                     >
-                      {t('orbisPQ.rooms.onTheWayUp.resetSection')}
+                      {t('pages.orbisPQ.rooms.onTheWayUp.resetSection')}
                     </button>
                   )}
                   
@@ -240,7 +240,7 @@ export default function OnTheWayUp() {
                       onClick={() => handleResetSection(sectionIndex)}
                       className="relative max-w-20 top-0 px-2 sm:px-3 py-1 bg-gray-600 text-white text-[8px] sm:text-xs md:text-sm rounded hover:bg-gray-700 transition-colors"
                     >
-                      {t('orbisPQ.rooms.onTheWayUp.resetSection')}
+                      {t('pages.orbisPQ.rooms.onTheWayUp.resetSection')}
                     </button>
                   )}
                 </div>
@@ -269,14 +269,14 @@ export default function OnTheWayUp() {
                     <svg xmlns="http://www.w3.org/2000/svg" className="h-3 w-3 sm:h-4 sm:w-4 mr-1" viewBox="0 0 20 20" fill="currentColor">
                       <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                     </svg>
-                    {t('orbisPQ.rooms.common.copied')}
+                    {t('pages.orbisPQ.rooms.common.copied')}
                   </>
                 ) : (
                   <>
                     <svg xmlns="http://www.w3.org/2000/svg" className="h-3 w-3 sm:h-4 sm:w-4 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                       <path strokeLinecap="round" strokeLinejoin="round" d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002-2h2a2 2 0 002 2m0 0h2a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3" />
                     </svg>
-                    {t('orbisPQ.rooms.onTheWayUp.copyAnswer')}
+                    {t('pages.orbisPQ.rooms.onTheWayUp.copyAnswer')}
                   </>
                 )}
               </button>
@@ -291,7 +291,7 @@ export default function OnTheWayUp() {
               onClick={() => setShowConfirmDialog(true)}
               className="z-10 px-4 py-2 bg-red-600 text-white text-xs sm:text-sm rounded hover:bg-red-700 transition-colors"
             >
-              {t('orbisPQ.rooms.onTheWayUp.clearAll')}
+              {t('pages.orbisPQ.rooms.onTheWayUp.clearAll')}
             </button>
           </div>
         )}
@@ -301,8 +301,8 @@ export default function OnTheWayUp() {
           href="/party-quest/orbis"
           className="relative z-20 w-24 h-28 bg-gradient-to-b from-door-exit to-door-exit-hover rounded-t-md flex flex-col items-center justify-center hover:from-door-exit-hover hover:to-door-exit-active transition-all duration-300 cursor-pointer shadow-lg hover:shadow-xl mx-auto transform hover:scale-105"
         >
-          <span className="text-altText-primary font-semibold">{t('orbisPQ.rooms.common.exit')}</span>
-          <span className="text-altText-secondary text-xxs text-center font-semibold mt-1">{t('orbisPQ.rooms.common.transferWarning')}</span>
+          <span className="text-altText-primary font-semibold">{t('pages.orbisPQ.rooms.common.exit')}</span>
+          <span className="text-altText-secondary text-xxs text-center font-semibold mt-1">{t('pages.orbisPQ.rooms.common.transferWarning')}</span>
         </Link>
       </div>
 
@@ -310,20 +310,20 @@ export default function OnTheWayUp() {
       {showConfirmDialog && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
           <div className="bg-white p-6 rounded-lg shadow-xl max-w-sm w-full">
-            <h3 className="text-lg font-semibold text-gray-900 mb-4">{t('orbisPQ.rooms.onTheWayUp.confirmClear')}</h3>
-            <p className="text-gray-600 mb-6">{t('orbisPQ.rooms.onTheWayUp.confirmMessage')}</p>
+            <h3 className="text-lg font-semibold text-gray-900 mb-4">{t('pages.orbisPQ.rooms.onTheWayUp.confirmClear')}</h3>
+            <p className="text-gray-600 mb-6">{t('pages.orbisPQ.rooms.onTheWayUp.confirmMessage')}</p>
             <div className="flex justify-end space-x-4">
               <button
                 onClick={() => setShowConfirmDialog(false)}
                 className="px-4 py-2 bg-gray-200 text-gray-700 rounded hover:bg-gray-300 transition-colors"
               >
-                {t('orbisPQ.rooms.onTheWayUp.cancel')}
+                {t('pages.orbisPQ.rooms.onTheWayUp.cancel')}
               </button>
               <button
                 onClick={handleClearAll}
                 className="px-4 py-2 bg-red-600 text-white rounded hover:bg-red-700 transition-colors"
               >
-                {t('orbisPQ.rooms.onTheWayUp.clearAll')}
+                {t('pages.orbisPQ.rooms.onTheWayUp.clearAll')}
               </button>
             </div>
           </div>
@@ -376,9 +376,9 @@ export default function OnTheWayUp() {
         <div className="relative z-10">
           <div className="text-text-primary font-semibold mb-2">{t('common.objective')}</div>
           <ul className="list-disc list-inside space-y-1 font-semibold text-xs text-text-secondary">
-            <li>{t('orbisPQ.rooms.onTheWayUp.requirement1')}</li>
-            <li>{t('orbisPQ.rooms.onTheWayUp.requirement2')}</li>
-            <li>{t('orbisPQ.rooms.onTheWayUp.requirement3')}</li>
+            <li>{t('pages.orbisPQ.rooms.onTheWayUp.requirement1')}</li>
+            <li>{t('pages.orbisPQ.rooms.onTheWayUp.requirement2')}</li>
+            <li>{t('pages.orbisPQ.rooms.onTheWayUp.requirement3')}</li>
           </ul>
         </div>
       </div>

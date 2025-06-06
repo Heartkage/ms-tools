@@ -10,10 +10,10 @@ export default function OrbisPQEntrance() {
     <div className="min-h-screen p-8">
       <div className="text-center">
         <h1 className="text-3xl font-bold text-altText-primary mb-2">
-          {t('orbisPQ.rooms.entrance.title')}
+          {t('pages.orbisPQ.rooms.entrance.title')}
         </h1>
         <h2 className="text-sm font-bold text-altText-secondary">
-          {t('orbisPQ.rooms.entrance.collectClouds')}
+          {t('pages.orbisPQ.rooms.entrance.collectClouds')}
         </h2>
       </div>
 
@@ -64,7 +64,7 @@ export default function OrbisPQEntrance() {
 
           <div className="relative z-10">
             <p className="text-status-warning font-semibold text-sm">
-              {t('orbisPQ.rooms.entrance.tip')}
+              {t('pages.orbisPQ.rooms.entrance.tip')}
             </p>
           </div>
         </div>

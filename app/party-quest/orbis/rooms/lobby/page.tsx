@@ -24,13 +24,13 @@ const SERVERS: Record<string, Server> = {
 };
 
 const DAY_COLORS: Record<string, DayInfo> = {
-  Monday:    { color: 'rgb(203, 136, 33)',    type: 'cute',      colorNameKey: 'orbisPQ.colors.orange' },      // Orange
-  Tuesday:   { color: 'rgb(229, 210, 62)',    type: 'scary',     colorNameKey: 'orbisPQ.colors.yellow' },     // Yellow
-  Wednesday: { color: 'rgb(163, 85, 200)',  type: 'fun',       colorNameKey: 'orbisPQ.colors.purple' },       // Purple
-  Thursday:  { color: 'rgb(9, 9, 175)',      type: 'sad',       colorNameKey: 'orbisPQ.colors.darkBlue' },       // Dark Blue
-  Friday:    { color: 'rgb(25, 142, 212)',  type: 'cold',      colorNameKey: 'orbisPQ.colors.lightBlue' },      // Light Blue
-  Saturday:  { color: 'rgb(50, 144, 21)',    type: 'tight',     colorNameKey: 'orbisPQ.colors.green' },     // Green
-  Sunday:    { color: 'rgb(204, 19, 23)',      type: 'operatic',   colorNameKey: 'orbisPQ.colors.red' }   // Red
+  Monday:    { color: 'rgb(203, 136, 33)',    type: 'cute',      colorNameKey: 'pages.orbisPQ.colors.orange' },      // Orange
+  Tuesday:   { color: 'rgb(229, 210, 62)',    type: 'scary',     colorNameKey: 'pages.orbisPQ.colors.yellow' },     // Yellow
+  Wednesday: { color: 'rgb(163, 85, 200)',  type: 'fun',       colorNameKey: 'pages.orbisPQ.colors.purple' },       // Purple
+  Thursday:  { color: 'rgb(9, 9, 175)',      type: 'sad',       colorNameKey: 'pages.orbisPQ.colors.darkBlue' },       // Dark Blue
+  Friday:    { color: 'rgb(25, 142, 212)',  type: 'cold',      colorNameKey: 'pages.orbisPQ.colors.lightBlue' },      // Light Blue
+  Saturday:  { color: 'rgb(50, 144, 21)',    type: 'tight',     colorNameKey: 'pages.orbisPQ.colors.green' },     // Green
+  Sunday:    { color: 'rgb(204, 19, 23)',      type: 'operatic',   colorNameKey: 'pages.orbisPQ.colors.red' }   // Red
 };
 
 export default function Lobby() {
@@ -133,7 +133,7 @@ export default function Lobby() {
 
   const handleCircleClick = async () => {
     const colorName = t(currentDayInfo.colorNameKey);
-    const textToCopy = `${t('orbisPQ.rooms.lobby.title')}: ${colorName}`;
+    const textToCopy = `${t('pages.orbisPQ.rooms.lobby.title')}: ${colorName}`;
     try {
       await copyToClipboard(textToCopy);
       setCopySuccess(true);
@@ -150,10 +150,10 @@ export default function Lobby() {
         {/* Title */}
         <div className="mt-8 sm:mt-4 mb-8 text-center">
           <div className="text-altText-primary text-2xl sm:text-3xl md:text-4xl font-semibold mb-2">
-            {t('orbisPQ.rooms.lobby.title')}
+            {t('pages.orbisPQ.rooms.lobby.title')}
           </div>
           <div className="text-altText-secondary text-xs sm:text-sm font-semibold">
-            {t('orbisPQ.rooms.lobby.collectCD', { color: t(currentDayInfo.colorNameKey) })}
+            {t('pages.orbisPQ.rooms.lobby.collectCD', { color: t(currentDayInfo.colorNameKey) })}
           </div>
         </div>
 
@@ -164,7 +164,7 @@ export default function Lobby() {
               onClick={() => setIsServerMenuOpen(!isServerMenuOpen)}
               className="flex items-center space-x-2 px-3 sm:px-4 py-1.5 sm:py-2 bg-interactive rounded-lg hover:bg-interactive-hover transition-colors duration-200"
             >
-              <span className="text-altText-primary font-semibold text-xxs sm:text-sm">{t(`orbisPQ.rooms.lobby.servers.${selectedServer.name.toLowerCase()}`)}</span>
+              <span className="text-altText-primary font-semibold text-xxs sm:text-sm">{t(`pages.orbisPQ.rooms.lobby.servers.${selectedServer.name.toLowerCase()}`)}</span>
               <svg
                 className={`w-2 h-2 sm:w-4 sm:h-4 transform transition-transform duration-200 ${isServerMenuOpen ? 'rotate-180' : ''}`}
                 fill="none"
@@ -188,7 +188,7 @@ export default function Lobby() {
                       selectedServer.name === server.name ? 'bg-interactive text-altText-primary' : 'text-altText-secondary'
                     }`}
                   >
-                    <span className="text-xs sm:text-sm">{t(`orbisPQ.rooms.lobby.servers.${server.name.toLowerCase()}`)}</span>
+                    <span className="text-xs sm:text-sm">{t(`pages.orbisPQ.rooms.lobby.servers.${server.name.toLowerCase()}`)}</span>
                   </button>
                 ))}
               </div>
@@ -210,12 +210,12 @@ export default function Lobby() {
             }}
           />
           <div className="absolute inset-0 flex flex-col items-center justify-center">
-            <span className="text-2xl sm:text-3xl font-bold text-altText-primary">{t(`orbisPQ.weekdays.${currentDay.toLowerCase()}`)}</span>
-            <span className="text-lg sm:text-xl text-altText-secondary mt-2">{t(`orbisPQ.dayTypes.${currentDayInfo.type}`)}</span>
-            <span className="text-xs text-altText-tertiary mt-1">{t('orbisPQ.rooms.lobby.clickTip')}</span>
+            <span className="text-2xl sm:text-3xl font-bold text-altText-primary">{t(`pages.orbisPQ.weekdays.${currentDay.toLowerCase()}`)}</span>
+            <span className="text-lg sm:text-xl text-altText-secondary mt-2">{t(`pages.orbisPQ.dayTypes.${currentDayInfo.type}`)}</span>
+            <span className="text-xs text-altText-tertiary mt-1">{t('pages.orbisPQ.rooms.lobby.clickTip')}</span>
             {copySuccess && (
               <div className="absolute bottom-4 text-status-success text-xs sm:text-sm font-semibold bg-black/50 px-3 py-1 rounded-full">
-                {t('orbisPQ.rooms.common.copied')}
+                {t('pages.orbisPQ.rooms.common.copied')}
               </div>
             )}
           </div>
@@ -227,19 +227,19 @@ export default function Lobby() {
             {currentTime} 
           </div>
           <div className="text-xs sm:text-sm text-altText-secondary">
-            {t('orbisPQ.rooms.lobby.serverTime', { server: selectedServer.displayName })} <span>({selectedServer.name === 'NA' ? 'EST/UTC-5' : selectedServer.name === 'TW' ? 'EST/UTC-5' : 'KST/UTC+9'})</span>
+            {t('pages.orbisPQ.rooms.lobby.serverTime', { server: selectedServer.displayName })} <span>({selectedServer.name === 'NA' ? 'EST/UTC-5' : selectedServer.name === 'TW' ? 'EST/UTC-5' : 'KST/UTC+9'})</span>
           </div>
         </div>
 
         {/* Next Day Time */}
         <div className="text-base sm:text-lg text-center space-y-1 mb-6">
           <div className="bg-white/5 backdrop-blur-sm rounded-lg p-3 sm:p-4 shadow-lg">
-            <div className="text-altText-secondary text-[10px] sm:text-xs">{t('orbisPQ.rooms.lobby.localTime')}</div>
+            <div className="text-altText-secondary text-[10px] sm:text-xs">{t('pages.orbisPQ.rooms.lobby.localTime')}</div>
             <div className="text-altText-primary text-sm sm:text-base">{localTime}</div>
             <div className="text-[10px] sm:text-xs text-altText-tertiary">{timezone}</div>
           </div>
           <div className="bg-white/5 backdrop-blur-sm rounded-lg p-3 sm:p-4 shadow-lg">
-            <div className="text-altText-secondary text-[10px] sm:text-xs">{t('orbisPQ.rooms.lobby.nextDayChange')}</div>
+            <div className="text-altText-secondary text-[10px] sm:text-xs">{t('pages.orbisPQ.rooms.lobby.nextDayChange')}</div>
             <div className="text-altText-primary text-sm sm:text-base">{nextDayTime}</div>
             <div className="text-[10px] sm:text-xs text-altText-tertiary">{timezone}</div>
           </div>
@@ -256,8 +256,8 @@ export default function Lobby() {
                 boxShadow: `0 0 15px ${info.color}`,
               }}
             >
-              <span className="text-white font-semibold text-xs sm:text-lg">{t(`orbisPQ.weekdays.${day.toLowerCase()}`)}</span>
-              <span className="text-white/90 text-xxs sm:text-sm mt-1">{t(`orbisPQ.dayTypes.${info.type}`)}</span>
+              <span className="text-white font-semibold text-xs sm:text-lg">{t(`pages.orbisPQ.weekdays.${day.toLowerCase()}`)}</span>
+              <span className="text-white/90 text-xxs sm:text-sm mt-1">{t(`pages.orbisPQ.dayTypes.${info.type}`)}</span>
             </div>
           ))}
         </div>
@@ -310,7 +310,7 @@ export default function Lobby() {
 
           <div className="relative z-10">
             <p className="text-status-warning font-semibold text-xs">
-              {t('orbisPQ.rooms.lobby.tip')}
+              {t('pages.orbisPQ.rooms.lobby.tip')}
             </p>
           </div>
         </div>

@@ -34,8 +34,8 @@ export default function LoungeRoom() {
 
         {/* Title */}
         <div className="relative z-0">
-          <h1 className="text-white/90 font-bold text-3xl text-center mb-2">{t('orbisPQ.rooms.lounge.title')}</h1>
-          <h3 className="text-white/60 text-sm text-center mb-2">{t('orbisPQ.rooms.lounge.collect40Pieces')}</h3>
+          <h1 className="text-white/90 font-bold text-3xl text-center mb-2">{t('pages.orbisPQ.rooms.lounge.title')}</h1>
+          <h3 className="text-white/60 text-sm text-center mb-2">{t('pages.orbisPQ.rooms.lounge.collect40Pieces')}</h3>
           <div className="h-1 w-3/4 bg-room mx-auto rounded-full"></div>
         </div>
 
@@ -44,9 +44,9 @@ export default function LoungeRoom() {
           {/* Roof semicircle */}
           <div className="mx-auto transform w-24 h-12 bg-door-dark rounded-t-full pt-2"></div>
           <div className="w-24 h-24 bg-gradient-to-b from-door-dark to-door-dark-bottom flex flex-col items-center justify-top mx-auto p-2">
-            <h3 className="text-altText-primary font-semibold text-sm text-center">{t('orbisPQ.rooms.lounge.room303')}</h3>
+            <h3 className="text-altText-primary font-semibold text-sm text-center">{t('pages.orbisPQ.rooms.lounge.room303')}</h3>
             <div className="text-center mt-2 space-y-1">
-              <p className="text-altText-secondary text-xs">0/10 {t('orbisPQ.rooms.lounge.pieces')}</p>
+              <p className="text-altText-secondary text-xs">0/10 {t('pages.orbisPQ.rooms.lounge.pieces')}</p>
             </div>
           </div>
           <div className="h-1 w-2/3 bg-room-floor mx-auto rounded-full"></div>
@@ -57,10 +57,10 @@ export default function LoungeRoom() {
           {/* Roof semicircle */}
           <div className="mx-auto transform w-24 h-12 bg-door-dark rounded-t-full pt-2"></div>
           <div className="w-24 h-24 bg-gradient-to-b from-door-dark to-door-dark-bottom flex flex-col items-center justify-top mx-auto">
-            <h3 className="text-altText-primary font-semibold text-sm text-center">{t('orbisPQ.rooms.lounge.room302')}</h3>
+            <h3 className="text-altText-primary font-semibold text-sm text-center">{t('pages.orbisPQ.rooms.lounge.room302')}</h3>
             <div className="text-center mt-2 space-y-1">
-              <p className="text-altText-secondary text-xs">0/10 {t('orbisPQ.rooms.lounge.pieces')}</p>
-              <p className="text-altText-tertiary text-xxs">({t('orbisPQ.rooms.lounge.weaponAttack')})</p>
+              <p className="text-altText-secondary text-xs">0/10 {t('pages.orbisPQ.rooms.lounge.pieces')}</p>
+              <p className="text-altText-tertiary text-xxs">({t('pages.orbisPQ.rooms.lounge.weaponAttack')})</p>
             </div>
           </div>
           <div className="h-1 w-2/3 bg-room-floor mx-auto rounded-full"></div>
@@ -99,10 +99,10 @@ export default function LoungeRoom() {
           {/* Roof semicircle */}
           <div className="mx-auto transform w-24 h-12 bg-door-dark rounded-t-full pt-2"></div>
           <div className="w-24 h-24 bg-gradient-to-b from-door-dark to-door-dark-bottom flex flex-col items-center justify-top mx-auto">
-            <h3 className="text-altText-primary font-semibold text-sm text-center">{t('orbisPQ.rooms.lounge.room301')}</h3>
+            <h3 className="text-altText-primary font-semibold text-sm text-center">{t('pages.orbisPQ.rooms.lounge.room301')}</h3>
             <div className="text-center mt-2 space-y-1">
-              <p className="text-altText-secondary text-xs">0/10 {t('orbisPQ.rooms.lounge.pieces')}</p>
-              <p className="text-altText-tertiary text-xxs">({t('orbisPQ.rooms.lounge.magicAttack')})</p>
+              <p className="text-altText-secondary text-xs">0/10 {t('pages.orbisPQ.rooms.lounge.pieces')}</p>
+              <p className="text-altText-tertiary text-xxs">({t('pages.orbisPQ.rooms.lounge.magicAttack')})</p>
             </div>
           </div>
           <div className="h-1 w-2/3 bg-room-floor mx-auto rounded-full"></div>
@@ -110,7 +110,7 @@ export default function LoungeRoom() {
 
         {/* Jump Requirement */}
         <div className="relative z-20 text-center">
-          <p className="text-status-hint font-semibold text-xs sm:text-base md:text-lg">{t('orbisPQ.rooms.lounge.jumpRequirement')}</p>
+          <p className="text-status-hint font-semibold text-xs sm:text-base md:text-lg">{t('pages.orbisPQ.rooms.lounge.jumpRequirement')}</p>
         </div>
 
         {/* Exit */}
@@ -119,8 +119,8 @@ export default function LoungeRoom() {
             href="/party-quest/orbis"
             className="relative w-24 h-32 bg-gradient-to-b from-door-exit to-door-exit-hover rounded-t-md flex flex-col items-center justify-center hover:from-door-exit-hover hover:to-door-exit-active transition-all duration-300 cursor-pointer shadow-lg hover:shadow-xl mx-auto transform hover:scale-105"
           >
-            <span className="text-altText-primary font-semibold">{t('orbisPQ.rooms.common.exit')}</span>
-            <span className="text-altText-secondary text-xxs text-center font-semibold mt-1">{t('orbisPQ.rooms.common.transferWarning')}</span>
+            <span className="text-altText-primary font-semibold">{t('pages.orbisPQ.rooms.common.exit')}</span>
+            <span className="text-altText-secondary text-xxs text-center font-semibold mt-1">{t('pages.orbisPQ.rooms.common.transferWarning')}</span>
           </Link>
           <div className="relative z-30 h-1 w-2/3 bg-room-floor mx-auto rounded-full"></div>
         </div>
@@ -130,8 +130,8 @@ export default function LoungeRoom() {
           <Link href="lounge/room/304">
             <div className="flex flex-col items-center">
               <div className="w-28 h-28 rounded-full bg-gradient-to-b from-door-dark to-door-dark-bottom flex flex-col items-center justify-center cursor-pointer transition-all duration-300 hover:ring-2 hover:ring-altText-tertiary hover:shadow-md">
-                <span className="text-altText-primary font-bold text-sm">{t('orbisPQ.rooms.lounge.room304')}</span>
-                <span className="text-altText-secondary text-xs mt-1 text-center">0/10 {t('orbisPQ.rooms.lounge.pieces')}</span>
+                <span className="text-altText-primary font-bold text-sm">{t('pages.orbisPQ.rooms.lounge.room304')}</span>
+                <span className="text-altText-secondary text-xs mt-1 text-center">0/10 {t('pages.orbisPQ.rooms.lounge.pieces')}</span>
               </div>
             </div>
           </Link>
@@ -183,7 +183,7 @@ export default function LoungeRoom() {
 
         <div className="relative z-10">
           <p className="text-status-warning font-semibold text-xs">
-            {t('orbisPQ.rooms.lounge.tip')}
+            {t('pages.orbisPQ.rooms.lounge.tip')}
           </p>
         </div>
       </div>

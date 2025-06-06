@@ -24,8 +24,8 @@ export default function WalkwayRoom() {
 
         {/* Title */}
         <div className="relative z-10 text-text-primary font-semibold text-center mb-8">
-          <div className="text-2xl">{t('orbisPQ.rooms.walkway.title')}</div>
-          <div className="text-sm text-text-secondary mt-1">{t('orbisPQ.rooms.walkway.collectPieces')}</div>
+          <div className="text-2xl">{t('pages.orbisPQ.rooms.walkway.title')}</div>
+          <div className="text-sm text-text-secondary mt-1">{t('pages.orbisPQ.rooms.walkway.collectPieces')}</div>
         </div>
 
         {/* Platform Grid */}
@@ -60,8 +60,8 @@ export default function WalkwayRoom() {
           href="/party-quest/orbis"
           className="relative mt-10 w-24 h-24 left-1/2 -translate-x-1/2 bg-gradient-to-b from-door-exit to-door-exit-hover rounded-t-md flex flex-col items-center justify-center hover:from-door-exit-hover hover:to-door-exit-active transition-all duration-300 cursor-pointer shadow-lg hover:shadow-xl transform hover:scale-105 z-10"
         >
-          <span className="text-altText-primary font-semibold">{t('orbisPQ.rooms.common.exit')}</span>
-          <span className="text-altText-secondary text-xxs text-center font-semibold mt-1">{t('orbisPQ.rooms.common.transferWarning')}</span>
+          <span className="text-altText-primary font-semibold">{t('pages.orbisPQ.rooms.common.exit')}</span>
+          <span className="text-altText-secondary text-xxs text-center font-semibold mt-1">{t('pages.orbisPQ.rooms.common.transferWarning')}</span>
         </Link>
       </div>
 
@@ -110,7 +110,7 @@ export default function WalkwayRoom() {
 
         <div className="relative z-10">
           <p className="text-status-warning font-semibold text-xs">
-            {t('orbisPQ.rooms.walkway.tip')}
+            {t('pages.orbisPQ.rooms.walkway.tip')}
           </p>
         </div>
       </div>

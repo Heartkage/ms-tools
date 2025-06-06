@@ -45,8 +45,8 @@ export default function DarkRoom() {
   return (
     <div className="flex flex-col bg-black p-8 rounded-lg">
       <div className="text-center mb-12">
-        <h1 className="text-3xl font-bold text-altText-primary">{t('orbisPQ.rooms.lounge.room304')}</h1>
-        <h3 className="text-altText-secondary text-sm font-semibold mt-2">{t('orbisPQ.rooms.lounge.collectPieces')}</h3>
+        <h1 className="text-3xl font-bold text-altText-primary">{t('pages.orbisPQ.rooms.lounge.room304')}</h1>
+        <h3 className="text-altText-secondary text-sm font-semibold mt-2">{t('pages.orbisPQ.rooms.lounge.collectPieces')}</h3>
       </div>
       <div className="flex w-full justify-center items-end h-[calc(100%-4rem)] max-w-3xl mx-auto">
         {/* Left Section - 6x9 Platform */}
@@ -69,7 +69,7 @@ export default function DarkRoom() {
             href="../"
             className="block w-12 h-12 sm:w-24 sm:h-24 bg-gradient-to-b from-door-dark to-door-dark-bottom rounded-full flex items-center justify-center shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 hover:ring-2 hover:ring-altText-tertiary"
           >
-            <span className="text-altText-primary font-semibold">{t('orbisPQ.rooms.common.exit')}</span>
+            <span className="text-altText-primary font-semibold">{t('pages.orbisPQ.rooms.common.exit')}</span>
           </Link>
         </div>
 
