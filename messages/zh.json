@@ -5,7 +5,9 @@
       "title": "組隊任務",
       "kerning": "墮落城市組隊任務",
       "ludibrium": "玩具城組隊任務",
-      "orbis": "天空之城組隊任務"
+      "ludibriumLevel": "等級需求：35 ~ 50",
+      "orbis": "天空之城組隊任務",
+      "orbisLevel": "等級需求：51 ~ 70"
     },
     "scroll": {
       "title": "卷軸",

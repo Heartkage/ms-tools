@@ -5,7 +5,9 @@
       "title": "Party Quest",
       "kerning": "Kerning Party Quest",
       "ludibrium": "Ludibrium Party Quest",
-      "orbis": "Orbis Party Quest"
+      "ludibriumLevel": "Level: 35 ~ 50",
+      "orbis": "Orbis Party Quest",
+      "orbisLevel": "Level: 51 ~ 70"
     },
     "scroll": {
       "title": "Scroll",
