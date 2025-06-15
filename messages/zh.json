@@ -75,13 +75,13 @@
         "red": "紅色"
       },
       "dayTypes": {
-        "cute": "有趣",
-        "scary": "恐怖",
-        "fun": "有意思",
+        "cute": "可愛",
+        "scary": "可怕",
+        "fun": "有趣",
         "sad": "憂鬱",
-        "cold": "冷冰冰",
+        "cold": "冷淡",
         "tight": "晴朗",
-        "operatic": "雄壯"
+        "operatic": "傑出"
       },
       "rooms": {
         "common": {
