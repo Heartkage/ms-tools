@@ -15,7 +15,7 @@ type Platform = {
 };
 
 export default function GardenRoom() {
-  const { t } = useLanguage();
+  const { t, tHtml } = useLanguage();
   const [copySuccess, setCopySuccess] = useState(false);
 
   // Initialize platforms with empty pots
@@ -275,11 +275,11 @@ export default function GardenRoom() {
         <div className="relative z-10">
           <div className="text-text-primary font-semibold mb-2">{t('common.objective')}</div>
           <ul className="list-decimal list-inside space-y-1 font-semibold text-xs text-text-secondary">
-            <li>{t('pages.orbisPQ.rooms.garden.objective1')}</li>
-            <li>{t('pages.orbisPQ.rooms.garden.objective2')}</li>
-            <li>{t('pages.orbisPQ.rooms.garden.objective3')}</li>
-            <li>{t('pages.orbisPQ.rooms.garden.objective4')}</li>
-            <li>{t('pages.orbisPQ.rooms.garden.objective5')}</li>
+            <li dangerouslySetInnerHTML={tHtml('pages.orbisPQ.rooms.garden.objective1')} />
+            <li dangerouslySetInnerHTML={tHtml('pages.orbisPQ.rooms.garden.objective2')} />
+            <li dangerouslySetInnerHTML={tHtml('pages.orbisPQ.rooms.garden.objective3')} />
+            <li dangerouslySetInnerHTML={tHtml('pages.orbisPQ.rooms.garden.objective4')} />
+            <li dangerouslySetInnerHTML={tHtml('pages.orbisPQ.rooms.garden.objective5')} />
           </ul>
         </div>
       </div>

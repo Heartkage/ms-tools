@@ -34,7 +34,7 @@ const DAY_COLORS: Record<string, DayInfo> = {
 };
 
 export default function Lobby() {
-  const { t } = useLanguage();
+  const { t, tHtml } = useLanguage();
   const [currentTime, setCurrentTime] = useState('');
   const [localTime, setLocalTime] = useState('');
   const [nextDayTime, setNextDayTime] = useState('');
@@ -227,7 +227,7 @@ export default function Lobby() {
             {currentTime} 
           </div>
           <div className="text-xs sm:text-sm text-altText-secondary">
-            {t('pages.orbisPQ.rooms.lobby.serverTime', { server: selectedServer.displayName })} <span>({selectedServer.name === 'NA' ? 'EST/UTC-5' : selectedServer.name === 'TW' ? 'EST/UTC-5' : 'KST/UTC+9'})</span>
+            <span dangerouslySetInnerHTML={tHtml('pages.orbisPQ.rooms.lobby.serverTime', { server: selectedServer.displayName })} /> <span>({selectedServer.name === 'NA' ? 'EST/UTC-5' : selectedServer.name === 'TW' ? 'EST/UTC-5' : 'KST/UTC+9'})</span>
           </div>
         </div>
 

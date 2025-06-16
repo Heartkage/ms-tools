@@ -5,7 +5,7 @@ import { useLanguage } from '../../../../../contexts/LanguageContext';
 import { copyToClipboard } from '../../../../../lib/utils/clipboard';
 
 export default function SealedRoom() {
-  const { t } = useLanguage();
+  const { t, tHtml } = useLanguage();
   const [codeInput, setCodeInput] = useState('');
   const [showError, setShowError] = useState(false);
   const [copySuccess, setCopySuccess] = useState(false);
@@ -167,10 +167,10 @@ export default function SealedRoom() {
           <div className="relative z-10">
             <h3 className="text-base font-semibold text-text-primary mb-3">{t('pages.orbisPQ.rooms.sealed.howToGetDigits')}</h3>
             <div className="space-y-2 text-xs font-semibold text-text-secondary">
-              <p>{t('pages.orbisPQ.rooms.sealed.step1')}</p>
-              <p>{t('pages.orbisPQ.rooms.sealed.step2')}</p>
-              <p>{t('pages.orbisPQ.rooms.sealed.step3')}</p>
-              <p>{t('pages.orbisPQ.rooms.sealed.step4')}</p>
+              <p dangerouslySetInnerHTML={tHtml('pages.orbisPQ.rooms.sealed.step1')} />
+              <p dangerouslySetInnerHTML={tHtml('pages.orbisPQ.rooms.sealed.step2')} />
+              <p dangerouslySetInnerHTML={tHtml('pages.orbisPQ.rooms.sealed.step3')} />
+              <p dangerouslySetInnerHTML={tHtml('pages.orbisPQ.rooms.sealed.step4')} />
             </div>
           </div>
         </div>
@@ -277,8 +277,8 @@ export default function SealedRoom() {
         <div className="relative z-10">
           <div className="text-text-primary font-semibold mb-2">{t('common.objective')}</div>
           <ul className="list-disc list-inside space-y-1 font-semibold text-xs text-text-secondary">
-            <li>{t('pages.orbisPQ.rooms.sealed.requirement1')}</li>
-            <li>{t('pages.orbisPQ.rooms.sealed.requirement2')}</li>
+            <li dangerouslySetInnerHTML={tHtml('pages.orbisPQ.rooms.sealed.requirement1')} />
+            <li dangerouslySetInnerHTML={tHtml('pages.orbisPQ.rooms.sealed.requirement2')} />
             <li>{t('pages.orbisPQ.rooms.sealed.requirement3')}</li>
           </ul>
         </div>

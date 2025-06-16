@@ -11,6 +11,7 @@ interface LanguageContextType {
   language: Language;
   setLanguage: (lang: Language) => void;
   t: (key: string, params?: Record<string, string>) => string;
+  tHtml: (key: string, params?: Record<string, string>) => { __html: string };
 }
 
 const messages: Record<Language, typeof enMessages> = {
@@ -51,7 +52,7 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
     setLanguage(detectedLanguage);
   }, []);
 
-  const t = (key: string, params?: Record<string, string>) => {
+  const getTranslation = (key: string, params?: Record<string, string>) => {
     const keys = key.split('.');
     let value: any = messages[language];
     
@@ -70,6 +71,21 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
     return result;
   };
 
+  const t = (key: string, params?: Record<string, string>) => {
+    return getTranslation(key, params);
+  };
+
+  const tHtml = (key: string, params?: Record<string, string>) => {
+    const translation = getTranslation(key, params);
+    // Replace \n with <br />
+    const withLineBreaks = translation.replace(/\\n/g, '<br />');
+    // Replace <color=#RRGGBB> with <span style="color: #RRGGBB">
+    const withColors = withLineBreaks.replace(/<color=#([0-9A-Fa-f]{6})>/g, '<span style="color: #$1">');
+    // Replace </color> with </span>
+    const withClosedColors = withColors.replace(/<\/color>/g, '</span>');
+    return { __html: withClosedColors };
+  };
+
   const handleSetLanguage = (lang: Language) => {
     setLanguage(lang);
     if (typeof window !== 'undefined') {
@@ -80,14 +96,14 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
   // Prevent hydration mismatch by not rendering content until mounted
   if (!mounted) {
     return (
-      <LanguageContext.Provider value={{ language: 'en', setLanguage: handleSetLanguage, t }}>
+      <LanguageContext.Provider value={{ language: 'en', setLanguage: handleSetLanguage, t, tHtml }}>
         {children}
       </LanguageContext.Provider>
     );
   }
 
   return (
-    <LanguageContext.Provider value={{ language, setLanguage: handleSetLanguage, t }}>
+    <LanguageContext.Provider value={{ language, setLanguage: handleSetLanguage, t, tHtml }}>
       {children}
     </LanguageContext.Provider>
   );

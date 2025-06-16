@@ -7,7 +7,7 @@ import { roomConfig } from '../../constants';
 import { copyToClipboard } from '../../../../../lib/utils/clipboard';
 
 export default function OnTheWayUp() {
-  const { t } = useLanguage();
+  const { t, tHtml } = useLanguage();
   const [isLoading, setIsLoading] = useState(true);
   const [toggleStates, setToggleStates] = useState<number[][][]>([
     // First section - 4x4 grid
@@ -375,9 +375,9 @@ export default function OnTheWayUp() {
 
         <div className="relative z-10">
           <div className="text-text-primary font-semibold mb-2">{t('common.objective')}</div>
-          <ul className="list-disc list-inside space-y-1 font-semibold text-xs text-text-secondary">
+          <ul className="list-decimal list-inside space-y-1 font-semibold text-xs text-text-secondary">
             <li>{t('pages.orbisPQ.rooms.onTheWayUp.requirement1')}</li>
-            <li>{t('pages.orbisPQ.rooms.onTheWayUp.requirement2')}</li>
+            <li dangerouslySetInnerHTML={tHtml('pages.orbisPQ.rooms.onTheWayUp.requirement2')} />
             <li>{t('pages.orbisPQ.rooms.onTheWayUp.requirement3')}</li>
           </ul>
         </div>
