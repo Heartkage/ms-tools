@@ -7,7 +7,9 @@
       "ludibrium": "玩具城組隊任務",
       "ludibriumLevel": "等級需求：35 ~ 50",
       "orbis": "天空之城組隊任務",
-      "orbisLevel": "等級需求：51 ~ 70"
+      "orbisLevel": "等級需求：51 ~ 70",
+      "rj": "羅密歐與茱麗葉組隊任務",
+      "rjLevel": "等級需求：71 ~ 85"
     },
     "scroll": {
       "title": "卷軸",
@@ -192,6 +194,35 @@
           "title": "大廳",
           "collectClouds": "目標：收集 0/20 雲朵",
           "tip": "注意：通關時不要爬繩索。"
+        }
+      }
+    },
+    "rjPQ": {
+      "title": "羅密歐與茱麗葉組隊任務工具",
+      "stages": {
+        "stage1": {
+          "title": "Mysterious Lab"
+        },
+        "stage2": {
+          "title": "Dark Tunnel",
+          "objective": "目標：清空房間內的怪物",
+          "tip": "<b>隱藏通關條件</b>：如果有另一隊正在進行另一邊的RJPQ，並在你們進入此關時通關的話，你們<color=#ff0000>不需要清空怪物就能前往下一個房間</color>。"
+        },
+        "stage3": {
+          "title": "Unpleasant Lab"
+        },
+        "stage4": {
+          "title": "Speical Lab"
+        },
+        "stage5": {
+          "title": "Yulete's Office"
+        },
+        "stage6": {
+          "title": "Lab Tunnel"
+        },
+        "stage7": {
+          "title": "Center Lab",
+          "content": "目標：擊殺 0/1 Boss - Frankenroid"
         }
       }
     },

@@ -40,6 +40,13 @@ module.exports = {
             4: 'rgb(52, 211, 153)',    // emerald-400
           }
         },
+        rj: {
+          background: {
+            light: 'rgb(59, 54, 55)',
+            dark: 'rgb(58, 53, 45)',
+            border: 'rgb(145, 145, 145)',
+          },
+        },
         // Room backgrounds and containers
         room: {
           DEFAULT: 'rgba(219, 234, 254, 0.5)', // bg-blue-100/50

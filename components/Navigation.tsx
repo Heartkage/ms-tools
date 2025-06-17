@@ -29,6 +29,14 @@ const Navigation = () => {
                 {t('navigation.partyQuest.orbis')}
               </Link>
             </div>
+
+            <div className="flex flex-col items-center">
+              <span className="text-altText-primary text-sm text-bold mb-1">{t('navigation.partyQuest.rjLevel')}</span>
+              <Link href="/party-quest/rj"
+                className="bg-purple-400 hover:bg-purple-500 text-white font-medium py-3 px-4 rounded-lg text-center transition-colors w-full">
+                {t('navigation.partyQuest.rj')}
+              </Link>
+            </div>
           </div>
         </div>
 
