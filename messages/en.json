@@ -103,6 +103,7 @@
           "clear": "Clear",
           "enterCodeHint": "Enter a 4-digit code using only numbers 0-2",
           "invalidCode": "Invalid code! This combination doesn't exist in the puzzle.",
+          "validCombinations": "Possible Combinations:",
           "copyAnswer": "Copy Answer",
           "requirements": "Requirements:",
           "requirement1": "Requires <color=#ff0000>1</color> player to decode",

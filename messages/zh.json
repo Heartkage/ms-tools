@@ -103,6 +103,7 @@
           "clear": "清除",
           "enterCodeHint": "輸入 4 位數字，請使用 0-2 之間的數字",
           "invalidCode": "無效的代碼！不存在這個組合。",
+          "validCombinations": "可能的組合：",
           "copyAnswer": "複製答案",
           "requirements": "通關條件：",
           "requirement1": "只需要 <color=#ff0000>1</color> 名玩家解謎",

@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useRef } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { useLanguage } from '../../../../../contexts/LanguageContext';
 import { copyToClipboard } from '../../../../../lib/utils/clipboard';
 
@@ -31,6 +31,29 @@ export default function SealedRoom() {
       '2211': [4, 0, 0]
     }
   };
+
+  // Auto-focus input when page is focused
+  useEffect(() => {
+    const handleFocus = () => {
+      // Only focus if the input is not already focused and there's no error showing
+      if (inputRef.current && !showError && document.activeElement !== inputRef.current) {
+        inputRef.current.focus();
+      }
+    };
+
+    // Focus on initial load if the page is already focused
+    if (document.hasFocus()) {
+      handleFocus();
+    }
+
+    // Add event listener for when the window gains focus
+    window.addEventListener('focus', handleFocus);
+
+    // Cleanup event listener on unmount
+    return () => {
+      window.removeEventListener('focus', handleFocus);
+    };
+  }, [showError]);
 
   // Handle copy to clipboard
   const handleCopy = async () => {
@@ -78,8 +101,19 @@ export default function SealedRoom() {
     return sealedRoomConfig.answers[codeInput] || [null, null, null];
   };
 
+  // Get valid combinations based on current input
+  const getValidCombinations = () => {
+    if (!codeInput) return Object.keys(sealedRoomConfig.answers);
+    
+    return Object.keys(sealedRoomConfig.answers).filter(code => 
+      code.startsWith(codeInput)
+    );
+  };
+
   const platformNumbers = getPlatformNumbers();
   const hasValidAnswer = platformNumbers[0] !== null;
+  const validCombinations = getValidCombinations();
+  const showTypeHints = codeInput.length > 0 && codeInput.length < 4 && validCombinations.length > 0;
 
   return (
     <div className="space-y-6">
@@ -211,6 +245,29 @@ export default function SealedRoom() {
               {t('pages.orbisPQ.rooms.sealed.clear')}
             </button>
           </div>
+
+          {/* Type Hints */}
+          {showTypeHints && (
+            <div className="relative z-10 mb-4">
+              <div className="text-xs text-text-secondary mb-2">{t('pages.orbisPQ.rooms.sealed.validCombinations')}</div>
+              <div className="flex flex-wrap gap-2">
+                {validCombinations.slice(0, 9).map((code) => (
+                  <button
+                    key={code}
+                    onClick={() => setCodeInput(code)}
+                    className="px-3 py-1 text-sm font-mono bg-blue-100 hover:bg-blue-200 text-blue-800 rounded-md border border-blue-300 transition-colors"
+                  >
+                    {code}
+                  </button>
+                ))}
+                {validCombinations.length > 9 && (
+                  <span className="px-3 py-1 text-sm text-text-secondary">
+                    +{validCombinations.length - 9} more
+                  </span>
+                )}
+              </div>
+            </div>
+          )}
 
           {/* Instructions */}
           <div className={`relative z-10 text-sm text-blue-600 mb-4 transition-opacity duration-300 ${showError ? 'opacity-0' : 'opacity-100'}`}>
