@@ -247,7 +247,7 @@ export default function LudibriumPQ() {
       isScrollingRef.current = true;
       setActiveSection(index + 1);
       
-      const offset = 20;
+      const offset = 70;
       const sectionTop = section.getBoundingClientRect().top + window.scrollY - offset;
       window.scrollTo({
         top: sectionTop,
