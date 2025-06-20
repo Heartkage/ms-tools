@@ -191,11 +191,11 @@ export default function OnTheWayUp() {
         )}
 
         {/* Platform Sections */}
-        <div className="relative z-10 space-y-8">
+        <div className="relative z-10 space-y-4 sm:space-y-6">
           {toggleStates.map((section, sectionIndex) => {
             const isRightStart = sectionIndex % 2 === 1;
             return (
-              <div key={sectionIndex} className="flex flex-col space-y-4">
+              <div key={sectionIndex} className="flex flex-col">
                 <div className="relative flex space-x-4 items-center justify-center">
                   {isRightStart && section.some(row => row.some(state => state === 1)) && (
                     <button
@@ -206,7 +206,7 @@ export default function OnTheWayUp() {
                     </button>
                   )}
                   
-                  <div className="flex flex-col space-y-4 items-center">
+                  <div className="flex flex-col space-y-2 items-center">
                     {section.map((row, rowIndex) => (
                       <div key={rowIndex} className="flex items-center justify-center">
                         <div className={`flex ${'flex-row'} gap-4`}>
