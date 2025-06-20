@@ -172,11 +172,6 @@
           },
           "tip": "Note: This stage requires a teleport skill to reach the platforms."
         },
-        "statue": {
-          "title": "Garden (Boss Room)",
-          "huntBoss": "Hunt 0/1 Boss",
-          "copy": "Copy"
-        },
         "storage": {
           "title": "Storage",
           "huntMobs": "Objective: Hunt 0/15 Cellion in the following sequence",
