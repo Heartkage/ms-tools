@@ -1,12 +1,13 @@
 {
-  "title": "楓之谷 - 工具",
+  "title": "MSTools",
+  "description": "楓之谷 - 工具",
   "navigation": {
     "partyQuest": {
       "title": "組隊任務",
-      "kerning": "墮落城市組隊任務",
-      "ludibrium": "玩具城組隊任務",
+      "kerning": "墮落城市",
+      "ludibrium": "玩具城",
       "ludibriumLevel": "等級需求：35 ~ 50",
-      "orbis": "天空之城組隊任務",
+      "orbis": "天空之城",
       "orbisLevel": "等級需求：51 ~ 70"
     },
     "scroll": {
@@ -16,10 +17,53 @@
     "tools": {
       "title": "工具",
       "rjtool": "羅密歐與茱麗葉"
-    }
+    },
+    "contact": {
+      "title": "聯絡我們",
+      "email": "信箱",
+      "form": "表單",
+      "suggestions": "意見與回饋"
+    },
+    "otherLinks": "其他連結",
+    "back": "返回"
+  },
+  "privacy": {
+    "title": "隱私權政策",
+    "section1": {
+      "title": "1. 我們收集的資訊",
+      "description": "MSTools 致力於保護您的隱私。我們僅收集提供服務所需的最少資訊：",
+      "languagePreference": "語言偏好：您的語言選擇會儲存在瀏覽器的本地儲存中",
+      "data": "資料：您儲存的任何進度資料都會儲存在您的裝置上"
+    },
+    "section2": {
+      "title": "2. 我們如何使用您的資訊",
+      "description": "我們將收集的資訊用於：",
+      "providing": "提供和維護我們的服務",
+      "improving": "改善使用者體驗和功能",
+      "responding": "回應用戶反饋和支援請求"
+    },
+    "section3": {
+      "title": "3. 資料儲存",
+      "description": "您的資料安全對我們很重要：",
+      "localStorage": "所有資料都儲存在您裝置的瀏覽器儲存中",
+      "noServerStorage": "我們不會在伺服器上儲存個人資訊",
+      "clearData": "您可以隨時透過瀏覽器設定清除這些資料"
+    },
+    "section4": {
+      "title": "4. 第三方服務",
+      "description": "我們使用 Google 表單來收集反饋。Google 有自己的隱私政策，我們建議您查看。"
+    },
+    "section5": {
+      "title": "5. 聯絡我們",
+      "description": "如果您對本隱私政策有任何疑問，請聯絡我們：",
+      "email": "電子郵件：",
+      "feedbackForm": "意見表單：",
+      "submitFeedback": "提交意見"
+    },
+    "lastUpdated": "最後更新：",
+    "backToHome": "返回首頁"
   },
   "pages": {
-    "backToHome": "← 返回首頁",
     "kerningPQ": {
       "title": "墮落城市組隊任務工具"
     },
@@ -87,18 +131,17 @@
         "common": {
           "exit": "出口",
           "transferWarning":"記得轉移隊長",
-          "copied": "已複製！",
-          "goback": "← 回前一張地圖"
+          "copied": "已複製！"
         },
         "sealed": {
           "title": "封印之間\n(400)",
           "shortTitle":"封印",
           "solvePuzzle": "目標：從NPC獲得4次提示並將數字填入下方解碼器，再讓四位玩家根據解答站在對應的平台上",
           "howToGetDigits": "如何獲得 4 位數字",
-          "step1": "1. 嘗試 <color=#ff0000>沒有人</color>站在任何平台上，點擊 NPC 獲得<color=#ff0000>第 1 位數字</color>。",
-          "step2": "2. 嘗試 <color=#ff0000>1 人站在左側</color>(←)平台上，點擊 NPC 獲得<color=#ff0000>第 2 位數字</color>。",
-          "step3": "3. 嘗試 <color=#ff0000>1 人站在中間</color>(↑)平台上，點擊 NPC 獲得<color=#ff0000>第 3 位數字</color>。",
-          "step4": "4. 嘗試 <color=#ff0000>1 人站在右側</color>(→)平台上，點擊 NPC 獲得<color=#ff0000>第 4 位數字</color>。",
+          "step1": "1. 嘗試 <color=#ff0000>沒有人</color>站在任何平台上，點擊 NPC 獲得<color=#ff0000>第 1 位數字</color>",
+          "step2": "2. 嘗試 <color=#ff0000>1 人站在左側</color>(←)平台上，點擊 NPC 獲得<color=#ff0000>第 2 位數字</color>",
+          "step3": "3. 嘗試 <color=#ff0000>1 人站在中間</color>(↑)平台上，點擊 NPC 獲得<color=#ff0000>第 3 位數字</color>",
+          "step4": "4. 嘗試 <color=#ff0000>1 人站在右側</color>(→)平台上，點擊 NPC 獲得<color=#ff0000>第 4 位數字</color>",
           "enterCode": "輸入4次NPC的回答 (0-2):",
           "clear": "清除",
           "enterCodeHint": "輸入 4 位數字，請使用 0-2 之間的數字",
@@ -106,20 +149,20 @@
           "validCombinations": "可能的組合：",
           "copyAnswer": "複製答案",
           "requirements": "通關條件：",
-          "requirement1": "只需要 <color=#ff0000>1</color> 名玩家解謎",
-          "requirement2": "需要共 <color=#ff0000>4</color> 名玩家依照答案以相同人數站在平台上，再次點擊NPC即可通關",
-          "requirement3": "記得到最上面打箱子取得女神像碎片",
+          "requirement1": "只需要 <color=#ff0000>1</color> 名玩家照著<color=#1E40AF>「如何獲得 4 位數字」</color>的步驟解謎",
+          "requirement2": "需要共 <color=#ff0000>4</color> 名玩家依照答案以相同人數站在平台上，隊長再次點擊NPC即可通關",
+          "requirement3": "記得到<color=#ff0000>地圖最上面</color>打箱子取得女神像碎片",
           "left": "左側",
           "middle": "中間",
           "right": "右側",
-          "tip": "注意：如果讓NPC回答超過 7 次，全員將被傳送出房間，答案會重新產生"
+          "tip": "注意：如果讓NPC回答超過 7 次，全員將被傳送出房間，答案也會重新產生"
         },
         "lobby": {
           "title": "休息室\n(CD)",
           "collectCD": "目標：找到 0/1 {color}唱片、點擊唱片機、和NPC對話取得女神像碎片",
           "serverTime": "當前 <b>{server}</b> 伺服器時間",
           "clickTip": "(點擊複製到剪貼簿)",
-          "localTime": "現在時間",
+          "localTime": "本地時間",
           "nextDayChange": "下次換日時間",
           "timezone": "時區",
           "servers": {
@@ -146,13 +189,13 @@
           "objective3": "擊殺<color=#ff0000>黑色食人花</color>後，王就會出現",
           "objective4": "擊殺王後會掉落<color=#ff0000>「更奇怪的種子」</color>，請將這種子種在剛剛無法長出花朵的<color=#ff0000>王盆</color>裡",
           "objective5": "取得<color=#ff0000>生命草</color>後，再回到<color=#ff0000>中央塔放置在女神像中間</color>，組隊任務就通關了",
-          "tip": "注意：種下種子後，如果花盆裡長出的是粉色食人花，請勿觸碰。"
+          "tip": "注意：種下種子後，如果花盆裡長出的是粉色食人花，請勿攻擊他。"
         },
         "storage": {
           "title": "倉庫",
           "huntMobs": "目標：按照以下順序擊殺 0 / 15 隻獨角獅",
           "copySequence": "複製順序",
-          "tip": "注意：最後一隻獨角獅會掉落女神像碎片"
+          "tip": "注意：最後一隻獨角獅會直接掉落女神像碎片，所以這關不需要轉移隊長。"
         },
         "lounge": {
           "title": "客房\n(下水道)",
@@ -193,6 +236,9 @@
           "title": "大廳",
           "collectClouds": "目標：收集 0/20 雲朵",
           "tip": "注意：通關時不要爬繩索。"
+        },
+        "centralTower": {
+          "title": "中央塔"
         }
       }
     },
@@ -252,7 +298,43 @@
         "selectColorFirst": "請先選擇你的顏色",
         "roomRemoved": "房間已關閉，請重新加入"
       },
-      "loading": "載入中..."
+      "loading": "載入中...",
+      "privacy": {
+        "title": "隱私政策",
+        "section1": {
+          "title": "1. 我們收集的資訊",
+          "description": "MSTools 致力於保護您的隱私。我們僅收集提供服務所需的最少資訊：",
+          "languagePreference": "語言偏好：您的語言選擇會儲存在瀏覽器的本地儲存中",
+          "data": "資料：您儲存的任何進度資料都會儲存在您的裝置上"
+        },
+        "section2": {
+          "title": "2. 我們如何使用您的資訊",
+          "description": "我們將收集的資訊用於：",
+          "providing": "提供和維護我們的楓之谷工具和服務",
+          "improving": "改善使用者體驗和功能",
+          "responding": "回應用戶反饋和支援請求"
+        },
+        "section3": {
+          "title": "3. 資料儲存",
+          "description": "您的資料安全對我們很重要：",
+          "localStorage": "所有資料都儲存在您裝置的瀏覽器儲存中",
+          "noServerStorage": "我們不會在伺服器上儲存個人資訊",
+          "clearData": "您可以隨時透過瀏覽器設定清除這些資料"
+        },
+        "section4": {
+          "title": "4. 第三方服務",
+          "description": "我們使用 Google 表單來收集反饋。Google 有自己的隱私政策，我們建議您查看。"
+        },
+        "section5": {
+          "title": "5. 聯絡我們",
+          "description": "如果您對本隱私政策有任何疑問，請聯絡我們：",
+          "email": "電子郵件：",
+          "feedbackForm": "意見表單：",
+          "submitFeedback": "提交意見"
+        },
+        "lastUpdated": "最後更新：",
+        "backToHome": "返回首頁"
+      }
     }
   },
   "common": {

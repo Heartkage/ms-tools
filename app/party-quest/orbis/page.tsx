@@ -2,11 +2,10 @@
 
 import React, { useState } from 'react';
 import Link from 'next/link';
-import LanguageSwitcher from '../../../components/LanguageSwitcher';
-import BackToHome from '../../../components/BackToHome';
 import { useLanguage } from '../../../contexts/LanguageContext';
 import { roomConfig as roomConfigs } from './constants';
 import Image from 'next/image';
+import Header from '../../../components/Header';
 
 export default function OrbisPQ() {
   const { t } = useLanguage();
@@ -79,14 +78,11 @@ export default function OrbisPQ() {
 
   return (
     <main className="min-h-screen p-4 sm:p-8 relative overflow-hidden">
+      <Header />
       <div className="max-w-4xl mx-auto">
+      
         
-        <div className="flex justify-between items-center mb-4">
-          <BackToHome />
-          <LanguageSwitcher />
-        </div>
-        
-        <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-8">{t('pages.orbisPQ.title')}</h1>
+        <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-8 mt-16">{t('pages.orbisPQ.title')}</h1>
         
         {/* Grid Container wrapper with padding */}
         <div className="pb-8 sm:pb-12 md:pb-16 mb-4 sm:mb-8 md:mb-12">
@@ -223,6 +219,8 @@ export default function OrbisPQ() {
             })}
           </div>
         </div>
+      
+        <div className="text-center text-altText-secondary text-md">{t('pages.orbisPQ.rooms.centralTower.title')}</div>
       </div>
     </main>
   );

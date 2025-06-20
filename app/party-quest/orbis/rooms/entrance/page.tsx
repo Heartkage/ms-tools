@@ -7,7 +7,7 @@ export default function OrbisPQEntrance() {
   const { t } = useLanguage();
 
   return (
-    <div className="min-h-screen p-8">
+    <div className="">
       <div className="text-center">
         <h1 className="text-3xl font-bold text-altText-primary mb-2">
           {t('pages.orbisPQ.rooms.entrance.title')}

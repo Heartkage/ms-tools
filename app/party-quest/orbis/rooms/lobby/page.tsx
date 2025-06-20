@@ -144,7 +144,7 @@ export default function Lobby() {
   };
 
   return (
-    <div className="flex flex-col items-center pb-4 bg-gradient-to-b from-gray-900 to-gray-800">
+    <div className="flex flex-col items-center">
       {/* Main Container */}
       <div className="relative max-w-4xl w-full mx-auto px-4">
         {/* Title */}

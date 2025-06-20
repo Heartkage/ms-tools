@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { useLanguage } from '../../../../contexts/LanguageContext';
-import LanguageSwitcher from '../../../../components/LanguageSwitcher';
+import Header from '../../../../components/Header';
 
 export default function RoomLayout({ children }) {
   const { t } = useLanguage();
@@ -10,11 +10,8 @@ export default function RoomLayout({ children }) {
   return (
     <div className="min-h-screen p-4 sm:p-8 relative overflow-hidden">
       <div className="max-w-4xl mx-auto">
-        <div className="flex justify-between items-center mb-4">
-          <Link href="../" className="text-blue-500 hover:text-blue-600 inline-block text-sm sm:text-base">
-            {t('pages.orbisPQ.rooms.common.goback')}
-          </Link>
-          <LanguageSwitcher />
+        <div className="flex justify-between items-center mb-16">
+          <Header hasBackButton={true} />
         </div>
         {children}
       </div>

@@ -333,10 +333,10 @@ export default function SealedRoom() {
 
         <div className="relative z-10">
           <div className="text-text-primary font-semibold mb-2">{t('common.objective')}</div>
-          <ul className="list-disc list-inside space-y-1 font-semibold text-xs text-text-secondary">
+          <ul className="list-decimal list-inside space-y-1 font-semibold text-xs text-text-secondary">
             <li dangerouslySetInnerHTML={tHtml('pages.orbisPQ.rooms.sealed.requirement1')} />
             <li dangerouslySetInnerHTML={tHtml('pages.orbisPQ.rooms.sealed.requirement2')} />
-            <li>{t('pages.orbisPQ.rooms.sealed.requirement3')}</li>
+            <li dangerouslySetInnerHTML={tHtml('pages.orbisPQ.rooms.sealed.requirement3')} />
           </ul>
         </div>
       </div>
