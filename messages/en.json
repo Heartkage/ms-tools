@@ -101,6 +101,7 @@
     "orbisPQ": {
       "title": "Orbis Party Quest Tool",
       "weekdays": {
+        "unknown": "Unknown",
         "monday": "Monday",
         "tuesday": "Tuesday",
         "wednesday": "Wednesday",
@@ -119,6 +120,7 @@
         "red": "Red"
       },
       "dayTypes": {
+        "unknown": "Unknown",
         "cute": "Cute",
         "scary": "Scary",
         "fun": "Fun",
@@ -159,11 +161,11 @@
         },
         "lobby": {
           "title": "Lobby",
-          "collectCD": "Objective: Find 0/1 {color} CD, click the CD player, then talk to NPC for the Goddess Piece",
+          "collectCD": "Objective: Find 0/1 <color={color}>{name}</color> CD, click the CD player, then talk to NPC for the Goddess Piece",
           "serverTime": "Current <b>{server}</b> Server time",
           "clickTip": "(copy to clipboard)",
           "localTime": "Your Local Time",
-          "nextDayChange": "Next Day Change",
+          "nextDayChange": "Remaining Time to Next Day",
           "timezone": "Timezone",
           "servers": {
             "na": "Artale (NA)",

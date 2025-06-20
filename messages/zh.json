@@ -101,6 +101,7 @@
     "orbisPQ": {
       "title": "天空之城組隊任務工具",
       "weekdays": {
+        "unknown": "未知",
         "monday": "星期一",
         "tuesday": "星期二",
         "wednesday": "星期三",
@@ -119,6 +120,7 @@
         "red": "紅色"
       },
       "dayTypes": {
+        "unknown": "未知",
         "cute": "可愛",
         "scary": "可怕",
         "fun": "有趣",
@@ -159,11 +161,11 @@
         },
         "lobby": {
           "title": "休息室\n(CD)",
-          "collectCD": "目標：找到 0/1 {color}唱片、點擊唱片機、和NPC對話取得女神像碎片",
+          "collectCD": "目標：找到 0/1 <color={color}>{name}</color>唱片、點擊唱片機、和NPC對話取得女神像碎片",
           "serverTime": "當前 <b>{server}</b> 伺服器時間",
           "clickTip": "(點擊複製到剪貼簿)",
           "localTime": "本地時間",
-          "nextDayChange": "下次換日時間",
+          "nextDayChange": "距離下次換日剩餘時間",
           "timezone": "時區",
           "servers": {
             "na": "Artale (NA)",
