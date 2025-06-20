@@ -140,10 +140,10 @@
           "shortTitle":"封印",
           "solvePuzzle": "目標：從NPC獲得4次提示並將數字填入下方解碼器，再讓四位玩家根據解答站在對應的平台上",
           "howToGetDigits": "如何獲得 4 位數字",
-          "step1": "1. 嘗試 <color=#ff0000>沒有人</color>站在任何平台上，點擊 NPC 獲得<color=#ff0000>第 1 位數字</color>",
-          "step2": "2. 嘗試 <color=#ff0000>1 人站在左側</color>(←)平台上，點擊 NPC 獲得<color=#ff0000>第 2 位數字</color>",
-          "step3": "3. 嘗試 <color=#ff0000>1 人站在中間</color>(↑)平台上，點擊 NPC 獲得<color=#ff0000>第 3 位數字</color>",
-          "step4": "4. 嘗試 <color=#ff0000>1 人站在右側</color>(→)平台上，點擊 NPC 獲得<color=#ff0000>第 4 位數字</color>",
+          "step1": "1. 嘗試 <color=#ff0000>沒有人</color>站在任何平台上，點擊 NPC 獲得<color=#ff0000>第 1 位數字</color>。",
+          "step2": "2. 嘗試 <color=#ff0000>1 人站在左側</color>(←)平台上，點擊 NPC 獲得<color=#ff0000>第 2 位數字</color>。",
+          "step3": "3. 嘗試 <color=#ff0000>1 人站在中間</color>(↑)平台上，點擊 NPC 獲得<color=#ff0000>第 3 位數字</color>。",
+          "step4": "4. 嘗試 <color=#ff0000>1 人站在右側</color>(→)平台上，點擊 NPC 獲得<color=#ff0000>第 4 位數字</color>。",
           "enterCode": "輸入4次NPC的回答 (0-2):",
           "clear": "清除",
           "enterCodeHint": "輸入 4 位數字，請使用 0-2 之間的數字",
@@ -151,13 +151,13 @@
           "validCombinations": "可能的組合：",
           "copyAnswer": "複製答案",
           "requirements": "通關條件：",
-          "requirement1": "只需要 <color=#ff0000>1</color> 名玩家照著<color=#1E40AF>「如何獲得 4 位數字」</color>的步驟解謎",
-          "requirement2": "需要共 <color=#ff0000>4</color> 名玩家依照答案以相同人數站在平台上，隊長再次點擊NPC即可通關",
-          "requirement3": "記得到<color=#ff0000>地圖最上面</color>打箱子取得女神像碎片",
+          "requirement1": "只需要 <color=#ff0000>1</color> 名玩家照著<color=#1E40AF>「如何獲得 4 位數字」</color>的步驟解謎。",
+          "requirement2": "需要共 <color=#ff0000>4</color> 名玩家依照答案以相同人數站在平台上，隊長再次點擊NPC即可通關。",
+          "requirement3": "記得到<color=#ff0000>地圖最上面</color>打箱子取得女神像碎片。",
           "left": "左側",
           "middle": "中間",
           "right": "右側",
-          "tip": "注意：如果讓NPC回答超過 7 次，全員將被傳送出房間，答案也會重新產生"
+          "tip": "注意：如果讓NPC回答超過 7 次，全員將被傳送出房間，答案也會重新產生。"
         },
         "lobby": {
           "title": "休息室\n(CD)",
@@ -172,7 +172,7 @@
             "tw": "Artale (TW)",
             "kr": "Artale (KR)"
           },
-          "tip": "注意：此關一定要有位移技能的職業，會跳忍耐更好"
+          "tip": "注意：此關一定要有位移技能的職業，會跳忍耐更好。"
         },
         "garden": {
           "title": "花園 (王房)",
@@ -186,11 +186,11 @@
             "middle": "中",
             "bottom": "下"
           },
-          "objective1": "清空王房內的怪物後會掉落<color=#ff0000>種子</color>",
-          "objective2": "將種子種在花盆裡並找出<color=#ff0000>黑色食人花</color>和<color=#ff0000>無法種下種子</color>的花盆",
-          "objective3": "擊殺<color=#ff0000>黑色食人花</color>後，王就會出現",
-          "objective4": "擊殺王後會掉落<color=#ff0000>「更奇怪的種子」</color>，請將這種子種在剛剛無法長出花朵的<color=#ff0000>王盆</color>裡",
-          "objective5": "取得<color=#ff0000>生命草</color>後，再回到<color=#ff0000>中央塔放置在女神像中間</color>，組隊任務就通關了",
+          "objective1": "清空王房內的怪物後會掉落<color=#ff0000>種子</color>。",
+          "objective2": "將種子種在花盆裡並找出<color=#ff0000>黑色食人花</color>和<color=#ff0000>無法種下種子</color>的花盆。",
+          "objective3": "擊殺<color=#ff0000>黑色食人花</color>後，王就會出現。",
+          "objective4": "擊殺王後會掉落<color=#ff0000>「更奇怪的種子」</color>，請將這種子種在剛剛無法長出花朵的<color=#ff0000>王盆</color>裡。",
+          "objective5": "取得<color=#ff0000>生命草</color>後，再回到<color=#ff0000>中央塔放置在女神像中間</color>，組隊任務就通關了。",
           "tip": "注意：種下種子後，如果花盆裡長出的是粉色食人花，請勿攻擊他。"
         },
         "storage": {
@@ -216,23 +216,23 @@
         "walkway": {
           "title": "散步路",
           "collectPieces": "目標：收集 0/30 個碎片、和NPC對話取得女神像碎片",
-          "tip": "注意：清空怪物後跳下平台前，請確認已收集該平台上的所有碎片。少撿一個碎片整個組隊任務要重來。",
+          "tip": "注意：清空怪物後跳下平台前，請確認已收集該平台上的所有碎片，少撿一個碎片整個組隊任務要重來。",
           "jobRequirement": "需要範圍攻擊職業"
         },
         "onTheWayUp": {
           "title": "上層 (向上)",
           "jumpToHighest": "目標：跳到最高平台",
           "reset": "重置",
-          "tip": "當抵達頂部敲控制桿時，答案一定是：2個下、3個上。總共只有 10 種可能的答案。",
           "resetSection": "重置區域",
           "clearAll": "清除全部",
           "confirmClear": "確認清除全部",
           "confirmMessage": "確定要清除所有選擇嗎？",
           "cancel": "取消",
           "copyAnswer": "複製答案",
-          "requirement1": "當其中一人跳到最上層時，另一位可以回到最下面。",
-          "requirement2": "最<color=#ff0000>上層</color>的玩家會<color=#ff0000>設定控制桿</color>，最<color=#ff0000>下面</color>玩家要一直<color=#ff0000>點NPC確認答案</color>。",
-          "requirement3": "通關後，記得打箱子取得女神像碎片"
+          "objective1": "當其中一人跳到最上層時，另一位可以回到最下面。",
+          "objective2": "當抵達頂部敲控制桿時，答案一定是<color=#ff0000>2個下、3個上</color>，總共只有 10 種可能的答案。",
+          "objective3": "最<color=#ff0000>上層</color>的玩家會<color=#ff0000>設定控制桿</color>，最<color=#ff0000>下面</color>玩家要一直<color=#ff0000>點NPC確認答案</color>。",
+          "objective4": "通關後，記得打箱子取得女神像碎片。"
         },
         "entrance": {
           "title": "大廳",

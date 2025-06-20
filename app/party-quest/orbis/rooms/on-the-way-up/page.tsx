@@ -155,7 +155,6 @@ export default function OnTheWayUp() {
 
   // Check if any section has the first row selected
   const hasFirstRowSelected = toggleStates[3][toggleStates[3].length - 1].some(state => state === 1);
-  const hasLastRowSelected = toggleStates[0].every(row => row.some(state => state === 1));
 
   // Check if any platform is selected
   const hasAnySelection = toggleStates.some(section => 
@@ -182,13 +181,6 @@ export default function OnTheWayUp() {
           <h1 className="text-2xl text-text-primary">{t('pages.orbisPQ.rooms.onTheWayUp.title')}</h1>
           <h3 className="text-sm text-text-secondary mt-1">{t('pages.orbisPQ.rooms.onTheWayUp.jumpToHighest')}</h3>
         </div>
-
-        {/* Hint Section */}
-        {hasLastRowSelected && (
-          <div className="relative flex items-center justify-center z-10 bg-decor rounded-lg border border-room-border p-3 sm:p-4">
-            <div className="text-xs sm:text-sm md:text-sm text-text-primary font-semibold">{t('pages.orbisPQ.rooms.onTheWayUp.tip')}</div>
-          </div>
-        )}
 
         {/* Platform Sections */}
         <div className="relative z-10 space-y-4 sm:space-y-6">
@@ -376,9 +368,10 @@ export default function OnTheWayUp() {
         <div className="relative z-10">
           <div className="text-text-primary font-semibold mb-2">{t('common.objective')}</div>
           <ul className="list-decimal list-inside space-y-1 font-semibold text-xs text-text-secondary">
-            <li>{t('pages.orbisPQ.rooms.onTheWayUp.requirement1')}</li>
-            <li dangerouslySetInnerHTML={tHtml('pages.orbisPQ.rooms.onTheWayUp.requirement2')} />
-            <li>{t('pages.orbisPQ.rooms.onTheWayUp.requirement3')}</li>
+            <li dangerouslySetInnerHTML={tHtml('pages.orbisPQ.rooms.onTheWayUp.objective1')} />
+            <li dangerouslySetInnerHTML={tHtml('pages.orbisPQ.rooms.onTheWayUp.objective2')} />
+            <li dangerouslySetInnerHTML={tHtml('pages.orbisPQ.rooms.onTheWayUp.objective3')} />
+            <li dangerouslySetInnerHTML={tHtml('pages.orbisPQ.rooms.onTheWayUp.objective4')} />
           </ul>
         </div>
       </div>
