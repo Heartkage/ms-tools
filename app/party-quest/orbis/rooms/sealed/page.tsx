@@ -72,13 +72,44 @@ export default function SealedRoom() {
     }
   };
 
+  // Get valid combinations based on current input
+  const getValidCombinations = (input = codeInput) => {
+    if (!input) return Object.keys(sealedRoomConfig.answers);
+    
+    return Object.keys(sealedRoomConfig.answers).filter(code => 
+      code.startsWith(input)
+    );
+  };
+
   // Handle code input change
   const handleCodeInputChange = (e) => {
     const value = e.target.value;
     setShowError(false);
     if (/^[0-2]{0,4}$/.test(value)) {
       setCodeInput(value);
-      if (value.length === 4) {
+      
+      // Check if there's only 1 valid combination left based on current value
+      const validCombinations = getValidCombinations(value);
+      
+      // If there's exactly 1 combination left and we have at least 1 character, autocomplete
+      // But only if we're not deleting (new value is longer than or equal to previous value)
+      if (validCombinations.length === 1 && value.length > 0 && value.length < 4 && value.length >= codeInput.length) {
+        const autoCompleteCode = validCombinations[0];
+        setCodeInput(autoCompleteCode);
+        
+        // Close keyboard by blurring the input
+        inputRef.current?.blur();
+        
+        // Show error if the autocompleted code is invalid (shouldn't happen, but safety check)
+        if (!sealedRoomConfig.answers[autoCompleteCode]) {
+          setShowError(true);
+          setCodeInput('');
+          inputRef.current?.focus();
+          setTimeout(() => {
+            setShowError(false);
+          }, 3000);
+        }
+      } else if (value.length === 4) {
         // Close keyboard by blurring the input
         inputRef.current?.blur();
         // Show error if code is invalid
@@ -99,15 +130,6 @@ export default function SealedRoom() {
   const getPlatformNumbers = () => {
     if (!codeInput) return [null, null, null];
     return sealedRoomConfig.answers[codeInput] || [null, null, null];
-  };
-
-  // Get valid combinations based on current input
-  const getValidCombinations = () => {
-    if (!codeInput) return Object.keys(sealedRoomConfig.answers);
-    
-    return Object.keys(sealedRoomConfig.answers).filter(code => 
-      code.startsWith(codeInput)
-    );
   };
 
   const platformNumbers = getPlatformNumbers();
