@@ -45,6 +45,10 @@ export default function Home() {
                 <span className="text-lg font-bold mb-1">{t('navigation.partyQuest.orbis')}</span>
                 <span className="text-xs font-medium">{t('navigation.partyQuest.orbisLevel')}</span>
               </Link>
+              <Link href="/party-quest/rj" className="flex flex-col items-center px-4 py-4 rounded-lg bg-purple-100 hover:bg-purple-200 text-purple-900 font-semibold shadow transition-all text-center border border-purple-300">
+                <span className="text-lg font-bold mb-1">{t('navigation.partyQuest.rj')}</span>
+                <span className="text-xs font-medium">{t('navigation.partyQuest.rjLevel')}</span>
+              </Link>
             </div>
           </div>
 

@@ -2,8 +2,7 @@
 
 import React, { useState } from 'react';
 import { useLanguage } from '../../../contexts/LanguageContext';
-import BackToHome from '../../../components/BackToHome';
-import LanguageSwitcher from '../../../components/LanguageSwitcher';
+import Header from '../../../components/Header';
 
 export default function RJPartyQuest() {
   const { t, tHtml } = useLanguage();
@@ -51,14 +50,11 @@ export default function RJPartyQuest() {
   };
 
   return (
-    <div className="container mx-auto px-4 py-8">
+    <div className="min-h-screen p-4 sm:p-8 relative overflow-hidden">
       <div className="max-w-4xl mx-auto">
-        <div className="flex justify-between items-center mb-4">
-          <BackToHome />
-          <LanguageSwitcher />
-        </div>
-
-        <h1 className="text-4xl font-bold text-white mb-10">
+        <Header />
+        
+        <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-8 mt-16">
           {t('pages.rjPQ.title')}
         </h1>
 
