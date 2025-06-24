@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useRef } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { useLanguage } from '../../../../../contexts/LanguageContext';
 import { copyToClipboard } from '../../../../../lib/utils/clipboard';
 
@@ -32,6 +32,29 @@ export default function SealedRoom() {
     }
   };
 
+  // Auto-focus input when page is focused
+  useEffect(() => {
+    const handleFocus = () => {
+      // Only focus if the input is not already focused and there's no error showing
+      if (inputRef.current && !showError && document.activeElement !== inputRef.current) {
+        inputRef.current.focus();
+      }
+    };
+
+    // Focus on initial load if the page is already focused
+    if (document.hasFocus()) {
+      handleFocus();
+    }
+
+    // Add event listener for when the window gains focus
+    window.addEventListener('focus', handleFocus);
+
+    // Cleanup event listener on unmount
+    return () => {
+      window.removeEventListener('focus', handleFocus);
+    };
+  }, [showError]);
+
   // Handle copy to clipboard
   const handleCopy = async () => {
     const platformNumbers = sealedRoomConfig.answers[codeInput];
@@ -49,13 +72,44 @@ export default function SealedRoom() {
     }
   };
 
+  // Get valid combinations based on current input
+  const getValidCombinations = (input = codeInput) => {
+    if (!input) return Object.keys(sealedRoomConfig.answers);
+    
+    return Object.keys(sealedRoomConfig.answers).filter(code => 
+      code.startsWith(input)
+    );
+  };
+
   // Handle code input change
   const handleCodeInputChange = (e) => {
     const value = e.target.value;
     setShowError(false);
     if (/^[0-2]{0,4}$/.test(value)) {
       setCodeInput(value);
-      if (value.length === 4) {
+      
+      // Check if there's only 1 valid combination left based on current value
+      const validCombinations = getValidCombinations(value);
+      
+      // If there's exactly 1 combination left and we have at least 1 character, autocomplete
+      // But only if we're not deleting (new value is longer than or equal to previous value)
+      if (validCombinations.length === 1 && value.length > 0 && value.length < 4 && value.length >= codeInput.length) {
+        const autoCompleteCode = validCombinations[0];
+        setCodeInput(autoCompleteCode);
+        
+        // Close keyboard by blurring the input
+        inputRef.current?.blur();
+        
+        // Show error if the autocompleted code is invalid (shouldn't happen, but safety check)
+        if (!sealedRoomConfig.answers[autoCompleteCode]) {
+          setShowError(true);
+          setCodeInput('');
+          inputRef.current?.focus();
+          setTimeout(() => {
+            setShowError(false);
+          }, 3000);
+        }
+      } else if (value.length === 4) {
         // Close keyboard by blurring the input
         inputRef.current?.blur();
         // Show error if code is invalid
@@ -80,6 +134,8 @@ export default function SealedRoom() {
 
   const platformNumbers = getPlatformNumbers();
   const hasValidAnswer = platformNumbers[0] !== null;
+  const validCombinations = getValidCombinations();
+  const showTypeHints = codeInput.length > 0 && codeInput.length < 4 && validCombinations.length > 0;
 
   return (
     <div className="space-y-6">
@@ -212,6 +268,29 @@ export default function SealedRoom() {
             </button>
           </div>
 
+          {/* Type Hints */}
+          {showTypeHints && (
+            <div className="relative z-10 mb-4">
+              <div className="text-xs text-text-secondary mb-2">{t('pages.orbisPQ.rooms.sealed.validCombinations')}</div>
+              <div className="flex flex-wrap gap-2">
+                {validCombinations.slice(0, 9).map((code) => (
+                  <button
+                    key={code}
+                    onClick={() => setCodeInput(code)}
+                    className="px-3 py-1 text-sm font-mono bg-blue-100 hover:bg-blue-200 text-blue-800 rounded-md border border-blue-300 transition-colors"
+                  >
+                    {code}
+                  </button>
+                ))}
+                {validCombinations.length > 9 && (
+                  <span className="px-3 py-1 text-sm text-text-secondary">
+                    +{validCombinations.length - 9} more
+                  </span>
+                )}
+              </div>
+            </div>
+          )}
+
           {/* Instructions */}
           <div className={`relative z-10 text-sm text-blue-600 mb-4 transition-opacity duration-300 ${showError ? 'opacity-0' : 'opacity-100'}`}>
             {t('pages.orbisPQ.rooms.sealed.enterCodeHint')}
@@ -276,10 +355,10 @@ export default function SealedRoom() {
 
         <div className="relative z-10">
           <div className="text-text-primary font-semibold mb-2">{t('common.objective')}</div>
-          <ul className="list-disc list-inside space-y-1 font-semibold text-xs text-text-secondary">
+          <ul className="list-decimal list-inside space-y-1 font-semibold text-xs text-text-secondary">
             <li dangerouslySetInnerHTML={tHtml('pages.orbisPQ.rooms.sealed.requirement1')} />
             <li dangerouslySetInnerHTML={tHtml('pages.orbisPQ.rooms.sealed.requirement2')} />
-            <li>{t('pages.orbisPQ.rooms.sealed.requirement3')}</li>
+            <li dangerouslySetInnerHTML={tHtml('pages.orbisPQ.rooms.sealed.requirement3')} />
           </ul>
         </div>
       </div>

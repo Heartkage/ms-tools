@@ -61,10 +61,15 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
       if (value === undefined) return key;
     }
     
+    // Ensure we have a string value
+    if (typeof value !== 'string') {
+      return key;
+    }
+    
     let result = value as string;
     if (params) {
-      Object.entries(params).forEach(([key, value]) => {
-        result = result.replace(`{${key}}`, value);
+      Object.entries(params).forEach(([paramKey, paramValue]) => {
+        result = result.replace(`{${paramKey}}`, paramValue);
       });
     }
     

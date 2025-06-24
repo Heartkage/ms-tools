@@ -33,11 +33,23 @@ const DAY_COLORS: Record<string, DayInfo> = {
   Sunday:    { color: 'rgb(204, 19, 23)',      type: 'operatic',   colorNameKey: 'pages.orbisPQ.colors.red' }   // Red
 };
 
+// Function to convert RGB to hex
+const rgbToHex = (rgb: string): string => {
+  const match = rgb.match(/rgb\((\d+),\s*(\d+),\s*(\d+)\)/);
+  if (!match) return '#000000';
+  
+  const r = parseInt(match[1]);
+  const g = parseInt(match[2]);
+  const b = parseInt(match[3]);
+  
+  return '#' + ((1 << 24) + (r << 16) + (g << 8) + b).toString(16).slice(1);
+};
+
 export default function Lobby() {
   const { t, tHtml } = useLanguage();
   const [currentTime, setCurrentTime] = useState('');
   const [localTime, setLocalTime] = useState('');
-  const [nextDayTime, setNextDayTime] = useState('');
+  const [remainingTime, setRemainingTime] = useState('');
   const [currentDay, setCurrentDay] = useState('');
   const [timezone, setTimezone] = useState('');
   const [copySuccess, setCopySuccess] = useState(false);
@@ -83,40 +95,31 @@ export default function Lobby() {
 
       // Calculate when server time changes to next day, converted to user's timezone
       const serverNextDay = new Date(now);
-      if (selectedServer.name === 'NA') {
-        serverNextDay.setUTCHours(5, 0, 0, 0); // Set to 00:00 Jamaica Time (05:00 UTC)
-      } else if (selectedServer.name === 'TW') {
-        serverNextDay.setUTCHours(16, 0, 0, 0); // Set to 00:00 Asia Time (16:00 UTC)
-      } else if (selectedServer.name === 'KR') {
+      if (selectedServer.name === 'KR') {
         serverNextDay.setUTCHours(15, 0, 0, 0); // Set to 00:00 Korea Time (15:00 UTC)
+      } else {
+        serverNextDay.setUTCHours(5, 0, 0, 0); // Set to 00:00 Jamaica Time (05:00 UTC)
       }
       
       if (serverNextDay <= now) {
         serverNextDay.setUTCDate(serverNextDay.getUTCDate() + 1);
       }
+
+      // Calculate remaining time
+      const timeDiff = serverNextDay.getTime() - now.getTime();
+      const hours = Math.floor(timeDiff / (1000 * 60 * 60));
+      const minutes = Math.floor((timeDiff % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((timeDiff % (1000 * 60)) / 1000);
       
-      const nextDayOptions: Intl.DateTimeFormatOptions = {
-        year: 'numeric',
-        month: '2-digit',
-        day: '2-digit',
-        hour: '2-digit',
-        minute: '2-digit',
-        second: '2-digit',
-        hour12: false
-      };
-      
-      const formattedNextDay = new Intl.DateTimeFormat('en-US', nextDayOptions).format(serverNextDay);
-      const [date, time] = formattedNextDay.split(', ');
-      const [month, dayOfMonth, year] = date.split('/');
-      setNextDayTime(`${year}/${month}/${dayOfMonth} ${time}`);
+      setRemainingTime(`${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`);
 
       // Get timezone offset
       const timeZone = Intl.DateTimeFormat().resolvedOptions().timeZone;
       const offset = now.getTimezoneOffset();
-      const hours = Math.abs(Math.floor(offset / 60));
-      const minutes = Math.abs(offset % 60);
+      const hoursOffset = Math.abs(Math.floor(offset / 60));
+      const minutesOffset = Math.abs(offset % 60);
       const sign = offset <= 0 ? '+' : '-';
-      setTimezone(`${timeZone}, UTC${sign}${hours}${minutes ? `:${minutes}` : ''}`);
+      setTimezone(`${timeZone}, UTC${sign}${hoursOffset}${minutesOffset ? `:${minutesOffset}` : ''}`);
     };
 
     updateTime();
@@ -127,7 +130,7 @@ export default function Lobby() {
 
   const currentDayInfo: DayInfo = DAY_COLORS[currentDay] || { 
     color: 'rgb(128, 128, 128)', 
-    type: 'Unknown',
+    type: 'unknown',
     colorNameKey: 'Unknown'
   };
 
@@ -144,7 +147,7 @@ export default function Lobby() {
   };
 
   return (
-    <div className="flex flex-col items-center pb-4 bg-gradient-to-b from-gray-900 to-gray-800">
+    <div className="flex flex-col items-center">
       {/* Main Container */}
       <div className="relative max-w-4xl w-full mx-auto px-4">
         {/* Title */}
@@ -153,7 +156,7 @@ export default function Lobby() {
             {t('pages.orbisPQ.rooms.lobby.title')}
           </div>
           <div className="text-altText-secondary text-xs sm:text-sm font-semibold">
-            {t('pages.orbisPQ.rooms.lobby.collectCD', { color: t(currentDayInfo.colorNameKey) })}
+            <div dangerouslySetInnerHTML={tHtml('pages.orbisPQ.rooms.lobby.collectCD', { color: rgbToHex(currentDayInfo.color), name: t(currentDayInfo.colorNameKey) })} />
           </div>
         </div>
 
@@ -210,7 +213,7 @@ export default function Lobby() {
             }}
           />
           <div className="absolute inset-0 flex flex-col items-center justify-center">
-            <span className="text-2xl sm:text-3xl font-bold text-altText-primary">{t(`pages.orbisPQ.weekdays.${currentDay.toLowerCase()}`)}</span>
+            <span className="text-2xl sm:text-3xl font-bold text-altText-primary">{t(`pages.orbisPQ.weekdays.${currentDay.toLowerCase() || 'unknown'}`)}</span>
             <span className="text-lg sm:text-xl text-altText-secondary mt-2">{t(`pages.orbisPQ.dayTypes.${currentDayInfo.type}`)}</span>
             <span className="text-xs text-altText-tertiary mt-1">{t('pages.orbisPQ.rooms.lobby.clickTip')}</span>
             {copySuccess && (
@@ -233,14 +236,14 @@ export default function Lobby() {
 
         {/* Next Day Time */}
         <div className="text-base sm:text-lg text-center space-y-1 mb-6">
-          <div className="bg-white/5 backdrop-blur-sm rounded-lg p-3 sm:p-4 shadow-lg">
+          {/* <div className="bg-white/5 backdrop-blur-sm rounded-lg p-3 sm:p-4 shadow-lg">
             <div className="text-altText-secondary text-[10px] sm:text-xs">{t('pages.orbisPQ.rooms.lobby.localTime')}</div>
             <div className="text-altText-primary text-sm sm:text-base">{localTime}</div>
             <div className="text-[10px] sm:text-xs text-altText-tertiary">{timezone}</div>
-          </div>
+          </div> */}
           <div className="bg-white/5 backdrop-blur-sm rounded-lg p-3 sm:p-4 shadow-lg">
             <div className="text-altText-secondary text-[10px] sm:text-xs">{t('pages.orbisPQ.rooms.lobby.nextDayChange')}</div>
-            <div className="text-altText-primary text-sm sm:text-base">{nextDayTime}</div>
+            <div className="text-altText-primary text-sm sm:text-base">{remainingTime}</div>
             <div className="text-[10px] sm:text-xs text-altText-tertiary">{timezone}</div>
           </div>
         </div>

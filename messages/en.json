@@ -1,14 +1,15 @@
 {
-  "title": "MapleStory - Tools",
+  "title": "MSTools",
+  "description": "MapleStory - Tools",
   "navigation": {
     "partyQuest": {
       "title": "Party Quest",
-      "kerning": "Kerning Party Quest",
-      "ludibrium": "Ludibrium Party Quest",
+      "kerning": "Kerning",
+      "ludibrium": "Ludibrium",
       "ludibriumLevel": "Level: 35 ~ 50",
-      "orbis": "Orbis Party Quest",
+      "orbis": "Orbis",
       "orbisLevel": "Level: 51 ~ 70",
-      "rj": "Romeo and Juliet Party Quest",
+      "rj": "Romeo and Juliet",
       "rjLevel": "Level: 71 ~ 85"
     },
     "scroll": {
@@ -18,10 +19,53 @@
     "tools": {
       "title": "Tools",
       "rjtool": "Romeo and Juliet"
-    }
+    },
+    "contact": {
+      "title": "Contact",
+      "email": "Email",
+      "form": "Form",
+      "suggestions": "Suggestions"
+    },
+    "otherLinks": "Other Links",
+    "back": "Back"
+  },
+  "privacy": {
+    "title": "Privacy Policy",
+    "section1": {
+      "title": "1. Information We Collect",
+      "description": "MSTools is committed to protecting your privacy. We collect minimal information necessary to provide our services:",
+      "languagePreference": "Language Preference: Your language selection is stored locally in your browser",
+      "data": "Data: Any progress data you save is stored locally on your device"
+    },
+    "section2": {
+      "title": "2. How We Use Your Information",
+      "description": "We use the collected information for:",
+      "providing": "Providing and maintaining our services",
+      "improving": "Improving user experience and functionality",
+      "responding": "Responding to user feedback and support requests"
+    },
+    "section3": {
+      "title": "3. Data Storage",
+      "description": "Your data security is important to us:",
+      "localStorage": "All data is stored locally on your device using browser storage",
+      "noServerStorage": "We do not store personal information on our servers",
+      "clearData": "You can clear this data at any time through your browser settings"
+    },
+    "section4": {
+      "title": "4. Third-Party Services",
+      "description": "We use Google Forms for feedback collection. Google has its own privacy policy, and we encourage you to review it."
+    },
+    "section5": {
+      "title": "5. Contact Us",
+      "description": "If you have any questions about this Privacy Policy, please contact us:",
+      "email": "Email:",
+      "feedbackForm": "Feedback Form:",
+      "submitFeedback": "Submit Feedback"
+    },
+    "lastUpdated": "Last Updated:",
+    "backToHome": "Back to Home"
   },
   "pages": {
-    "backToHome": "← Back to Home",
     "kerningPQ": {
       "title": "Kerning Party Quest Tool"
     },
@@ -49,7 +93,7 @@
           "tips4": "Suggestion: There are 5 portals, the top 3 are suitable for magic attack jobs, the bottom 2 are suitable for physical attack jobs. The last portal has two monsters.",
           "tips5": "Suggestion: The top portal is suitable for mages, the bottom portal is suitable for thieves.",
           "tips6": "Code: 333 221 333 123 111",
-          "tips8": "There are 126 combinations, please watch the animation based on the jump method of your team",
+          "tips8": "There are 126 combinations, please watch the animation based on the jump method of your team.",
           "warning1": "Warning: Do not immediately go to the next stage after clearing the stage. Please let 1-2 players go to the next stage and enter the Hidden Room, then the rest of the players can enter.",
           "warning5": "Warning: The bottommost portal requires a thief with stealth to enter, otherwise you will die when you are hit by a monster.",
           "warning7": "Warning: This stage requires a range-attack job to hit monsters."
@@ -59,6 +103,7 @@
     "orbisPQ": {
       "title": "Orbis Party Quest Tool",
       "weekdays": {
+        "unknown": "Unknown",
         "monday": "Monday",
         "tuesday": "Tuesday",
         "wednesday": "Wednesday",
@@ -77,6 +122,7 @@
         "red": "Red"
       },
       "dayTypes": {
+        "unknown": "Unknown",
         "cute": "Cute",
         "scary": "Scary",
         "fun": "Fun",
@@ -89,8 +135,7 @@
         "common": {
           "exit": "Exit",
           "transferWarning": "Transfer leader before exit",
-          "copied": "Copied!",  
-          "goback": "← Previous page"
+          "copied": "Copied!"
         },
         "sealed": {
           "title": "Sealed Room",
@@ -105,23 +150,24 @@
           "clear": "Clear",
           "enterCodeHint": "Enter a 4-digit code using only numbers 0-2",
           "invalidCode": "Invalid code! This combination doesn't exist in the puzzle.",
+          "validCombinations": "Possible Combinations:",
           "copyAnswer": "Copy Answer",
           "requirements": "Requirements:",
-          "requirement1": "Requires <color=#ff0000>1</color> player to decode",
-          "requirement2": "Requires <color=#ff0000>4</color> players to stand on the platform according to the answer, then click NPC to complete the stage",
-          "requirement3": "Get the Goddess Piece from the box at the top platform",
+          "requirement1": "Requires <color=#ff0000>1</color> player to follow the steps in <color=#1E40AF>\"How to get 4 digits\"</color> to decode.",
+          "requirement2": "Requires <color=#ff0000>4</color> players to stand on the platform according to the answer, then let the leader click the NPC once more to complete the stage.",
+          "requirement3": "Retrieve the Goddess Piece from the box at the <color=#ff0000>top of the map</color>.",
           "left": "LEFT",
           "middle": "MIDDLE",
           "right": "RIGHT",
-          "tip": "Warning: If you tested more than 7 tries, you will be send out of the room and the answer will be regenerated again"
+          "tip": "Warning: If you tested more than 7 tries, you will be sent out of the room and the answer will regenerate."
         },
         "lobby": {
           "title": "Lobby",
-          "collectCD": "Objective: Find 0/1 {color} CD, click the CD player, then talk to NPC for the Goddess Piece",
+          "collectCD": "Objective: Find 0/1 <color={color}>{name}</color> CD, click the CD player, then talk to NPC for the Goddess Piece",
           "serverTime": "Current <b>{server}</b> Server time",
           "clickTip": "(copy to clipboard)",
           "localTime": "Your Local Time",
-          "nextDayChange": "Next Day Change",
+          "nextDayChange": "Remaining Time to Next Day",
           "timezone": "Timezone",
           "servers": {
             "na": "Artale (NA)",
@@ -130,16 +176,11 @@
           },
           "tip": "Note: This stage requires a teleport skill to reach the platforms."
         },
-        "statue": {
-          "title": "Garden (Boss Room)",
-          "huntBoss": "Hunt 0/1 Boss",
-          "copy": "Copy"
-        },
         "storage": {
           "title": "Storage",
           "huntMobs": "Objective: Hunt 0/15 Cellion in the following sequence",
           "copySequence": "Copy Sequence",
-          "tip": "Note: The last Cellion will drop the Goddess Piece."
+          "tip": "Note: The last Cellion will drop the Goddess Piece directly, so this room doesn't require transferring the leader."
         },
         "lounge": {
           "title": "Lounge",
@@ -165,16 +206,16 @@
           "title": "On the way up",
           "jumpToHighest": "Objective: Jump to the top platform",
           "reset": "Reset",
-          "tip": "When you reach top for levers, answer is always 2 ↓ 3 ↑. Total of 10 possible answers.",
           "resetSection": "Reset",
           "clearAll": "Clear All",
           "confirmClear": "Confirm Clear All",
           "confirmMessage": "Are you sure you want to clear all selections?",
           "cancel": "Cancel",
           "copyAnswer": "Copy Answer",
-          "requirement1": "When a player reaches the top, the other can return to the bottom.",
-          "requirement2": "The top will <color=#ff0000>configure levers</color> while the bottom <color=#ff0000>spams NPC to check for the answer</color>.",
-          "requirement3": "After clearing the stage, remember to get the Goddess Piece from the box."
+          "objective1": "When a player reaches the top, the other can return to the bottom.",
+          "objective2": "When you reach top for levers, answer is always <color=#ff0000>2 ↓ 3 ↑</color>. Total of 10 possible answers.",
+          "objective3": "The top will <color=#ff0000>configure levers</color> while the bottom <color=#ff0000>spams NPC to check for the answer</color>.",
+          "objective4": "After clearing the stage, remember to get the Goddess Piece from the box."
         },
         "entrance": {
           "title": "Entrance",
@@ -193,12 +234,15 @@
             "middle": "Middle",
             "bottom": "Bottom"
           },
-          "objective1": "After clearing mobs in the garden, <color=#ff0000>seeds</color> will drop",
-          "objective2": "Plant these seeds in the pots and find a <color=#ff0000>Dark Nependeath</color> and a <color=#ff0000>pot that cannot be planted</color>",
-          "objective3": "After killing the <color=#ff0000>Dark Nependeath</color>, the boss will appear",
-          "objective4": "After killing the boss, an <color=#ff0000>Even Stranger Seed</color> will drop, then plant this seed in the <color=#ff0000>pot that cannot grow Nependeath</color>",
-          "objective5": "After planting the seed, a <color=#ff0000>Life of Grass</color> will grow. Take the <color=#ff0000>Life of Grass</color> and return to <color=#ff0000>Central Tower</color> and place it in the middle of the <color=#ff0000>Statue</color> to complete the party quest",
+          "objective1": "After clearing mobs in the garden, <color=#ff0000>seeds</color> will drop.",
+          "objective2": "Plant these seeds in the pots and find a <color=#ff0000>Dark Nependeath</color> and a <color=#ff0000>pot that cannot be planted</color>.",
+          "objective3": "After killing the <color=#ff0000>Dark Nependeath</color>, the boss will appear.",
+          "objective4": "After killing the boss, an <color=#ff0000>Even Stranger Seed</color> will drop, then plant this seed in the <color=#ff0000>pot that cannot grow Nependeath</color>.",
+          "objective5": "After planting the seed, a <color=#ff0000>Life of Grass</color> will grow. Take the <color=#ff0000>Life of Grass</color> and return to <color=#ff0000>Central Tower</color> and place it in the middle of the <color=#ff0000>Statue</color> to complete the party quest.",
           "tip": "Note: If a pink Nependeath grows, do not kill it."
+        },
+        "centralTower": {
+          "title": "Center Tower"
         }
       }
     },

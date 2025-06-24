@@ -115,7 +115,7 @@ export default function GardenRoom() {
   );
 
   return (
-    <div className="bg-gradient-to-b from-gray-900 to-gray-800 pb-8 space-y-6">
+    <div className="space-y-6">
       {/* Main Container */}
       <div className="relative max-w-2xl mx-auto bg-gradient-to-b from-room to-room-bottom rounded-lg border border-room-border pt-4 px-4 flex flex-col space-y-8 overflow-hidden">
         {/* Skybox */}

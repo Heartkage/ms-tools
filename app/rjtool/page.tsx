@@ -5,9 +5,8 @@ import { useRouter, useSearchParams } from 'next/navigation'
 import { RJService } from './rjService'
 import { Room, ROWS, COLS } from './rjModel'
 import { useLanguage } from '../../contexts/LanguageContext'
-import LanguageSwitcher from '../../components/LanguageSwitcher'
-import BackToHome from '../../components/BackToHome'
 import { copyToClipboard } from '../../lib/utils/clipboard'
+import Header from '../../components/Header'
 
 // User colors for the 4 players
 const USER_COLORS = {
@@ -867,12 +866,9 @@ export default function RJPQPage() {
   return (
     <main className="min-h-screen p-4 sm:p-8">
       <div className="max-w-4xl mx-auto">
-        <div className="flex justify-between items-center mb-4">
-          <BackToHome />
-          <LanguageSwitcher />
-        </div>
+        <Header />
         
-        <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-8 text-white">
+        <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-8 mt-16 text-white">
           {t('pages.rjtool.title')}
         </h1>
 

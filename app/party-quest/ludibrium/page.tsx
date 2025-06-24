@@ -2,9 +2,8 @@
 
 import React, { useState, useEffect, useRef, useMemo } from 'react';
 import { useLanguage } from '../../../contexts/LanguageContext';
-import BackToHome from '../../../components/BackToHome';
-import LanguageSwitcher from '../../../components/LanguageSwitcher';
 import { copyToClipboard } from '../../../lib/utils/clipboard';
+import Header from '../../../components/Header';
 
 type StageDescription = {
   objective?: string;
@@ -248,7 +247,7 @@ export default function LudibriumPQ() {
       isScrollingRef.current = true;
       setActiveSection(index + 1);
       
-      const offset = 20;
+      const offset = 70;
       const sectionTop = section.getBoundingClientRect().top + window.scrollY - offset;
       window.scrollTo({
         top: sectionTop,
@@ -265,11 +264,8 @@ export default function LudibriumPQ() {
   return (
     <main className="min-h-screen p-4 sm:p-8 mb-4">
       <div className="max-w-4xl mx-auto">
-        <div className="flex justify-between items-center mb-4">
-          <BackToHome />
-          <LanguageSwitcher />
-        </div>
-        <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-8">{t('pages.ludibriumPQ.title')}</h1>
+        <Header />
+        <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-8 mt-16">{t('pages.ludibriumPQ.title')}</h1>
 
         {/* Simple Section */}
         <div className="max-w-2xl mx-auto">
@@ -596,7 +592,7 @@ export default function LudibriumPQ() {
         </div>
 
         {/* Spacer */}
-        <div className="h-[60vh]"></div>
+        <div className="h-[40vh]"></div>
       </div>
     </main>
   );

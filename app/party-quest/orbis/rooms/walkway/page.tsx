@@ -8,7 +8,7 @@ export default function WalkwayRoom() {
   const { t } = useLanguage();
 
   return (
-    <div className="bg-gradient-to-b from-gray-900 to-gray-800">
+    <div className="">
       {/* Walkway Room Container */}
       <div className="relative max-w-2xl mx-auto bg-gradient-to-b from-room to-room-bottom rounded-lg border border-room-border pt-4 px-4 flex flex-col overflow-hidden">
         {/* Background decor */}
