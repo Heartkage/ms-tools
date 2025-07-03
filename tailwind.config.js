@@ -10,6 +10,7 @@ module.exports = {
       fontSize: {
         'xxs': '0.625rem',    // 10px
         'tiny': '0.563rem',   // 9px
+        'mini': '0.5rem',     // 8px
       },
       colors: {
         ludibrium: {

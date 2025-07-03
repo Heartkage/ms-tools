@@ -67,10 +67,10 @@
   },
   "pages": {
     "kerningPQ": {
-      "title": "墮落城市組隊任務工具"
+      "title": "墮落城市組隊任務介紹"
     },
     "ludibriumPQ": {
-      "title": "玩具城組隊任務工具",
+      "title": "玩具城組隊任務介紹",
       "simple": {
         "title": "有這串就能通關了",
         "copy": "複製到剪貼簿",
@@ -247,31 +247,53 @@
       }
     },
     "rjPQ": {
-      "title": "羅密歐與茱麗葉組隊任務工具",
+      "title": "羅密歐與茱麗葉組隊任務介紹",
+      "previous": "上一關",
+      "next": "下一關",
       "stages": {
         "stage1": {
-          "title": "Mysterious Lab"
+          "title": "Mysterious Lab",
+          "objective": "<b>目標</b>：點擊地圖紅色位置找出下一扇門的拉桿",
+          "hiddenObjective": "<b><color=#ff0000>隱藏任務 1-1</color></b>：點擊地圖紅色位置找出 0/1 情書（一位玩家取得即可）"
         },
         "stage2": {
           "title": "Dark Tunnel",
-          "objective": "目標：清空房間內的怪物",
-          "tip": "<b>隱藏通關條件</b>：如果有另一隊正在進行另一邊的RJPQ，並在你們進入此關時通關的話，你們<color=#ff0000>不需要清空怪物就能前往下一個房間</color>。"
+          "objective": "<b>目標</b>：清空房間內的怪物",
+          "tip": "<b><color=#00ff00>快速通關條件</color></b>：如果有另一隊正在進行另一邊的RJPQ，並在你們<color=#00ff00>進入此關時</color>通關的話，你們<color=#00ff00>不需要清空怪物</color>就能前往下一個房間。"
         },
         "stage3": {
-          "title": "Unpleasant Lab"
+          "title": "Unpleasant Lab",
+          "objective": "<b>目標</b>：擊殺房間內怪物後會掉落液體瓶，將液體倒滿 0/3 個燒杯，總共需要21瓶液體。"
         },
         "stage4": {
-          "title": "Speical Lab"
+          "title": "Speical Lab",
+          "leftObjective": "<b>目標</b>：找到 0/1 研究報告",
+          "leftTip": "必要條件：<color=#ff0000>140%速度</color> & <color=#ff0000>120%跳躍</color>角色",
+          "middleObjective": "<b>目標</b>：打鑰匙卡，負責開左右兩間的門",
+          "middleTip": "<b><color=#ff0000>注意</color></b>：請留至少<color=#ff0000>1人</color>在這間，不然沒人開門",
+          "rightObjective": "<b>目標</b>：找到 0/1 研究報告",
+          "rightTip": "必要條件：法師或拳霸，需要<color=#ff0000>可穿牆</color>角色",
+          "hiddenObjective": "<b><color=#ff0000>隱藏任務 1-2</color></b>：將 0/1 情書交給羅密歐或是茱麗葉（取得信件的隊友）"
         },
         "stage5": {
-          "title": "Yulete's Office"
+          "title": "Yulete's Office",
+          "objective": "<b>目標</b>：清空房間內的怪物，並在房間的<color=#ff0000>物品</color>中找出前往下一扇門的機關。",
+          "hiddenObjective": "<b><color=#ff0000>隱藏任務 2</color></b>：進入房間後，點擊NPC<color=#ff0000>偷聽</color>他說話，超過圖中紅色的線就無法偷聽了。",
+          "tip": "<b><color=#00ff00>快速通關條件</color></b>：如果是<color=#00ff00>茱麗葉組隊任務</color>，不需要打完怪物<color=#00ff00>直接找機關</color>就可以前往下一關。"
         },
         "stage6": {
-          "title": "Lab Tunnel"
+          "title": "Lab Tunnel",
+          "objective": "<b>目標</b>：每一位隊友選一道門，進去後跳到最高平台。",
+          "warning": "<color=#ff0000>注意</color>：此關必須要有<color=#ff0000>4人</color>才可通關，少了一人就必須重新組隊。",
+          "tip": "<b>提示</b>：每一個房間的同一層平台答案不會重複，所以可以利用工具同步資訊給隊友。",
+          "link": "工具: RJPQ工具"
         },
         "stage7": {
           "title": "Center Lab",
-          "content": "目標：擊殺 0/1 Boss - Frankenroid"
+          "objective": "<b>目標</b>：擊殺 0/1 Boss - Frankenroid",
+          "hiddenObjective": "<b><color=#ff0000>隱藏任務 3</color></b>：點擊NPC招喚Boss時，要選<color=#ff0000>第二個選項</color>。",
+          "warning": "<b><color=#ff0000>注意</color></b>：不要讓左上角的羅密歐或茱麗葉死亡。",
+          "bonus": "<color=#00ff00>隱藏獎勵</color>：如果達成3個隱藏任務，可招喚更強的Boss，通關經驗也會增加。"
         }
       }
     },

@@ -67,10 +67,10 @@
   },
   "pages": {
     "kerningPQ": {
-      "title": "Kerning Party Quest Tool"
+      "title": "Kerning Party Quest Guide"
     },
     "ludibriumPQ": {
-      "title": "Ludibrium Party Quest Tool",
+      "title": "Ludibrium Party Quest Guide",
       "simple": {
         "title": "All you need to know",
         "copy": "Copy",
@@ -247,31 +247,53 @@
       }
     },
     "rjPQ": {
-      "title": "Romeo and Juliet Party Quest Tool",
+      "title": "Romeo and Juliet Party Quest Guide",
+      "previous": "Previous",
+      "next": "Next",
       "stages": {
         "stage1": {
-          "title": "Mysterious Lab"
+          "title": "Mysterious Lab",
+          "objective": "<b>Objective</b>: Find the hidden <color=#ff0000>Switch</color> in the <color=#ff0000>MARKED</color> position",
+          "hiddenObjective": "<b><color=#ff0000>Hidden Mission 1-1</color></b>: Find 0/1 Love Letter. (Any team member)"
         },
         "stage2": {
           "title": "Dark Tunnel",
-          "objective": "Objective: clear all mobs in the room",
-          "tip": "<b>Hidden</b>: If another team has cleared the room in the other party quest, your team will be able to move to next stage without clearing the room"
+          "objective": "<b>Objective</b>: Clear all mobs in the room",
+          "tip": "<b>Tip</b>: If <color=#00ff00>another team has cleared the room from the other side</color>, your team will be able to move to next stage without clearing mobs in the room."
         },
         "stage3": {
-          "title": "Unpleasant Lab"
+          "title": "Unpleasant Lab",
+          "objective": "<b>Objective</b>: After killing mobs in the room, liquid bottles will drop. Fill 0/3 beakers with liquid, total of 21 bottles."
         },
         "stage4": {
-          "title": "Speical Lab"
+          "title": "Speical Lab",
+          "leftObjective": "<b>Objective</b>: Find 0/1 Report",
+          "leftTip": "Required: <color=#ff0000>140% Speed & 120% Jump</color>",
+          "middleObjective": "<b>Objective</b>: Obtain Key Cards to open the doors",
+          "middleTip": "Note: Leave at least 1 person in this room, otherwise no one will be able to open the door.",
+          "rightObjective": "<b>Objective</b>: Find 0/1 Report",
+          "rightTip": "Required: Mage or buccaneer, requires a job that can <color=#ff0000>teleport through walls</color>.",
+          "hiddenObjective": "<b><color=#ff0000>Hidden Mission 1-2</color></b>: Deliver 0/1 Love Letter to the Romeo or Juliet. (The one who gets the letter)"
         },
         "stage5": {
-          "title": "Yulete's Office"
+          "title": "Yulete's Office",
+          "objective": "<b>Objective</b>: Clear all mobs in the room, and find the <color=#ff0000>Switch</color> in the room to open the next door.",
+          "hiddenObjective": "<b><color=#ff0000>Hidden Mission 2</color></b>: After entering the room, click the NPC to <color=#ff0000>eavesdrop</color>. You will not be able to listen if you cross the red line in the picture.",
+          "tip": "Tip: If you are doing <color=#00ff00>Juliet Party Quest</color>, you can move to next stage directly by finding the switch without clearing mobs in the room."
         },
         "stage6": {
-          "title": "Lab Tunnel"
+          "title": "Lab Tunnel",
+          "objective": "<b>Objective</b>: Each player enters a room, then jumps to the highest platform.",
+          "warning": "<color=#ff0000>Warning</color>: This stage requires <color=#ff0000>4 players</color> to complete. You will have to restart the Party Quest if you are missing one player.",
+          "tip": "<b>Tip</b>: The answer of the same platform in each room must be different, so you can use the tool below to share information with your teammates.",
+          "link": "Link: RJPQ Tool"
         },
         "stage7": {
           "title": "Center Lab",
-          "content": "Objective: Kill 0/1 Boss - Frankenroid"
+          "objective": "<b>Objective</b>: Kill 0/1 Boss - Frankenroid",
+          "hiddenObjective": "<b><color=#ff0000>Hidden Mission 3</color></b>: when summonning the boss from the NPC, choose the second option.",
+          "warning": "<b><color=#ff0000>Note</color></b>: Do not let the Romeo or Juliet die.",
+          "bonus": "<color=#00ff00>Bonus</color>: If you complete 3 hidden missions, you can summon a stronger Frankenroid, and the reward experience will be increased."
         }
       }
     },
