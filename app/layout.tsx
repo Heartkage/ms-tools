@@ -28,6 +28,8 @@ export default function RootLayout({
       <head>
         <link rel="icon" href="/favicon.png" sizes="32x32" type="image/png" />
         <link rel="icon" href="/favicon-192.png" sizes="192x192" type="image/png" />
+        {/* Google Adsense */}
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2893966294717188" crossOrigin="anonymous"></script>
       </head>
       <body className={`${notoSansTC.className} antialiased`}>
         <Providers>
