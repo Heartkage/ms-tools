@@ -368,8 +368,8 @@ export default function RJPartyQuest() {
             <div className="w-full h-full p-4 sm:p-8 relative">
               <div className="text-xs sm:text-sm text-altText-primary space-y-2">
                 <div dangerouslySetInnerHTML={tHtml(`pages.rjPQ.stages.stage${activeStage}.objective`)} />
-                <div dangerouslySetInnerHTML={tHtml(`pages.rjPQ.stages.stage${activeStage}.hiddenObjective`)} />
                 <div dangerouslySetInnerHTML={tHtml(`pages.rjPQ.stages.stage${activeStage}.warning`)} />
+                <div dangerouslySetInnerHTML={tHtml(`pages.rjPQ.stages.stage${activeStage}.hiddenObjective`)} />
                 <div dangerouslySetInnerHTML={tHtml(`pages.rjPQ.stages.stage${activeStage}.bonus`)} />
               </div>
             </div>
