@@ -53,7 +53,7 @@ export default function Home() {
           </div>
 
           {/* Tools Section */}
-          <div className="w-full max-w-2xl flex flex-col items-center space-y-4">
+          <div className="hidden w-full max-w-2xl flex flex-col items-center space-y-4">
             <div className="flex items-center mb-2">
               <div className="w-10 h-10 bg-gradient-to-r from-purple-400 to-pink-500 rounded-xl flex items-center justify-center mr-3">
                 <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
